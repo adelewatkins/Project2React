@@ -16,7 +16,7 @@
         "Phone Number": "07777777777"
 }],
 
-    "Properties for sale": [
+    "PropertiesForSale": [
         {"id" : 1,
         "Type":"",
         "Price": "",
@@ -28,7 +28,7 @@
     }
     ],
 
-    "Properties to let": [
+    "PropertiesToLet": [
         {"id" : 1,
         "Type":"",
         "Rent": "",
