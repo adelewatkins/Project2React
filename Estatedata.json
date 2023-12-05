@@ -1,46 +1,46 @@
 {
     "Sellers": [
-        {"id" : 1,
-        "First Name":"John",
-        "Last Name": "Smith",
-        "Address": "123 Real Street",
-        "Postcode": "A1 1AA",
-        "Phone Number": "07777777777"
-    }],
-    "Buyers" : [
-        {"id" : 1,
-        "First Name":"Mike",
-        "Last Name": "Smith",
-        "Address": "122 Real Street",
-        "Postcode": "A1 1AA",
-        "Phone Number": "07777777777"
-}],
-
-    "PropertiesForSale": [
-        {"id" : 1,
-        "Type":"",
-        "Price": "",
-        "Bedrooms": "",
-        "Bathrooms": "",
-        "Garden": "",
-        "Address":"",
-        "Postcode":""
-    }
+        {
+            "id": 1,
+            "First Name": "John",
+            "Last Name": "Smith",
+            "Address": "123 Real Street",
+            "Postcode": "A1 1AA",
+            "Phone Number": "07777777777"
+        }
     ],
-
+    "Buyers": [
+        {
+            "id": 1,
+            "First Name": "Mike",
+            "Last Name": "Smith",
+            "Address": "122 Real Street",
+            "Postcode": "A1 1AA",
+            "Phone Number": "07777777777"
+        }
+    ],
+    "PropertiesForSale": [
+        {
+            "id": 1,
+            "Type": "",
+            "Price": "",
+            "Bedrooms": "",
+            "Bathrooms": "",
+            "Garden": "",
+            "Address": "",
+            "Postcode": ""
+        }
+    ],
     "PropertiesToLet": [
-        {"id" : 1,
-        "Type":"",
-        "Rent": "",
-        "Bedrooms": "",
-        "Bathrooms": "",
-        "Garden": "",
-        "Address":"",
-        "Postcode":""
-    }
-
+        {
+            "id": 1,
+            "Type": "",
+            "Rent": "",
+            "Bedrooms": "",
+            "Bathrooms": "",
+            "Garden": "",
+            "Address": "",
+            "Postcode": ""
+        }
     ]
-
-
-
 }
