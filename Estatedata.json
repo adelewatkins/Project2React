@@ -1,0 +1,46 @@
+{
+    "Sellers": [
+        {"id" : 1,
+        "First Name":"John",
+        "Last Name": "Smith",
+        "Address": "123 Real Street",
+        "Postcode": "A1 1AA",
+        "Phone Number": "07777777777"
+    }],
+    "Buyers" : [
+        {"id" : 1,
+        "First Name":"Mike",
+        "Last Name": "Smith",
+        "Address": "122 Real Street",
+        "Postcode": "A1 1AA",
+        "Phone Number": "07777777777"
+}],
+
+    "Properties for sale": [
+        {"id" : 1,
+        "Type":"",
+        "Price": "",
+        "Bedrooms": "",
+        "Bathrooms": "",
+        "Garden": "",
+        "Address":"",
+        "Postcode":""
+    }
+    ],
+
+    "Properties to let": [
+        {"id" : 1,
+        "Type":"",
+        "Rent": "",
+        "Bedrooms": "",
+        "Bathrooms": "",
+        "Garden": "",
+        "Address":"",
+        "Postcode":""
+    }
+
+    ]
+
+
+
+}
