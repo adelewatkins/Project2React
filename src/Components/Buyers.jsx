@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
+
 function Buyers() {
   const [FirstName, setFirstName] = useState("");
-  const [lastName, LasttName] = useState("");
+  const [LastName, setLastName] = useState("");
   const [Address, setAddress] = useState("");
   const [Postcode, setPostcode] = useState("");
   const [PhoneNumber, setPhoneNumber] = useState("");
@@ -10,7 +12,20 @@ function Buyers() {
     <div>
 
       <h1>Buyers</h1>
-      <form>
+      <form onSubmit={e => {
+        e.preventDefault();
+        axios.post("http://localhost:3000/Buyers",
+          { FirstName, LastName, Address, Postcode, PhoneNumber, })
+          .then(response => {
+            setFirstName("");
+            setLastName("");
+            setAddress("");
+            setPostcode("");
+            setPhoneNumber("");
+          })
+          .catch(err => console.error(err))
+      }}>
+
         <label htmlFor="fn" >First Name</label>
         <input id="fn" type="text"></input>
         <label htmlFor="ln" >Last Name</label>
@@ -20,7 +35,7 @@ function Buyers() {
         <label htmlFor="pc">Postcode</label>
         <input id="pc" type="text"></input>
         <label htmlFor="pn" >Phone Number</label>
-        <input id="pn" type="text"></input>
+        <input id="pn" type="tel"></input>
         <br />
         <button type="submit">Submit</button>
 

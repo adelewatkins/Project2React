@@ -1,10 +1,39 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 function PropertiesToLet() {
+  const [Type, setType] = useState("");
+  const [Rent, setRent] = useState("");
+  const [Bedrooms, setBedrooms] = useState("");
+  const [Bathrooms, setBathrooms] = useState("");
+  const [Garden, setGarden] = useState("");
+  const [Address, setAddress] = useState("");
+  const [Postcode, setPostcode] = useState("");
+
+
   return (
     <div>
 
     <h1>Properties To Let </h1>
 
-    <form>
+    <form onSubmit={e => {
+        e.preventDefault();
+        axios.post("http://localhost:3000/PropertiesToLet",
+          { Type, Rent, Bedrooms, Bathrooms, Garden, Address, Postcode })
+          .then(response => {
+            setType("");
+            setRent("");
+            setBedrooms("");
+            setBathrooms("");
+            setGarden("");
+            setAddress("");
+            setPostcode("");
+            
+          })
+          .catch(err => console.error(err))
+      }}>
+
+
       <label htmlFor="typ" >Type</label>
       <input id="typ" type="text"></input>
       <label htmlFor="re" >Rent</label>

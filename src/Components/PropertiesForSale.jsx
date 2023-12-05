@@ -1,10 +1,40 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 function PropertiesForSale() {
+  const [Type, setType] = useState("");
+  const [Price, setPrice] = useState("");
+  const [Bedrooms, setBedrooms] = useState("");
+  const [Bathrooms, setBathrooms] = useState("");
+  const [Garden, setGarden] = useState("");
+  const [Address, setAddress] = useState("");
+  const [Postcode, setPostcode] = useState("");
+
+
   return (
     <div>
 
       <h1>Properties For Sale</h1>
 
-      <form>
+      <form onSubmit={e => {
+        e.preventDefault();
+        axios.post("http://localhost:3000/PropertiesForSale",
+          { Type, Price, Bedrooms, Bathrooms, Garden, Address, Postcode })
+          .then(response => {
+            setType("");
+            setPrice("");
+            setBedrooms("");
+            setBathrooms("");
+            setGarden("");
+            setAddress("");
+            setPostcode("");
+            
+          })
+          .catch(err => console.error(err))
+      }}>
+
+
+
         <label htmlFor="ty" >Type</label>
         <input id="ty" type="text"></input>
         <label htmlFor="pr" >Price</label>
