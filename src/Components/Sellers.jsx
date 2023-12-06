@@ -27,16 +27,17 @@ function Sellers() {
           .catch(err => console.error(err))
       }}>
 
-        <label htmlFor="fne" >First Name</label>
-        <input id="fne" type="text"></input>
-        <label htmlFor="lne" >Last Name</label>
-        <input id="lne" type="text"></input>
-        <label htmlFor="add" >Address</label>
-        <input id="add" type="text"></input>
-        <label htmlFor="pce">Postcode</label>
-        <input id="pce" type="text"></input>
-        <label htmlFor="pnr" >Phone Number</label>
-        <input id="pnr" type="tel"></input>
+
+<label htmlFor="fn" >First Name</label>
+        <input value={FirstName}onChange={(e)=>setFirstName(e.target.value)} id="fn" type="text"></input>
+        <label htmlFor="ln" >Last Name</label>
+        <input value={LastName}onChange={(e)=>setLastName(e.target.value)}id="ln" type="text"></input>
+        <label htmlFor="ad" >Address</label>
+        <input value={Address}onChange={(e)=>setAddress(e.target.value)}id="ad" type="text"></input>
+        <label htmlFor="pc">Postcode</label>
+        <input value={Postcode}onChange={(e)=>setPostcode(e.target.value)}id="pc" type="text"></input>
+        <label htmlFor="pn" >Phone Number</label>
+        <input value={PhoneNumber}onChange={(e)=>setPhoneNumber(e.target.value)}id="pn" type="tel"></input>
         <br />
         <button type="submit">Submit</button>
         </form>

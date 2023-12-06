@@ -7,6 +7,14 @@
       "Address": "123 Real Street",
       "Postcode": "A1 1AA",
       "Phone Number": "07777777777"
+    },
+    {
+      "FirstName": "agus",
+      "LastName": "tina",
+      "Address": "123 fake street",
+      "Postcode": "eh1 1aq",
+      "PhoneNumber": "0777777777",
+      "id": 2
     }
   ],
   "Buyers": [
@@ -25,6 +33,30 @@
       "Postcode": "",
       "PhoneNumber": "",
       "id": 2
+    },
+    {
+      "FirstName": "",
+      "LastName": "",
+      "Address": "",
+      "Postcode": "",
+      "PhoneNumber": "",
+      "id": 3
+    },
+    {
+      "FirstName": "",
+      "LastName": "",
+      "Address": "",
+      "Postcode": "",
+      "PhoneNumber": "",
+      "id": 4
+    },
+    {
+      "FirstName": "Poca",
+      "LastName": "Hontas",
+      "Address": "123 address",
+      "Postcode": "eh1 1aq",
+      "PhoneNumber": "0777777777",
+      "id": 5
     }
   ],
   "PropertiesForSale": [
@@ -37,6 +69,16 @@
       "Garden": "",
       "Address": "",
       "Postcode": ""
+    },
+    {
+      "Type": "flat",
+      "Price": "1000",
+      "Bedrooms": "1",
+      "Bathrooms": "1",
+      "Garden": "0",
+      "Address": "123 address",
+      "Postcode": "eh1 1aq",
+      "id": 2
     }
   ],
   "PropertiesToLet": [
@@ -59,6 +101,16 @@
       "Address": "",
       "Postcode": "",
       "id": 2
+    },
+    {
+      "Type": "flat",
+      "Rent": "50000",
+      "Bedrooms": "1",
+      "Bathrooms": "1",
+      "Garden": "1",
+      "Address": "123 address",
+      "Postcode": "eh1 1aq",
+      "id": 3
     }
   ]
 }

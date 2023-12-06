@@ -5,6 +5,11 @@ import Buyers from "./Components/Buyers";
 import PropertiesForSale from "./Components/PropertiesForSale";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from "./Components/Home";
+import BuyersPT from "./Components/BuyersPT";
+import SelletsPT from "./Components/SellersPT";
+import PropertiesToLetPT from "./Components/PropertiesToLetPT";
+import PropertiesForSalePT from "./Components/PropertiesForSalePT";
+
 
 function App() {
   return (
