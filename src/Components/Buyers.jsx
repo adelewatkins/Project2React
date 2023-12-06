@@ -27,15 +27,15 @@ function Buyers() {
       }}>
 
         <label htmlFor="fn" >First Name</label>
-        <input id="fn" type="text"></input>
+        <input value={FirstName}onChange={(e)=>setFirstName(e.target.value)} id="fn" type="text"></input>
         <label htmlFor="ln" >Last Name</label>
-        <input id="ln" type="text"></input>
+        <input value={LastName}onChange={(e)=>setLastName(e.target.value)}id="ln" type="text"></input>
         <label htmlFor="ad" >Address</label>
-        <input id="ad" type="text"></input>
+        <input value={Address}onChange={(e)=>setAddress(e.target.value)}id="ad" type="text"></input>
         <label htmlFor="pc">Postcode</label>
-        <input id="pc" type="text"></input>
+        <input value={Postcode}onChange={(e)=>setPostcode(e.target.value)}id="pc" type="text"></input>
         <label htmlFor="pn" >Phone Number</label>
-        <input id="pn" type="tel"></input>
+        <input value={PhoneNumber}onChange={(e)=>setPhoneNumber(e.target.value)}id="pn" type="tel"></input>
         <br />
         <button type="submit">Submit</button>
 

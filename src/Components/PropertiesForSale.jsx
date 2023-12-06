@@ -36,19 +36,19 @@ function PropertiesForSale() {
 
 
         <label htmlFor="ty" >Type</label>
-        <input id="ty" type="text"></input>
-        <label htmlFor="pr" >Price</label>
-        <input id="pr" type="£"></input>
+        <input value={Type}onChange={(e)=>setType(e.target.value)} id="ty" type="text"></input>
+        <label htmlFor="pr" >Price £</label>
+        <input value={Price}onChange={(e)=>setPrice(e.target.value)} id="pr" type="£"></input>
         <label htmlFor="bd" >Bedrooms</label>
-        <input id="bd" type="number" min={0}></input>
+        <input value={Bedrooms}onChange={(e)=>setBedrooms(e.target.value)} id="bd" type="number" min={0}></input>
         <label htmlFor="bt">Bathrooms</label>
-        <input id="bt" type="number" min={0}></input>
+        <input value={Bathrooms}onChange={(e)=>setBathrooms(e.target.value)} id="bt" type="number" min={0}></input>
         <label htmlFor="gn" >Garden</label>
-        <input id="gn" type="text"></input>
+        <input value={Garden}onChange={(e)=>setGarden(e.target.value)} id="gn" type="text"></input>
         <label htmlFor="ad" >Address</label>
-        <input id="ad" type="text"></input>
+        <input value={Address}onChange={(e)=>setAddress(e.target.value)}id="ad" type="text"></input>
         <label htmlFor="pc" >Postcode</label>
-        <input id="pc" type="text"></input>
+        <input value={Postcode}onChange={(e)=>setPostcode(e.target.value)} id="pc" type="text"></input>
         <br />
         <button type="submit">Submit</button>
 
