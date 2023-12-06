@@ -19,7 +19,7 @@ PropertiesToLetPT.propTypes = {
     Rent: PropTypes.number.isRequired,
     Bedrooms: PropTypes.number.isRequired,
     Bathrooms: PropTypes.number.isRequired,
-    Garden: PropTypes.string.isRequired,
+    Garden: PropTypes.bool.isRequired,
     Address: PropTypes.string.isRequired,
     Postcode: PropTypes.string.isRequired,
 }

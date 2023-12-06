@@ -115,6 +115,36 @@
       "Address": "123 cold street",
       "Postcode": "Co4 2us",
       "id": 4
+    },
+    {
+      "Type": "Terrace",
+      "Price": "12",
+      "Bedrooms": "2",
+      "Bathrooms": "3",
+      "Garden": "",
+      "Address": "",
+      "Postcode": "",
+      "id": 5
+    },
+    {
+      "Type": "",
+      "Price": "",
+      "Bedrooms": "",
+      "Bathrooms": "",
+      "Garden": "",
+      "Address": "",
+      "Postcode": "",
+      "id": 6
+    },
+    {
+      "Type": "",
+      "Price": "",
+      "Bedrooms": "",
+      "Bathrooms": "",
+      "Garden": "",
+      "Address": "",
+      "Postcode": "",
+      "id": 7
     }
   ],
   "PropertiesToLet": [
@@ -147,6 +177,96 @@
       "Address": "123 address",
       "Postcode": "eh1 1aq",
       "id": 3
+    },
+    {
+      "Type": "Detached",
+      "Rent": "",
+      "Bedrooms": "",
+      "Bathrooms": "",
+      "Garden": "",
+      "Address": "",
+      "Postcode": "",
+      "id": 4
+    },
+    {
+      "Type": "",
+      "Rent": "",
+      "Bedrooms": "",
+      "Bathrooms": "",
+      "Garden": "",
+      "Address": "",
+      "Postcode": "",
+      "id": 5
+    },
+    {
+      "Type": "",
+      "Rent": "100",
+      "Bedrooms": "2",
+      "Bathrooms": "2",
+      "Garden": "",
+      "Address": "123 hope",
+      "Postcode": "aa11aa",
+      "id": 6
+    },
+    {
+      "Type": "",
+      "Rent": "",
+      "Bedrooms": "",
+      "Bathrooms": "",
+      "Garden": "",
+      "Address": "",
+      "Postcode": "",
+      "id": 7
+    },
+    {
+      "Type": "",
+      "Rent": "",
+      "Bedrooms": "",
+      "Bathrooms": "",
+      "Garden": "",
+      "Address": "",
+      "Postcode": "",
+      "id": 8
+    },
+    {
+      "Type": "",
+      "Rent": "",
+      "Bedrooms": "",
+      "Bathrooms": "",
+      "Garden": "",
+      "Address": "",
+      "Postcode": "",
+      "id": 9
+    },
+    {
+      "Type": "",
+      "Rent": "",
+      "Bedrooms": "",
+      "Bathrooms": "",
+      "Garden": "",
+      "Address": "",
+      "Postcode": "",
+      "id": 10
+    },
+    {
+      "Type": "",
+      "Rent": "",
+      "Bedrooms": "",
+      "Bathrooms": "",
+      "Garden": "",
+      "Address": "",
+      "Postcode": "",
+      "id": 11
+    },
+    {
+      "Type": "Semi-Detached",
+      "Rent": "12344",
+      "Bedrooms": "2",
+      "Bathrooms": "2",
+      "Garden": "",
+      "Address": "1234 street",
+      "Postcode": "bb1 1bb",
+      "id": 12
     }
   ]
 }
