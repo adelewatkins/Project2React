@@ -4,7 +4,7 @@ function PropertiesForSalePT(props) {
     return (
         <div>
             <p> {props.Type}</p>
-            <p>{props.Price}</p>
+            <p> {props.Price}</p>
             <p> {props.Bedrooms}</p>
             <p> {props.Bathrooms}</p>
             <p> {props.Garden}</p>

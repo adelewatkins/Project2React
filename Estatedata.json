@@ -15,6 +15,22 @@
       "Postcode": "eh1 1aq",
       "PhoneNumber": "0777777777",
       "id": 2
+    },
+    {
+      "FirstName": "Seller",
+      "LastName": "MrSelly",
+      "Address": "19 Seller Street",
+      "Postcode": "M1 1AQ",
+      "PhoneNumber": "11111111",
+      "id": 3
+    },
+    {
+      "FirstName": "Michael",
+      "LastName": "Parker",
+      "Address": "31 Road",
+      "Postcode": "gl1 8bl",
+      "PhoneNumber": "07888854421",
+      "id": 4
     }
   ],
   "Buyers": [

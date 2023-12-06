@@ -4,12 +4,10 @@ import Sellers from './Sellers';
 function SellersPT(props) {
     return (
         <div>
-            <h4>{props.FirstName}</h4>
-            <h4>{props.LastName}</h4>
+            <h4>{props.FirstName} {props.LastName}</h4>
             <p>{props.Address}</p>
             <p>{props.Postcode}</p>
             <p>{props.PhoneNumber}</p>
-
         </div>
     );
 }
