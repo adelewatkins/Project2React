@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import GetLet from "./GetLet";
 
 function PropertiesToLet() {
   const [Type, setType] = useState("");
@@ -52,6 +53,9 @@ function PropertiesToLet() {
         <button type="submit">Submit</button>
 
     </form>
+    <div>
+      <GetLet />
+    </div>
 
     <br />
 

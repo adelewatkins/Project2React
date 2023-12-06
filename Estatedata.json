@@ -95,6 +95,26 @@
       "Address": "123 address",
       "Postcode": "eh1 1aq",
       "id": 2
+    },
+    {
+      "Type": "",
+      "Price": "",
+      "Bedrooms": "",
+      "Bathrooms": "",
+      "Garden": "",
+      "Address": "",
+      "Postcode": "",
+      "id": 3
+    },
+    {
+      "Type": "semi",
+      "Price": "150,000",
+      "Bedrooms": "3",
+      "Bathrooms": "1",
+      "Garden": "yes",
+      "Address": "123 cold street",
+      "Postcode": "Co4 2us",
+      "id": 4
     }
   ],
   "PropertiesToLet": [

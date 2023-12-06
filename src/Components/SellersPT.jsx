@@ -16,7 +16,7 @@ SellersPT.propTypes = {
     LastName: PropTypes.string.isRequired,
     Address: PropTypes.string.isRequired,
     Postcode: PropTypes.string.isRequired,
-    PhoneNumber: PropTypes.number.isRequired
+    PhoneNumber: PropTypes.number.isRequired,
 
 }
 
