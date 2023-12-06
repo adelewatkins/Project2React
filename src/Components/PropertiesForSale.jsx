@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import GetSale from "./GetSale";
 
 function PropertiesForSale() {
   const [Type, setType] = useState("");
@@ -53,6 +54,9 @@ function PropertiesForSale() {
         <button type="submit">Submit</button>
 
       </form>
+      <div>
+        <GetSale />
+      </div>
 
       <br />
 
