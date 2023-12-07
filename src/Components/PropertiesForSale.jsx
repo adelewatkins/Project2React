@@ -34,10 +34,10 @@ function PropertiesForSale() {
           .catch(err => console.error(err))
       }}>
 
-
+{/* <select value={Type} onChange={(e) => setType(e.target.value)} id="ty" type="text"><option value="semi">Semi</option><option value="semi">detached</option><option value="semi">terrace</option></select> */}
 
         <label htmlFor="ty" >Type</label>
-        <input value={Type}onChange={(e)=>setType(e.target.value)} id="ty" type="text"></input>
+        <select value={Type}onChange={(e)=>setType(e.target.value)} id="ty" type="text"><option value="Select Type">Select Type</option><option value="Semi-Detached">Semi-Detached</option><option value="Detached">Detached</option><option value="Terrace">Terrace</option><option value="Flat">Flat</option></select>
         <label htmlFor="pr" >Price £</label>
         <input value={Price}onChange={(e)=>setPrice(e.target.value)} id="pr" type="£"></input>
         <label htmlFor="bd" >Bedrooms</label>
@@ -45,7 +45,7 @@ function PropertiesForSale() {
         <label htmlFor="bt">Bathrooms</label>
         <input value={Bathrooms}onChange={(e)=>setBathrooms(e.target.value)} id="bt" type="number" min={0}></input>
         <label htmlFor="gn" >Garden</label>
-        <input value={Garden}onChange={(e)=>setGarden(e.target.value)} id="gn" type="text"></input>
+        <select value={Garden} onChange={(e) => setGarden(e.target.value)} id="gn" type="text"><option value="Select">Select</option><option value="Yes">Yes</option><option value="No">No</option></select>
         <label htmlFor="ad" >Address</label>
         <input value={Address}onChange={(e)=>setAddress(e.target.value)}id="ad" type="text"></input>
         <label htmlFor="pc" >Postcode</label>
