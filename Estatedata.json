@@ -145,6 +145,16 @@
       "Address": "",
       "Postcode": "",
       "id": 7
+    },
+    {
+      "Type": "Detached",
+      "Price": "567000",
+      "Bedrooms": "4",
+      "Bathrooms": "3",
+      "Garden": "No",
+      "Address": "ABC STREET",
+      "Postcode": "aa11aa",
+      "id": 8
     }
   ],
   "PropertiesToLet": [
@@ -267,6 +277,16 @@
       "Address": "1234 street",
       "Postcode": "bb1 1bb",
       "id": 12
+    },
+    {
+      "Type": "Semi-Detached",
+      "Rent": "500",
+      "Bedrooms": "1",
+      "Bathrooms": "3",
+      "Garden": "Yes",
+      "Address": "ABC STREET",
+      "Postcode": "aa11aa",
+      "id": 13
     }
   ]
 }

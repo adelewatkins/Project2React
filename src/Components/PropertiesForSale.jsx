@@ -45,7 +45,7 @@ function PropertiesForSale() {
         <label htmlFor="bt">Bathrooms</label>
         <input value={Bathrooms}onChange={(e)=>setBathrooms(e.target.value)} id="bt" type="number" min={0}></input>
         <label htmlFor="gn" >Garden</label>
-        <input value={Garden}onChange={(e)=>setGarden(e.target.value)} id="gn" type="checkbox"></input>
+        <select value={Garden} onChange={(e) => setGarden(e.target.value)} id="gn" type="text"><option value="Select">Select</option><option value="Yes">Yes</option><option value="No">No</option></select>
         <label htmlFor="ad" >Address</label>
         <input value={Address}onChange={(e)=>setAddress(e.target.value)}id="ad" type="text"></input>
         <label htmlFor="pc" >Postcode</label>
