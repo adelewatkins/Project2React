@@ -75,6 +75,7 @@ function Buyers() {
       <div>
         <GetBuyers />
       </div>
+      
     </div>
   );
 }

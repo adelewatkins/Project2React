@@ -20,7 +20,7 @@ function PropertiesForSale() {
       <form onSubmit={e => {
         e.preventDefault();
         axios.post("http://localhost:3000/PropertiesForSale",
-          { Type, Price, Bedrooms, Bathrooms, Garden, Address, Postcode })
+          { Type, Price:parseInt (Price), Bedrooms:parseInt (Bedrooms), Bathrooms:parseInt(Bathrooms), Garden:(Garden=="Yes"), Address, Postcode })
           .then(response => {
             setType("");
             setPrice("");

@@ -77,216 +77,76 @@
   ],
   "PropertiesForSale": [
     {
-      "id": 1,
-      "Type": "",
-      "Price": "",
-      "Bedrooms": "",
-      "Bathrooms": "",
-      "Garden": "",
-      "Address": "",
-      "Postcode": ""
+      "Type": "Semi",
+      "Price": 140000,
+      "Bedrooms": 2,
+      "Bathrooms": 1,
+      "Garden": "Yes",
+      "Address": "123 Address Street",
+      "Postcode": "AB1 C23",
+      "id": 1
     },
     {
-      "Type": "flat",
-      "Price": "1000",
-      "Bedrooms": "1",
-      "Bathrooms": "1",
-      "Garden": "0",
-      "Address": "123 address",
-      "Postcode": "eh1 1aq",
+      "Type": "Flat",
+      "Price": 10000,
+      "Bedrooms": 1,
+      "Bathrooms": 3,
+      "Garden": "No",
+      "Address": "456 Address Street",
+      "Postcode": "AB2 C45",
       "id": 2
     },
     {
-      "Type": "",
-      "Price": "",
-      "Bedrooms": "",
-      "Bathrooms": "",
-      "Garden": "",
-      "Address": "",
-      "Postcode": "",
+      "Type": "Terrace",
+      "Price": 123123,
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "Yes",
+      "Address": "123 sakdnans",
+      "Postcode": "eh1 1aq",
       "id": 3
     },
     {
-      "Type": "semi",
-      "Price": "150,000",
-      "Bedrooms": "3",
-      "Bathrooms": "1",
-      "Garden": "yes",
-      "Address": "123 cold street",
-      "Postcode": "Co4 2us",
+      "Type": "Flat",
+      "Price": 50000,
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "No",
+      "Address": "a121",
+      "Postcode": "eh1 1aq",
       "id": 4
     },
     {
       "Type": "Terrace",
-      "Price": "12",
-      "Bedrooms": "2",
-      "Bathrooms": "3",
-      "Garden": "",
-      "Address": "",
-      "Postcode": "",
-      "id": 5
-    },
-    {
-      "Type": "",
-      "Price": "",
-      "Bedrooms": "",
-      "Bathrooms": "",
-      "Garden": "",
-      "Address": "",
-      "Postcode": "",
-      "id": 6
-    },
-    {
-      "Type": "",
-      "Price": "",
-      "Bedrooms": "",
-      "Bathrooms": "",
-      "Garden": "",
-      "Address": "",
-      "Postcode": "",
-      "id": 7
-    },
-    {
-      "Type": "Detached",
-      "Price": "567000",
-      "Bedrooms": "4",
-      "Bathrooms": "3",
+      "Price": 50000,
+      "Bedrooms": 1,
+      "Bathrooms": 1,
       "Garden": "No",
-      "Address": "ABC STREET",
-      "Postcode": "aa11aa",
-      "id": 8
+      "Address": "123 address",
+      "Postcode": "eh1 1aq",
+      "id": 5
     }
   ],
   "PropertiesToLet": [
     {
-      "id": 1,
-      "Type": "",
-      "Rent": "",
-      "Bedrooms": "",
-      "Bathrooms": "",
-      "Garden": "",
-      "Address": "",
-      "Postcode": ""
-    },
-    {
-      "Type": "",
-      "Rent": "",
-      "Bedrooms": "",
-      "Bathrooms": "",
-      "Garden": "",
-      "Address": "",
-      "Postcode": "",
-      "id": 2
-    },
-    {
-      "Type": "flat",
-      "Rent": "50000",
-      "Bedrooms": "1",
-      "Bathrooms": "1",
-      "Garden": "1",
+      "Type": "Semi-Detached",
+      "Rent": 100,
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "Yes",
       "Address": "123 address",
       "Postcode": "eh1 1aq",
-      "id": 3
+      "id": 1
     },
     {
       "Type": "Detached",
-      "Rent": "",
-      "Bedrooms": "",
-      "Bathrooms": "",
-      "Garden": "",
-      "Address": "",
-      "Postcode": "",
-      "id": 4
-    },
-    {
-      "Type": "",
-      "Rent": "",
-      "Bedrooms": "",
-      "Bathrooms": "",
-      "Garden": "",
-      "Address": "",
-      "Postcode": "",
-      "id": 5
-    },
-    {
-      "Type": "",
-      "Rent": "100",
-      "Bedrooms": "2",
-      "Bathrooms": "2",
-      "Garden": "",
-      "Address": "123 hope",
-      "Postcode": "aa11aa",
-      "id": 6
-    },
-    {
-      "Type": "",
-      "Rent": "",
-      "Bedrooms": "",
-      "Bathrooms": "",
-      "Garden": "",
-      "Address": "",
-      "Postcode": "",
-      "id": 7
-    },
-    {
-      "Type": "",
-      "Rent": "",
-      "Bedrooms": "",
-      "Bathrooms": "",
-      "Garden": "",
-      "Address": "",
-      "Postcode": "",
-      "id": 8
-    },
-    {
-      "Type": "",
-      "Rent": "",
-      "Bedrooms": "",
-      "Bathrooms": "",
-      "Garden": "",
-      "Address": "",
-      "Postcode": "",
-      "id": 9
-    },
-    {
-      "Type": "",
-      "Rent": "",
-      "Bedrooms": "",
-      "Bathrooms": "",
-      "Garden": "",
-      "Address": "",
-      "Postcode": "",
-      "id": 10
-    },
-    {
-      "Type": "",
-      "Rent": "",
-      "Bedrooms": "",
-      "Bathrooms": "",
-      "Garden": "",
-      "Address": "",
-      "Postcode": "",
-      "id": 11
-    },
-    {
-      "Type": "Semi-Detached",
-      "Rent": "12344",
-      "Bedrooms": "2",
-      "Bathrooms": "2",
-      "Garden": "",
-      "Address": "1234 street",
-      "Postcode": "bb1 1bb",
-      "id": 12
-    },
-    {
-      "Type": "Semi-Detached",
-      "Rent": "500",
-      "Bedrooms": "1",
-      "Bathrooms": "3",
-      "Garden": "Yes",
-      "Address": "ABC STREET",
-      "Postcode": "aa11aa",
-      "id": 13
+      "Rent": 500,
+      "Bedrooms": 2,
+      "Bathrooms": 2,
+      "Garden": "No",
+      "Address": "123 sakdnans",
+      "Postcode": "ab1 2aq",
+      "id": 2
     }
   ]
 }
