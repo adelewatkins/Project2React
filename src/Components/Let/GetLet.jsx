@@ -11,7 +11,6 @@ function GetLet() {
   const [filtergds, setFiltergds] = useState("");
   const [filterads, setFilterads] = useState("");
   const [filterpcd, setFilterpcd] = useState("");
-//   const [filter, setFilter] = useState("");
 
   useEffect(function () {
     axios
@@ -33,7 +32,7 @@ function GetLet() {
     if (filtergds && plet.Garden !== filtergds) continue;
     if (filterads && plet.Address === filterads) continue;
     if (filterpcd && plet.Postcode === filterpcd) continue;
-    // if(filter.length === 0 || )
+
     letArray.push(
       <PropertiesToLetPT
         key={plet.Type + " " + plet.Rent}
@@ -70,7 +69,7 @@ function GetLet() {
 <label htmlFor="pc" >Postcode</label>
 <input value={filterpcd} onChange={(event) => setFilterpcd(event.target.value)} id="pc" type="text"></input>
 <br />
-{/* <button type="Search">Search</button> */}
+<button type="search" className="btn btn-danger btn-sm"> Clear </button>
 </form>
     </div>
   );

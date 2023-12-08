@@ -13,6 +13,7 @@ function PropertiesForSale() {
 
 
   return (
+    
     <div>
 
       <h1>Properties For Sale</h1>
@@ -51,7 +52,9 @@ function PropertiesForSale() {
         <label htmlFor="pc" >Postcode</label>
         <input value={Postcode}onChange={(e)=>setPostcode(e.target.value)} id="pc" type="text"></input>
         <br />
-        <button type="submit">Submit</button>
+        <div >
+        <button type="submit" className="btn btn-success btn-sm"> Add Property </button>
+        </div>
 
       </form>
       <div>

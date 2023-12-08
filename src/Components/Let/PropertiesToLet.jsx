@@ -51,7 +51,7 @@ function PropertiesToLet() {
         <label htmlFor="pc" >Postcode</label>
         <input value={Postcode} onChange={(e) => setPostcode(e.target.value)} id="pc" type="text"></input>
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit" className="btn btn-success btn-sm"> Add Property </button>
 
       </form>
       <div>
