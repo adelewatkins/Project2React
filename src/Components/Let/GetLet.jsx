@@ -69,7 +69,7 @@ function GetLet() {
 <label htmlFor="pc" >Postcode</label>
 <input value={filterpcd} onChange={(event) => setFilterpcd(event.target.value)} id="pc" type="text"></input>
 <br />
-<button type="search" class="btn btn-danger btn-sm"> Clear </button>
+<button type="search" className="btn btn-danger btn-sm"> Clear </button>
 </form>
     </div>
   );

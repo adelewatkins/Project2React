@@ -52,7 +52,7 @@ function PropertiesForSale() {
         <input value={Postcode}onChange={(e)=>setPostcode(e.target.value)} id="pc" type="text"></input>
         <br />
         <div >
-        <button type="submit" class="btn btn-success btn-sm"> Add Property </button>
+        <button type="submit" className="btn btn-success btn-sm"> Add Property </button>
         </div>
 
       </form>
