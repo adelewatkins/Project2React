@@ -1,14 +1,6 @@
 {
   "Sellers": [
-    {
-      "id": 1,
-      "First Name": "John",
-      "Last Name": "Smith",
-      "Address": "123 Real Street",
-      "Postcode": "A1 1AA",
-      "Phone Number": "07777777777"
-    },
-    {
+  {
       "FirstName": "agus",
       "LastName": "tina",
       "Address": "123 fake street",
@@ -34,14 +26,7 @@
     }
   ],
   "Buyers": [
-    {
-      "id": 1,
-      "First Name": "Mike",
-      "Last Name": "Smith",
-      "Address": "122 Real Street",
-      "Postcode": "A1 1AA",
-      "Phone Number": "07777777777"
-    },
+
     {
       "FirstName": "Poca",
       "LastName": "Hontas",
@@ -101,7 +86,7 @@
       "Address": "123 address",
       "Postcode": "eh1 1aq",
       "id": 5
-    },
+    }
 
   ],
   "PropertiesToLet": [

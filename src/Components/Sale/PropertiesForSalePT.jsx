@@ -3,6 +3,8 @@ import PropertiesForSale from './PropertiesForSale';
 
 function PropertiesForSalePT(props) {
     return (
+
+        
         <div>
             <p> {props.Type}</p>
             <p> {props.Price}</p>
@@ -25,3 +27,5 @@ PropertiesForSalePT.propTypes = {
     Postcode: PropTypes.string.isRequired,
 }
 export default PropertiesForSalePT;
+
+

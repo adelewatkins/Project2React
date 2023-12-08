@@ -13,6 +13,7 @@ function PropertiesForSale() {
 
 
   return (
+    
     <div>
 
       <h1>Properties For Sale</h1>
