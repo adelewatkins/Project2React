@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.container{
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: antiquewhite;
+  border-radius: 5px;
+  padding: 10px 20px 30px;
+  margin-top: 50px;
+}

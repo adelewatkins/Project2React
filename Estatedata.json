@@ -125,6 +125,36 @@
       "Address": "123 address",
       "Postcode": "eh1 1aq",
       "id": 5
+    },
+    {
+      "Type": "",
+      "Price": null,
+      "Bedrooms": null,
+      "Bathrooms": null,
+      "Garden": false,
+      "Address": "",
+      "Postcode": "",
+      "id": 6
+    },
+    {
+      "Type": "",
+      "Price": null,
+      "Bedrooms": null,
+      "Bathrooms": null,
+      "Garden": false,
+      "Address": "",
+      "Postcode": "",
+      "id": 7
+    },
+    {
+      "Type": "",
+      "Price": null,
+      "Bedrooms": null,
+      "Bathrooms": null,
+      "Garden": false,
+      "Address": "",
+      "Postcode": "",
+      "id": 8
     }
   ],
   "PropertiesToLet": [

@@ -79,7 +79,7 @@ function GetSale() {
         <label htmlFor="pc" >Postcode</label>
         <input value={filterpc} onChange={(event) => setFilterpc(event.target.value)} id="pc" type="text"></input>
         <br />
-        {/* <button type="Search">Search</button> */}
+        <button type="search" class="btn btn-danger btn-sm"> Clear </button>
       </form>
     </div>
   );
