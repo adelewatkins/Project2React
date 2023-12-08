@@ -13,48 +13,47 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 
 
-function App  ()  {
+function App() {
   return (
     <header>
       <Router>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/"><img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdWK7j0tDuQySJtiFoaacxBtjj8uIf-LSU9Q&usqp=CAU" alt= "Logo" width="80%px" height="80%px" class= "d-inline-block align-text-middle"/>  </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/Buyers">Buyers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/Sellers">Sellers</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button onClick" data-bs-toggle="dropdown" aria-expanded="false">
-            Properties
-            </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/PropertiesToLet">To Let</a>
-            <a class="dropdown-item" href="/PropertiesForSale">For Sale</a>
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdWK7j0tDuQySJtiFoaacxBtjj8uIf-LSU9Q&usqp=CAU" alt="Logo" width="50%px" height="50%px" class="d-inline-block align-text-middle" />  </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Buyers">Buyers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Sellers">Sellers</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button onClick" data-bs-toggle="dropdown" aria-expanded="false">
+                    Properties
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/PropertiesToLet">To Let</a>
+                    <a class="dropdown-item" href="/PropertiesForSale">For Sale</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-        </li> 
-        <li class="nav-item dropdown">        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">          Dropdown        </a>        <div class="dropdown-menu" aria-labelledby="navbarDropdown">          <a class="dropdown-item" href="#">Action</a>          <a class="dropdown-item" href="#">Another action</a>          <div class="dropdown-divider"></div>          <a class="dropdown-item" href="#">Something else here</a>        </div>
-      </li>     
-      </ul>
-    </div>
-  </div>
+
+
+
 </nav>
-        
-        
-        
-        
-        
-        
+
+
+
+
         {/* class="navbar navbar-expand-lg bg-body-tertiary" >
           <div class= "container-fluid" >
             <a class="navbar-brand" href="/"> </a>
