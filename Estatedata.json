@@ -33,55 +33,8 @@
       "Postcode": "eh1 1aq",
       "PhoneNumber": "0777777777",
       "id": 5
-    },
-    {
-      "FirstName": "Otto",
-      "LastName": "Octavius",
-      "Address": "139 NY",
-      "Postcode": "NY1 122",
-      "PhoneNumber": "",
-      "id": 6
-    },
-    {
-      "FirstName": "Otto",
-      "LastName": "Octavius",
-      "Address": "139 NY",
-      "Postcode": "NY1 122",
-      "PhoneNumber": "",
-      "id": 7
-    },
-    {
-      "FirstName": "Otto",
-      "LastName": "Octavius",
-      "Address": "139 NY",
-      "Postcode": "NY1 122",
-      "PhoneNumber": "",
-      "id": 8
-    },
-    {
-      "FirstName": "Otto",
-      "LastName": "Octavius",
-      "Address": "139 NY",
-      "Postcode": "NY1 122",
-      "PhoneNumber": "",
-      "id": 9
-    },
-    {
-      "FirstName": "Otto",
-      "LastName": "Octavius",
-      "Address": "139 NY",
-      "Postcode": "NY1 122",
-      "PhoneNumber": "",
-      "id": 10
-    },
-    {
-      "FirstName": "Michael",
-      "LastName": "Parker",
-      "Address": "31 Road",
-      "Postcode": "gl1 8bl",
-      "PhoneNumber": "07888854421",
-      "id": 11
     }
+    
   ],
   "PropertiesForSale": [
     {
@@ -113,87 +66,8 @@
       "Address": "123 sakdnans",
       "Postcode": "eh1 1aq",
       "id": 3
-    },
-    {
-      "Type": "Flat",
-      "Price": 50000,
-      "Bedrooms": 1,
-      "Bathrooms": 1,
-      "Garden": "No",
-      "Address": "a121",
-      "Postcode": "eh1 1aq",
-      "id": 4
-    },
-    {
-      "Type": "Terrace",
-      "Price": 50000,
-      "Bedrooms": 1,
-      "Bathrooms": 1,
-      "Garden": "No",
-      "Address": "123 address",
-      "Postcode": "eh1 1aq",
-      "id": 5
-    },
-    {
-      "Type": "Semi-Detached",
-      "Price": 2222,
-      "Bedrooms": 3,
-      "Bathrooms": 3,
-      "Garden": true,
-      "Address": "222",
-      "Postcode": "33",
-      "id": 6
-    },
-    {
-      "Type": "",
-      "Price": 3112,
-      "Bedrooms": 33,
-      "Bathrooms": 22,
-      "Garden": true,
-      "Address": "33",
-      "Postcode": "22",
-      "id": 7
-    },
-    {
-      "Type": "Semi-Detached",
-      "Price": null,
-      "Bedrooms": 11,
-      "Bathrooms": 11,
-      "Garden": false,
-      "Address": "222",
-      "Postcode": "33",
-      "id": 8
-    },
-    {
-      "Type": "Semi-Detached",
-      "Price": 11,
-      "Bedrooms": 11,
-      "Bathrooms": 1,
-      "Garden": false,
-      "Address": "1",
-      "Postcode": "1",
-      "id": 9
-    },
-    {
-      "Type": "Semi-Detached",
-      "Price": 11,
-      "Bedrooms": 11,
-      "Bathrooms": 1,
-      "Garden": true,
-      "Address": "1",
-      "Postcode": "1",
-      "id": 10
-    },
-    {
-      "Type": "Semi-Detached",
-      "Price": 11,
-      "Bedrooms": 11,
-      "Bathrooms": 7,
-      "Garden": true,
-      "Address": "1",
-      "Postcode": "1",
-      "id": 11
     }
+    
   ],
   "PropertiesToLet": [
     {

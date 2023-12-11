@@ -13,7 +13,7 @@ function SellersPT(props) {
             <img
               src="https://www.shutterstock.com/image-vector/vector-flat-illustration-grayscale-avatar-600nw-2264922221.jpg"
               alt="avatar"
-              width="30%"
+              className="card-image"
             />
             {props.FirstName} {props.LastName}
           </h4>

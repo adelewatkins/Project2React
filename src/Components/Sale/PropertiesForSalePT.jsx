@@ -10,7 +10,7 @@ function PropertiesForSalePT(props) {
         <div className="card-body card-text">
         <h4 className="card-title"></h4>
         {" "}
-                    <img src="https://cdn2-property.estateapps.co.uk/files/property/107/image/437868/437868_1347858_IMAGES_MAIN_4378681.jpg" width="330" alt="house stock" />
+                    <img src="https://cdn2-property.estateapps.co.uk/files/property/107/image/437868/437868_1347858_IMAGES_MAIN_4378681.jpg" className="card-image" alt="house stock" />
                         <p>{"Price: £" +props.Price} </p>
                         <p> {"Type:" +props.Type}</p>
                         <p> {"Bedrooms: "+props.Bedrooms}</p>

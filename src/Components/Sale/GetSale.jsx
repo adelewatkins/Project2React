@@ -62,7 +62,7 @@ function GetSale() {
     <div>
       <br></br>
       
-      <form>
+      <form className="drop-menu">
 
     <label htmlFor="ty" >Type</label>
     <input value={filterty}onChange={(event)=>setFilterty(event.target.value)} id="ty" type="text"></input>

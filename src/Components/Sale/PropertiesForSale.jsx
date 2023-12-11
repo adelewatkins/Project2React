@@ -15,8 +15,7 @@ function PropertiesForSale() {
     <div>
       <h1>Properties For Sale</h1>
 
-      <form
-        onSubmit={(e) => {
+      <form className="drop-menu"accordion         onSubmit={(e) => {
           e.preventDefault();
           axios
             .post("http://localhost:3000/PropertiesForSale", {

@@ -15,7 +15,7 @@ function PropertiesToLet() {
     <div>
       <h1>Properties To Let </h1>
 
-      <form
+      <form className="drop-menu"
         onSubmit={(e) => {
           e.preventDefault();
           axios
@@ -55,7 +55,7 @@ function PropertiesToLet() {
           <option value="Terrace">Terrace</option>
           <option value="Flat">Flat</option>
         </select>
-        <br />
+       
         <label htmlFor="pr">Rent £</label>
         <input
           value={Rent}
@@ -79,7 +79,7 @@ function PropertiesToLet() {
           type="number"
           min={0}
         ></input>
-        <br />
+        
         <label htmlFor="gn">Garden</label>
         <select
           value={Garden}
@@ -91,7 +91,7 @@ function PropertiesToLet() {
           <option value="Yes">Yes</option>
           <option value="No">No</option>
         </select>
-        <br />
+    
         <label htmlFor="ad">Address</label>
         <input
           value={Address}

@@ -52,7 +52,8 @@ function GetLet() {
 
     <div>
 
-      <form>
+        
+      <form className="drop-menu">
 
 <label htmlFor="ty" >Type</label>
 <input value={filtertyp}onChange={(event)=>setFiltertyp(event.target.value)} id="ty" type="text"></input>
