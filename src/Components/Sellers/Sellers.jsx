@@ -69,7 +69,7 @@ function Sellers() {
           type="tel"
         ></input>
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit"className="btn btn-success btn-sm">Submit</button>
       </form>
       <div>
         <GetSellers/>
