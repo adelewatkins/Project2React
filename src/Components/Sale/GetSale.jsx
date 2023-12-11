@@ -82,12 +82,13 @@ function GetSale() {
     <button type="search" className="btn btn-danger btn-sm"> Clear </button>
   </form>
       <h2> Show Properties for Sale</h2>
-      {saleArray}
-      
+      <div className="container-fluid">
+     <div className="row">{saleArray}
+     </div>
     </div>
-  );
+    </div>
+);
 }
-
 
 
 

@@ -33,35 +33,35 @@ function Sellers() {
             .catch((err) => console.error(err));
         }}
       >
-        <label htmlFor="fn">First Name</label>
+        <label htmlFor="fn">First Name &nbsp;</label>
         <input
           value={FirstName}
           onChange={(e) => setFirstName(e.target.value)}
           id="fn"
           type="text"
         ></input>
-        <label htmlFor="ln">Last Name</label>
+        <label htmlFor="ln">Last Name &nbsp;</label>
         <input
           value={LastName}
           onChange={(e) => setLastName(e.target.value)}
           id="ln"
           type="text"
         ></input>
-        <label htmlFor="ad">Address</label>
+        <label htmlFor="ad">Address &nbsp; &nbsp; &nbsp;</label>
         <input
           value={Address}
           onChange={(e) => setAddress(e.target.value)}
           id="ad"
           type="text"
         ></input>
-        <label htmlFor="pc">Postcode</label>
+        <label htmlFor="pc">Postcode &nbsp;&nbsp;&nbsp;</label>
         <input
           value={Postcode}
           onChange={(e) => setPostcode(e.target.value)}
           id="pc"
           type="text"
         ></input>
-        <label htmlFor="pn">Phone Number</label>
+        <label htmlFor="pn">PhoneNum</label>
         <input
           value={PhoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
@@ -69,10 +69,12 @@ function Sellers() {
           type="tel"
         ></input>
         <br />
-        <button type="submit"className="btn btn-success btn-sm">Submit</button>
+        <button type="submit" className="btn btn-success btn-sm">
+          Submit
+        </button>
       </form>
       <div>
-        <GetSellers/>
+        <GetSellers />
       </div>
     </div>
   );

@@ -73,10 +73,10 @@ function GetLet() {
 </form>
 
       <h2> A list of properties to let </h2>
-    
-      {letArray}
-      
+      <div className="container-fluid">
+        <div className="row">{letArray}</div>
     </div>
+    </div>  
   );
 }
 

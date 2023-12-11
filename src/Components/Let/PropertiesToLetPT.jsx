@@ -3,17 +3,11 @@ import Card from 'react-bootstrap/Card';
 
 function PropertiesToLetPT(props) {
     return (
-        
-        <div Card style={{ width: '50%' }}>
-
-       
-            <div className="row-gap-1 ">
-                <div className="card">
-                    <div className="card-body">
-                        <div className="card-text"></div>
-                        {/* <div className="row-cols-6"></div> */}
-                        <div className="card-title" d-d-inline-grid  ></div> 
-                    <img src="https://cdn2-property.estateapps.co.uk/files/property/107/image/437868/437868_1347858_IMAGES_MAIN_4378681.jpg" width={400} alt="house stock" />
+        <Card className="col-3 m-4">
+        <div className="flex">
+        <div className="card-body card-text">
+        <h4 className="card-title"></h4>
+        <img src="https://cdn2-property.estateapps.co.uk/files/property/107/image/437868/437868_1347858_IMAGES_MAIN_4378681.jpg" width="330" alt="house stock" />
                         <p>{"Rent: £" +props.Rent} </p>
                         <p> {"Type:" +props.Type}</p>
                         <p> {"Bedrooms: "+props.Bedrooms}</p>
@@ -30,8 +24,7 @@ function PropertiesToLetPT(props) {
                    
                     </div>
                     </div>
-                    </div>
-                    </div>
+                    </Card>
                     );
 }
                     PropertiesToLetPT.propTypes = {

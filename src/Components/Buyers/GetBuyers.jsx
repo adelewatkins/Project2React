@@ -32,7 +32,9 @@ function GetBuyers() {
   return (
     <div>
       <h2> A list of buyers </h2>
-      {buyerArray}
+      <div className="container-fluid">
+        <div className="row">{buyerArray}</div>
+      </div>
     </div>
   );
 }

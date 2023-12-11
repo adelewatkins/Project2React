@@ -1,17 +1,16 @@
 import PropTypes from "prop-types";
 import PropertiesForSale from './PropertiesForSale';
+import Card from "react-bootstrap/Card";
+
 
 function PropertiesForSalePT(props) {
     return (
-
-        <div className="row-gap-1 ">
-         <div Card style={{ width: '50%' }}>
-            {/* <div className="col"> */}
-                <div className="card">
-                    <div className="card-body">
-                        <div className="card-text"></div>
-                        <div className="card-title"></div> 
-                        <img src="https://cdn2-property.estateapps.co.uk/files/property/107/image/437868/437868_1347858_IMAGES_MAIN_4378681.jpg" width={400} alt="house stock" />
+        <Card className="col-3 m-4">
+        <div className="flex">
+        <div className="card-body card-text">
+        <h4 className="card-title"></h4>
+        {" "}
+                    <img src="https://cdn2-property.estateapps.co.uk/files/property/107/image/437868/437868_1347858_IMAGES_MAIN_4378681.jpg" width="330" alt="house stock" />
                         <p>{"Price: £" +props.Price} </p>
                         <p> {"Type:" +props.Type}</p>
                         <p> {"Bedrooms: "+props.Bedrooms}</p>
@@ -29,8 +28,7 @@ function PropertiesForSalePT(props) {
 
                     </div>
                     </div>
-                    </div>
-                    </div>
+                    </Card>
     );
 }
 PropertiesForSalePT.propTypes = {

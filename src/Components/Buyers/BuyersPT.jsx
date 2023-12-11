@@ -3,27 +3,24 @@ import Card from "react-bootstrap/Card";
 
 function BuyersPT(props) {
   return (
-    <div className="container">
-      <div className="row-xl">
-        <div className="col-xl"></div>
-          <div className="flex-wrap-properly"> </div>
-            <div className="card">
-              <div Card style={{ width: "18rem" }}>
-                <div className="card-body">
-                  <div className="card-text">
-                    <h4 className="card-title">
-                      {" "}
-                      {props.FirstName} {props.LastName}
-                    </h4>
-                    <p>{props.Address}</p>
-                    <p>{props.Postcode}</p>
-                    <p>{props.PhoneNumber}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <Card className="col-3 m-4">
+      <div className="flex">
+        <div className="card-body card-text">
+          <h4 className="card-title">
+            {" "}
+            <img
+              src="https://www.shutterstock.com/image-vector/vector-flat-illustration-grayscale-avatar-600nw-2264922221.jpg"
+              alt="avatar"
+              width="30%"
+            />
+            {props.FirstName} {props.LastName}
+          </h4>
+          <p>{props.Address}</p>
+          <p>{props.Postcode}</p>
+          <p>{props.PhoneNumber}</p>
         </div>
-    </div>
+      </div>
+    </Card>
   );
 }
 BuyersPT.propTypes = {

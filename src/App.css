@@ -47,11 +47,12 @@
   border-radius: 5px;
   padding: 10px 20px 30px;
   margin-top: 50px;
+  /* display: flex; */
 }
 form {
   background: rgba(39, 169, 71, 0.252);
   padding: 1.5em;
-  border-radius: 1em;
+  border-radius: 1em; width: 20%;
 }
 
 .d-flex {
