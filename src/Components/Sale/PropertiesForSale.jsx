@@ -18,6 +18,8 @@ function PropertiesForSale() {
 
       <h1>Properties For Sale</h1>
 
+      
+
       <form onSubmit={e => {
         e.preventDefault();
         axios.post("http://localhost:3000/PropertiesForSale",

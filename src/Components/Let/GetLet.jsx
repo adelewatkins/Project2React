@@ -49,9 +49,9 @@ function GetLet() {
   }
 
   return (
+
     <div>
-      <h2> A list of properties to let </h2>
-      {letArray}
+
       <form>
 
 <label htmlFor="ty" >Type</label>
@@ -71,6 +71,11 @@ function GetLet() {
 <br />
 <button type="search" className="btn btn-danger btn-sm"> Clear </button>
 </form>
+
+      <h2> A list of properties to let </h2>
+    
+      {letArray}
+      
     </div>
   );
 }

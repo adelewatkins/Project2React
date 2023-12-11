@@ -60,27 +60,30 @@ function GetSale() {
 
   return (
     <div>
-      <h2> Filter </h2>
-      {saleArray}
+      <br></br>
+      
       <form>
 
-        <label htmlFor="ty" >Type</label>
-        <input value={filterty}onChange={(event)=>setFilterty(event.target.value)} id="ty" type="text"></input>
-        <label htmlFor="pr" >Price £</label>
-        <input value={filterpr} onChange={(event) => setFilterpr(event.target.value)} id="pr" type="£"></input>
-        <label htmlFor="bd" >Min Bedrooms</label>
-        <input value={filterbd} onChange={(event) => setFilterbd(event.target.value)} id="bd" type="number" min={0}></input>
-        <label htmlFor="bt">Bathrooms</label>
-        <input value={filterbt} onChange={(event) => setFilterbt(event.target.value)} id="bt" type="number" min={0}></input>
-        <label htmlFor="gn" >Garden</label>
-        <input value={filtergd} onChange={(event) => setFiltergd(event.target.value)} id="gn" type="text"></input>
-        <label htmlFor="ad" >Address</label>
-        <input value={filterad} onChange={(event) => setFilterad(event.target.value)} id="ad" type="text"></input>
-        <label htmlFor="pc" >Postcode</label>
-        <input value={filterpc} onChange={(event) => setFilterpc(event.target.value)} id="pc" type="text"></input>
-        <br />
-        <button type="search" className="btn btn-danger btn-sm"> Clear </button>
-      </form>
+    <label htmlFor="ty" >Type</label>
+    <input value={filterty}onChange={(event)=>setFilterty(event.target.value)} id="ty" type="text"></input>
+    <label htmlFor="pr" >Price £</label>
+    <input value={filterpr} onChange={(event) => setFilterpr(event.target.value)} id="pr" type="£"></input>
+    <label htmlFor="bd" >Min Bedrooms</label>
+    <input value={filterbd} onChange={(event) => setFilterbd(event.target.value)} id="bd" type="number" min={0}></input>
+    <label htmlFor="bt">Bathrooms</label>
+    <input value={filterbt} onChange={(event) => setFilterbt(event.target.value)} id="bt" type="number" min={0}></input>
+    <label htmlFor="gn" >Garden</label>
+    <input value={filtergd} onChange={(event) => setFiltergd(event.target.value)} id="gn" type="text"></input>
+    <label htmlFor="ad" >Address</label>
+    <input value={filterad} onChange={(event) => setFilterad(event.target.value)} id="ad" type="text"></input>
+    <label htmlFor="pc" >Postcode</label>
+    <input value={filterpc} onChange={(event) => setFilterpc(event.target.value)} id="pc" type="text"></input>
+    <br />
+    <button type="search" className="btn btn-danger btn-sm"> Clear </button>
+  </form>
+      <h2> Show Properties for Sale</h2>
+      {saleArray}
+      
     </div>
   );
 }

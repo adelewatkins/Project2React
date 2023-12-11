@@ -37,7 +37,7 @@ function PropertiesToLet() {
 
 
         <label htmlFor="ty" >Type</label>
-        <select value={Type} onChange={(e) => setType(e.target.value)} id="ty" type="text"><option value="Select Type">Select Type</option><option value="Semi-Detached">Semi-Detached</option><option value="Detached">Detached</option><option value="Terrace">Terrace</option><option value="Flat">Flat</option></select>
+        <select value={Type} onChange={(e) => setType(e.target.value)} id="ty" type="text"><option value="Select Type" disabled>Select Type</option><option value="Semi-Detached">Semi-Detached</option><option value="Detached">Detached</option><option value="Terrace">Terrace</option><option value="Flat">Flat</option></select>
         <label htmlFor="pr" >Rent £</label>
         <input value={Rent} onChange={(e) => setRent(e.target.value)} id="pr" type="£"></input>
         <label htmlFor="bd" >Bedrooms</label>
@@ -54,6 +54,7 @@ function PropertiesToLet() {
         <button type="submit" className="btn btn-success btn-sm"> Add Property </button>
 
       </form>
+      <br></br>
       <div>
         <GetLet />
       </div>
