@@ -183,6 +183,16 @@
       "Address": "1",
       "Postcode": "1",
       "id": 10
+    },
+    {
+      "Type": "Semi-Detached",
+      "Price": 11,
+      "Bedrooms": 11,
+      "Bathrooms": 7,
+      "Garden": true,
+      "Address": "1",
+      "Postcode": "1",
+      "id": 11
     }
   ],
   "PropertiesToLet": [
