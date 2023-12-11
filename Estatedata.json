@@ -1,0 +1,220 @@
+{
+  "Sellers": [
+    {
+      "FirstName": "agus",
+      "LastName": "tina",
+      "Address": "123 fake street",
+      "Postcode": "eh1 1aq",
+      "PhoneNumber": "0777777777",
+      "id": 2
+    },
+    {
+      "FirstName": "Seller",
+      "LastName": "MrSelly",
+      "Address": "19 Seller Street",
+      "Postcode": "M1 1AQ",
+      "PhoneNumber": "11111111",
+      "id": 3
+    },
+    {
+      "FirstName": "Michael",
+      "LastName": "Parker",
+      "Address": "31 Road",
+      "Postcode": "gl1 8bl",
+      "PhoneNumber": "07888854421",
+      "id": 4
+    }
+  ],
+  "Buyers": [
+    {
+      "FirstName": "Poca",
+      "LastName": "Hontas",
+      "Address": "123 address",
+      "Postcode": "eh1 1aq",
+      "PhoneNumber": "0777777777",
+      "id": 5
+    },
+    {
+      "FirstName": "Otto",
+      "LastName": "Octavius",
+      "Address": "139 NY",
+      "Postcode": "NY1 122",
+      "PhoneNumber": "",
+      "id": 6
+    },
+    {
+      "FirstName": "Otto",
+      "LastName": "Octavius",
+      "Address": "139 NY",
+      "Postcode": "NY1 122",
+      "PhoneNumber": "",
+      "id": 7
+    },
+    {
+      "FirstName": "Otto",
+      "LastName": "Octavius",
+      "Address": "139 NY",
+      "Postcode": "NY1 122",
+      "PhoneNumber": "",
+      "id": 8
+    },
+    {
+      "FirstName": "Otto",
+      "LastName": "Octavius",
+      "Address": "139 NY",
+      "Postcode": "NY1 122",
+      "PhoneNumber": "",
+      "id": 9
+    },
+    {
+      "FirstName": "Otto",
+      "LastName": "Octavius",
+      "Address": "139 NY",
+      "Postcode": "NY1 122",
+      "PhoneNumber": "",
+      "id": 10
+    },
+    {
+      "FirstName": "Michael",
+      "LastName": "Parker",
+      "Address": "31 Road",
+      "Postcode": "gl1 8bl",
+      "PhoneNumber": "07888854421",
+      "id": 11
+    }
+  ],
+  "PropertiesForSale": [
+    {
+      "Type": "Semi",
+      "Price": 140000,
+      "Bedrooms": 2,
+      "Bathrooms": 1,
+      "Garden": "Yes",
+      "Address": "123 Address Street",
+      "Postcode": "AB1 C23",
+      "id": 1
+    },
+    {
+      "Type": "Flat",
+      "Price": 10000,
+      "Bedrooms": 1,
+      "Bathrooms": 3,
+      "Garden": "No",
+      "Address": "456 Address Street",
+      "Postcode": "AB2 C45",
+      "id": 2
+    },
+    {
+      "Type": "Terrace",
+      "Price": 123123,
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "Yes",
+      "Address": "123 sakdnans",
+      "Postcode": "eh1 1aq",
+      "id": 3
+    },
+    {
+      "Type": "Flat",
+      "Price": 50000,
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "No",
+      "Address": "a121",
+      "Postcode": "eh1 1aq",
+      "id": 4
+    },
+    {
+      "Type": "Terrace",
+      "Price": 50000,
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "No",
+      "Address": "123 address",
+      "Postcode": "eh1 1aq",
+      "id": 5
+    },
+    {
+      "Type": "Semi-Detached",
+      "Price": 2222,
+      "Bedrooms": 3,
+      "Bathrooms": 3,
+      "Garden": true,
+      "Address": "222",
+      "Postcode": "33",
+      "id": 6
+    },
+    {
+      "Type": "",
+      "Price": 3112,
+      "Bedrooms": 33,
+      "Bathrooms": 22,
+      "Garden": true,
+      "Address": "33",
+      "Postcode": "22",
+      "id": 7
+    },
+    {
+      "Type": "Semi-Detached",
+      "Price": null,
+      "Bedrooms": 11,
+      "Bathrooms": 11,
+      "Garden": false,
+      "Address": "222",
+      "Postcode": "33",
+      "id": 8
+    },
+    {
+      "Type": "Semi-Detached",
+      "Price": 11,
+      "Bedrooms": 11,
+      "Bathrooms": 1,
+      "Garden": false,
+      "Address": "1",
+      "Postcode": "1",
+      "id": 9
+    },
+    {
+      "Type": "Semi-Detached",
+      "Price": 11,
+      "Bedrooms": 11,
+      "Bathrooms": 1,
+      "Garden": true,
+      "Address": "1",
+      "Postcode": "1",
+      "id": 10
+    }
+  ],
+  "PropertiesToLet": [
+    {
+      "Type": "Semi-Detached",
+      "Rent": 100,
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "Yes",
+      "Address": "123 address",
+      "Postcode": "eh1 1aq",
+      "id": 1
+    },
+    {
+      "Type": "Detached",
+      "Rent": 500,
+      "Bedrooms": 2,
+      "Bathrooms": 2,
+      "Garden": "No",
+      "Address": "123 sakdnans",
+      "Postcode": "ab1 2aq",
+      "id": 2
+    },
+    {
+      "Type": "Detached",
+      "Rent": 11,
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": null,
+      "Address": "1",
+      "Postcode": "1",
+      "id": 3
+    }
+  ]
+}
