@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 function PropertiesToLetPT(props) {
     return (
         
-        <div Card style={{ width: '40%' }}>
+        <div Card style={{ width: '50%' }}>
 
        
             <div className="row-gap-1 ">
