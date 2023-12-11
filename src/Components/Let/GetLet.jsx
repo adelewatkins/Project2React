@@ -29,7 +29,7 @@ function GetLet() {
     if (filterrt && plet.Rent > parseInt(filterrt)) continue;
     if (filterbds && plet.Bedrooms < parseInt(filterbds)) continue;
     if (filterbts && plet.Bathrooms < parseInt(filterbts)) continue;
-    if (filtergds && plet.Garden !== filtergds) continue;
+    if (filtergds && plet.Garden < parseInt(filtergds)) continue;
     if (filterads && plet.Address === filterads) continue;
     if (filterpcd && plet.Postcode === filterpcd) continue;
 

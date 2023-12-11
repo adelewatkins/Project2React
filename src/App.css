@@ -17,7 +17,7 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -39,7 +39,7 @@
 
 .container{
   max-width: 860px;
-  margin: 0 auto;
+  margin: 10 auto;
 }
 
 .card {
@@ -48,3 +48,19 @@
   padding: 10px 20px 30px;
   margin-top: 50px;
 }
+form {
+  background: rgba(39, 169, 71, 0.252);
+  padding: 1.5em;
+  border-radius: 1em;
+}
+
+.d-flex {
+  display: flex!important;
+  height: 100vh;
+}
+
+.center {
+  margin: 0 auto;
+  align-self: center;
+}
+

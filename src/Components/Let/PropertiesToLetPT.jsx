@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function PropertiesToLetPT(props) {
     return (
@@ -15,12 +17,10 @@ function PropertiesToLetPT(props) {
                         <p> {"Garden:" +props.Garden}</p>
                         <p> {"Address:" +props.Address}</p>
                         <p> {"Postcode:" +props.Postcode}</p>
-
                     </div>
                     </div>
                     </div>
                     </div>
-
                     );
 }
                     PropertiesToLetPT.propTypes = {
