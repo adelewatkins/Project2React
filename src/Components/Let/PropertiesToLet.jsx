@@ -49,7 +49,7 @@ function PropertiesToLet() {
           type="text"
           class ="form-control"
         >
-          <option value="Select Type" disabled>
+          <option value="select Type">
             Select Type</option>
           <option value="Semi-Detached">Semi-Detached</option>
           <option value="Detached">Detached</option>
