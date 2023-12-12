@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
 import PropertiesForSale from './PropertiesForSale';
 import Card from "react-bootstrap/Card";
+import { useNavigate } from "react-router-dom";
+
 
 
 function PropertiesForSalePT(props) {
+    const navigate = useNavigate();
     return (
         <Card className="col-sm-6 col-md-4 col-lg-3 m-auto">
         <div className="flex">
@@ -24,13 +27,15 @@ function PropertiesForSalePT(props) {
                             <option>Under Offer</option>
                             <option>Withdrawn</option>
                         </select>&nbsp;
-                        <button type="submit" className="btn btn-success btn-sm"> Submit </button>
+                        <button onClick={()=> navigate()} type="Bookings" className="btn btn-success btn-sm"> Booking </button>
 
                     </div>
                     </div>
                     </Card>
     );
 }
+
+
 PropertiesForSalePT.propTypes = {
     Type: PropTypes.string.isRequired,
     Price: PropTypes.number.isRequired,

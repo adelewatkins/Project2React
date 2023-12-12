@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import PropertiesForSalePT from "./PropertiesForSalePT";
+import { useNavigate } from "react-router-dom";
 
 function GetSale() {
   const [sale, setSale] = useState([]);
@@ -11,6 +12,7 @@ function GetSale() {
   const [filtergd, setFiltergd] = useState("");
   const [filterad, setFilterad] = useState("");
   const [filterpc, setFilterpc] = useState("");
+  // const navigate = useNavigate();
 
   useEffect(function () {
     axios

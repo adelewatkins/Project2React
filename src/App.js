@@ -12,6 +12,7 @@ import PropertiesForSalePT from "./Components/Sale/PropertiesForSalePT";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import "bootstrap/dist/js/bootstrap.min.js";
+import BookingLet from "./Components/Let/BookingLet";
 
 function App() {
   return (
@@ -102,6 +103,7 @@ function App() {
           <Route path="/Buyers" element={<Buyers />} />
           <Route path="/PropertiesForSale" element={<PropertiesForSale />} />
           <Route path="/PropertiesToLet" element={<PropertiesToLet />} />
+          <Route path="/PropertiesToLet/BookingLet/:id" element={<BookingLet/>}/>
         </Routes>
       </Router>
     </header>

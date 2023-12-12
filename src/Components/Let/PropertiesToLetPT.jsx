@@ -1,7 +1,12 @@
 import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
+import { useNavigate } from "react-router-dom";
+
+
+
 
 function PropertiesToLetPT(props) {
+  const navigate = useNavigate();
   return (
     <Card className="col-sm-6 col-md-4 col-lg-3 m-auto">
       <div className="flex">
@@ -25,9 +30,9 @@ function PropertiesToLetPT(props) {
             <option>Withdrawn</option>
           </select>
           &nbsp;
-          <button type="submit" className="btn btn-success btn-md">
+          <button onClick={()=> navigate("/PropertiesToLet/BookingLet" + PropertiesToLetPT.id)} type="submit" className="btn btn-success btn-md">
             {" "}
-            Submit{" "}
+            Booking{" "}
           </button>
         </div>
       </div>

@@ -41,6 +41,22 @@
       "Postcode": "ZZ0 0ZZ",
       "PhoneNumber": "00000000",
       "id": 6
+    },
+    {
+      "Name": "mike",
+      "Email": "atkinson",
+      "PhoneNumber": "0777777777",
+      "Date": "24/01/2024",
+      "TimeSlot": "14:00",
+      "id": 7
+    },
+    {
+      "Name": "",
+      "Email": "",
+      "PhoneNumber": "",
+      "Date": "",
+      "TimeSlot": "",
+      "id": 8
     }
   ],
   "PropertiesForSale": [
