@@ -15,7 +15,10 @@ function PropertiesForSale() {
     <div>
       <h1>Properties For Sale</h1>
 
-      <form className="drop-menu"accordion         onSubmit={(e) => {
+      <form
+        className="drop-menu"
+        accordion
+        onSubmit={(e) => {
           e.preventDefault();
           axios
             .post("http://localhost:3000/PropertiesForSale", {
@@ -40,31 +43,30 @@ function PropertiesForSale() {
         }}
       >
         {/* <select value={Type} onChange={(e) => setType(e.target.value)} id="ty" type="text"><option value="semi">Semi</option><option value="semi">detached</option><option value="semi">terrace</option></select> */}
-
         <label htmlFor="ty">Type</label>
         <select
           value={Type}
           onChange={(e) => setType(e.target.value)}
           id="ty"
           type="text"
-          class ="form-control"
+          className="form-control"
         >
-          <option value="Select Type" disabled>
-            Select Type</option>
+          <option value="Select Type" selectDefault>
+            Select Type
+          </option>
           <option value="Semi-Detached">Semi-Detached</option>
           <option value="Detached">Detached</option>
           <option value="Terrace">Terrace</option>
           <option value="Flat">Flat</option>
         </select>
-        <br />
         <label htmlFor="pr">Price £</label>
         <input
           value={Price}
           onChange={(e) => setPrice(e.target.value)}
           id="pr"
           type="£"
-          class ="form-control"
-        ></input> <br />
+          className="form-control"
+        ></input>{" "}
         <label htmlFor="bd">Bedroom</label>
         <input
           value={Bedrooms}
@@ -72,8 +74,8 @@ function PropertiesForSale() {
           id="bd"
           type="number"
           min={0}
-          class ="form-control"
-        ></input> <br />
+          className="form-control"
+        ></input>{" "}
         <label htmlFor="bt">Bathroom</label>
         <input
           value={Bathrooms}
@@ -81,41 +83,39 @@ function PropertiesForSale() {
           id="bt"
           type="number"
           min={0}
-          class ="form-control"
+          className="form-control"
         ></input>
-        <br />
         <label htmlFor="gn">Garden</label>
         <select
           value={Garden}
           onChange={(e) => setGarden(e.target.value)}
           id="gn"
           type="text"
-          class ="form-control"
+          className="form-control"
         >
           <option value="Select">Select</option>
           <option value="Yes">Yes</option>
           <option value="No">No</option>
         </select>
-        <br />
         <label htmlFor="ad">Address</label>
         <input
           value={Address}
           onChange={(e) => setAddress(e.target.value)}
           id="ad"
           type="text"
-          class ="form-control"
-        ></input> <br />
+          className="form-control"
+        ></input>{" "}
         <label htmlFor="pc">Postcode</label>
         <input
           value={Postcode}
           onChange={(e) => setPostcode(e.target.value)}
           id="pc"
           type="text"
-          class ="form-control"
+          className="form-control"
         ></input>
         <br />
         <div>
-          <button type="submit" className="btn btn-success btn-sm">
+          <button type="submit" className="btn btn-success btn-md">
             {" "}
             Add Property{" "}
           </button>

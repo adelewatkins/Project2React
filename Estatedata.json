@@ -33,8 +33,15 @@
       "Postcode": "eh1 1aq",
       "PhoneNumber": "0777777777",
       "id": 5
+    },
+    {
+      "FirstName": "Peter",
+      "LastName": "Qwerty",
+      "Address": "1282",
+      "Postcode": "ZZ0 0ZZ",
+      "PhoneNumber": "00000000",
+      "id": 6
     }
-    
   ],
   "PropertiesForSale": [
     {
@@ -67,7 +74,6 @@
       "Postcode": "eh1 1aq",
       "id": 3
     }
-    
   ],
   "PropertiesToLet": [
     {
