@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 
 function PropertiesForSalePT(props) {
     return (
-        <Card className="col-3 m-4">
+        <Card className="col-sm-6 col-md-4 col-lg-3 m-auto">
         <div className="flex">
         <div className="card-body card-text">
         <h4 className="card-title"></h4>

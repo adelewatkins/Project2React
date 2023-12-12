@@ -47,6 +47,7 @@ function PropertiesToLet() {
           onChange={(e) => setType(e.target.value)}
           id="ty"
           type="text"
+          class ="form-control"
         >
           <option value="Select Type" disabled>
             Select Type</option>
@@ -62,6 +63,7 @@ function PropertiesToLet() {
           onChange={(e) => setRent(e.target.value)}
           id="pr"
           type="£"
+          class ="form-control"
         ></input>
         <label htmlFor="bd">Bedroom</label>
         <input
@@ -70,6 +72,7 @@ function PropertiesToLet() {
           id="bd"
           type="number"
           min={0}
+          class ="form-control"
         ></input>
         <label htmlFor="bt">Bathroom</label>
         <input
@@ -78,6 +81,7 @@ function PropertiesToLet() {
           id="bt"
           type="number"
           min={0}
+          class ="form-control"
         ></input>
         
         <label htmlFor="gn">Garden</label>
@@ -86,6 +90,7 @@ function PropertiesToLet() {
           onChange={(e) => setGarden(e.target.value)}
           id="gn"
           type="text"
+          class ="form-control"
         >
           <option value="Select">Select</option>
           <option value="Yes">Yes</option>
@@ -98,6 +103,7 @@ function PropertiesToLet() {
           onChange={(e) => setAddress(e.target.value)}
           id="ad"
           type="text"
+          class ="form-control"
         ></input>
         <label htmlFor="pc">Postcode</label>
         <input
@@ -105,12 +111,15 @@ function PropertiesToLet() {
           onChange={(e) => setPostcode(e.target.value)}
           id="pc"
           type="text"
+          class ="form-control"
         ></input>
         <br />
+        <div>
         <button type="submit" className="btn btn-success btn-sm">
           {" "}
           Add Property{" "}
         </button>
+       </div>
       </form>
       <br></br>
       <div>

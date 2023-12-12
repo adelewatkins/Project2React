@@ -65,19 +65,19 @@ function GetSale() {
       <form className="drop-menu">
 
     <label htmlFor="ty" >Type</label>
-    <input value={filterty}onChange={(event)=>setFilterty(event.target.value)} id="ty" type="text"></input>
+    <input value={filterty}onChange={(event)=>setFilterty(event.target.value)} id="ty" type="text"class ="form-control"></input> <br />
     <label htmlFor="pr" >Price £</label>
-    <input value={filterpr} onChange={(event) => setFilterpr(event.target.value)} id="pr" type="£"></input>
-    <label htmlFor="bd" >Min Bedrooms</label>
-    <input value={filterbd} onChange={(event) => setFilterbd(event.target.value)} id="bd" type="number" min={0}></input>
+    <input value={filterpr} onChange={(event) => setFilterpr(event.target.value)} id="pr" type="£"class ="form-control"></input> <br />
+    <label htmlFor="bd" >Bedrooms</label>
+    <input value={filterbd} onChange={(event) => setFilterbd(event.target.value)} id="bd" type="number" min={0}class ="form-control"></input> <br />
     <label htmlFor="bt">Bathrooms</label>
-    <input value={filterbt} onChange={(event) => setFilterbt(event.target.value)} id="bt" type="number" min={0}></input>
+    <input value={filterbt} onChange={(event) => setFilterbt(event.target.value)} id="bt" type="number" min={0}class ="form-control"></input> <br />
     <label htmlFor="gn" >Garden</label>
-    <input value={filtergd} onChange={(event) => setFiltergd(event.target.value)} id="gn" type="text"></input>
+    <input value={filtergd} onChange={(event) => setFiltergd(event.target.value)} id="gn" type="text"class ="form-control"></input> <br />
     <label htmlFor="ad" >Address</label>
-    <input value={filterad} onChange={(event) => setFilterad(event.target.value)} id="ad" type="text"></input>
+    <input value={filterad} onChange={(event) => setFilterad(event.target.value)} id="ad" type="text"class ="form-control"></input> <br />
     <label htmlFor="pc" >Postcode</label>
-    <input value={filterpc} onChange={(event) => setFilterpc(event.target.value)} id="pc" type="text"></input>
+    <input value={filterpc} onChange={(event) => setFilterpc(event.target.value)} id="pc" type="text"class ="form-control"></input>
     <br />
     <button type="search" className="btn btn-danger btn-sm"> Clear </button>
   </form>

@@ -56,19 +56,19 @@ function GetLet() {
       <form className="drop-menu">
 
 <label htmlFor="ty" >Type</label>
-<input value={filtertyp}onChange={(event)=>setFiltertyp(event.target.value)} id="ty" type="text"></input>
+<input value={filtertyp}onChange={(event)=>setFiltertyp(event.target.value)} id="ty" type="text" class ="form-control"></input>
 <label htmlFor="rt" >Rent £</label>
-<input value={filterrt} onChange={(event) => setFilterrt(event.target.value)} id="pr" type="£"></input>
+<input value={filterrt} onChange={(event) => setFilterrt(event.target.value)} id="pr" type="£" class ="form-control"></input>
 <label htmlFor="bd" >Min Bedrooms</label>
-<input value={filterbds} onChange={(event) => setFilterbds(event.target.value)} id="bd" type="number" min={0}></input>
+<input value={filterbds} onChange={(event) => setFilterbds(event.target.value)} id="bd" type="number" min={0} class ="form-control"></input>
 <label htmlFor="bt">Bathrooms</label>
-<input value={filterbts} onChange={(event) => setFilterbts(event.target.value)} id="bt" type="number" min={0}></input>
+<input value={filterbts} onChange={(event) => setFilterbts(event.target.value)} id="bt" type="number" min={0}class ="form-control"></input>
 <label htmlFor="gn" >Garden</label>
-<input value={filtergds} onChange={(event) => setFiltergds(event.target.value)} id="gn" type="text"></input>
+<input value={filtergds} onChange={(event) => setFiltergds(event.target.value)} id="gn" type="text"class ="form-control"></input>
 <label htmlFor="ad" >Address</label>
-<input value={filterads} onChange={(event) => setFilterads(event.target.value)} id="ad" type="text"></input>
+<input value={filterads} onChange={(event) => setFilterads(event.target.value)} id="ad" type="text"class ="form-control"></input>
 <label htmlFor="pc" >Postcode</label>
-<input value={filterpcd} onChange={(event) => setFilterpcd(event.target.value)} id="pc" type="text"></input>
+<input value={filterpcd} onChange={(event) => setFilterpcd(event.target.value)} id="pc" type="text"class ="form-control"></input>
 <br />
 <button type="search" className="btn btn-danger btn-sm"> Clear </button>
 </form>

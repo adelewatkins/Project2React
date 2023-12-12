@@ -39,6 +39,7 @@ function Buyers() {
           onChange={(e) => setFirstName(e.target.value)}
           id="fn"
           type="text"
+          class ="form-control"
         ></input>
         <br />
         <label htmlFor="ln">Last Name &nbsp;</label>
@@ -47,6 +48,7 @@ function Buyers() {
           onChange={(e) => setLastName(e.target.value)}
           id="ln"
           type="text"
+          class ="form-control"
         ></input>
         <br />
         <label htmlFor="ad">Address &nbsp; &nbsp; &nbsp;</label>
@@ -55,6 +57,7 @@ function Buyers() {
           onChange={(e) => setAddress(e.target.value)}
           id="ad"
           type="text"
+          class ="form-control"
         ></input>
         <br />
         <label htmlFor="pc">Postcode &nbsp;&nbsp;&nbsp;</label>
@@ -63,6 +66,7 @@ function Buyers() {
           onChange={(e) => setPostcode(e.target.value)}
           id="pc"
           type="text"
+          class ="form-control"
         ></input>
         <br />
         <label htmlFor="pn">PhoneNum</label>
@@ -71,6 +75,7 @@ function Buyers() {
           onChange={(e) => setPhoneNumber(e.target.value)}
           id="pn"
           type="tel"
+          class ="form-control"
         ></input>
         <br />
         <button type="submit"className="btn btn-success btn-sm">Submit</button>

@@ -47,6 +47,7 @@ function PropertiesForSale() {
           onChange={(e) => setType(e.target.value)}
           id="ty"
           type="text"
+          class ="form-control"
         >
           <option value="Select Type" disabled>
             Select Type</option>
@@ -62,7 +63,8 @@ function PropertiesForSale() {
           onChange={(e) => setPrice(e.target.value)}
           id="pr"
           type="£"
-        ></input>
+          class ="form-control"
+        ></input> <br />
         <label htmlFor="bd">Bedroom</label>
         <input
           value={Bedrooms}
@@ -70,7 +72,8 @@ function PropertiesForSale() {
           id="bd"
           type="number"
           min={0}
-        ></input>
+          class ="form-control"
+        ></input> <br />
         <label htmlFor="bt">Bathroom</label>
         <input
           value={Bathrooms}
@@ -78,6 +81,7 @@ function PropertiesForSale() {
           id="bt"
           type="number"
           min={0}
+          class ="form-control"
         ></input>
         <br />
         <label htmlFor="gn">Garden</label>
@@ -86,6 +90,7 @@ function PropertiesForSale() {
           onChange={(e) => setGarden(e.target.value)}
           id="gn"
           type="text"
+          class ="form-control"
         >
           <option value="Select">Select</option>
           <option value="Yes">Yes</option>
@@ -98,13 +103,15 @@ function PropertiesForSale() {
           onChange={(e) => setAddress(e.target.value)}
           id="ad"
           type="text"
-        ></input>
+          class ="form-control"
+        ></input> <br />
         <label htmlFor="pc">Postcode</label>
         <input
           value={Postcode}
           onChange={(e) => setPostcode(e.target.value)}
           id="pc"
           type="text"
+          class ="form-control"
         ></input>
         <br />
         <div>
@@ -114,6 +121,7 @@ function PropertiesForSale() {
           </button>
         </div>
       </form>
+      <br></br>
       <div>
         <GetSale />
       </div>
