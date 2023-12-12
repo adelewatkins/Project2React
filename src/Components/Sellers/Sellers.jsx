@@ -39,6 +39,7 @@ function Sellers() {
           onChange={(e) => setFirstName(e.target.value)}
           id="fn"
           type="text"
+          className="form-control"
         ></input>
         <label htmlFor="ln">Last Name &nbsp;</label>
         <input
@@ -46,6 +47,7 @@ function Sellers() {
           onChange={(e) => setLastName(e.target.value)}
           id="ln"
           type="text"
+          className="form-control"
         ></input>
         <label htmlFor="ad">Address &nbsp; &nbsp; &nbsp;</label>
         <input
@@ -53,6 +55,7 @@ function Sellers() {
           onChange={(e) => setAddress(e.target.value)}
           id="ad"
           type="text"
+          className="form-control"
         ></input>
         <label htmlFor="pc">Postcode &nbsp;&nbsp;&nbsp;</label>
         <input
@@ -60,6 +63,7 @@ function Sellers() {
           onChange={(e) => setPostcode(e.target.value)}
           id="pc"
           type="text"
+          className="form-control"
         ></input>
         <label htmlFor="pn">PhoneNum</label>
         <input
@@ -67,9 +71,10 @@ function Sellers() {
           onChange={(e) => setPhoneNumber(e.target.value)}
           id="pn"
           type="tel"
+          className="form-control"
         ></input>
         <br />
-        <button type="submit" className="btn btn-success btn-sm">
+        <button type="submit" className="btn btn-success btn-md">
           Submit
         </button>
       </form>
