@@ -1,4 +1,16 @@
 {
+  "bookingForSale": [
+    
+    {
+      "Name": "elliot",
+      "Email": "elliot@aol.com",
+      "PhoneNumber": "0898765431234",
+      "Date": "2023-12-14",
+      "TimeSlot": "16:22",
+      "property": "1",
+      "id": 2
+    }
+  ],
   "Sellers": [
     {
       "FirstName": "agus",
@@ -61,7 +73,6 @@
       "Address": "123 Address Street",
       "Postcode": "AB1 C23",
       "id": 1
-  
     },
     {
       "Type": "Flat",

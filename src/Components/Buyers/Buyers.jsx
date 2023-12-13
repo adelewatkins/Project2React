@@ -35,50 +35,52 @@ function Buyers() {
       >
         <label htmlFor="fn">First Name &nbsp;</label>
         <input
-          value={FirstName}
-          br
+          value={FirstName} br
           onChange={(e) => setFirstName(e.target.value)}
           id="fn"
           type="text"
-          className="form-control"
+          class="form-control"
         ></input>
+        <br />
         <label htmlFor="ln">Last Name &nbsp;</label>
         <input
           value={LastName}
           onChange={(e) => setLastName(e.target.value)}
           id="ln"
           type="text"
-          className="form-control"
+          class="form-control"
         ></input>
+        <br />
         <label htmlFor="ad">Address &nbsp; &nbsp; &nbsp;</label>
         <input
           value={Address}
           onChange={(e) => setAddress(e.target.value)}
           id="ad"
           type="text"
-          className="form-control"
+          class="form-control"
         ></input>
+        <br />
         <label htmlFor="pc">Postcode &nbsp;&nbsp;&nbsp;</label>
         <input
           value={Postcode}
           onChange={(e) => setPostcode(e.target.value)}
           id="pc"
           type="text"
-          className="form-control"
+          class="form-control"
         ></input>
+        <br />
         <label htmlFor="pn">PhoneNum</label>
         <input
           value={PhoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
           id="pn"
           type="tel"
-          className="form-control"
+          class="form-control"
         ></input>
         <br />
-        <button type="submit" className="btn btn-success btn-md">
-          Submit
-        </button>
+        <button type="submit" className="btn btn-success btn-sm">Submit</button>
       </form>
+      <br />
       <GetBuyers />
     </div>
   );
