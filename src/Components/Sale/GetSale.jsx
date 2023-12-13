@@ -37,7 +37,7 @@ function GetSale() {
 
     saleArray.push(
       <PropertiesForSalePT
-        key={psale.Type + " " + psale.Price}
+        key={psale.id}
         Type={psale.Type}
         Price={psale.Price}
         Bedrooms={psale.Bedrooms}
@@ -45,15 +45,17 @@ function GetSale() {
         Garden={psale.Garden}
         Address={psale.Address}
         Postcode={psale.Postcode}
+        id={psale.id}
       />
     );
   }
 
   return (
-    <div>
-      <br></br>
-
+    <>
+     
+<div className="col">
       <form className="drop-menu">
+        <h1>Filter Properties &nbsp;</h1>
         <label htmlFor="ty">Type</label>
         <input
           value={filterty}
@@ -118,11 +120,13 @@ function GetSale() {
           Clear{" "}
         </button>
       </form>
+      </div>
       <h2> Show Properties for Sale</h2>
       <div className="container-fluid">
         <div className="row">{saleArray}</div>
       </div>
-    </div>
+    
+  </>
   );
 }
 

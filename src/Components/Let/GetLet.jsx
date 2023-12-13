@@ -35,7 +35,7 @@ function GetLet() {
 
     letArray.push(
       <PropertiesToLetPT
-        key={plet.Type + " " + plet.Rent}
+        key={plet.id}
         Type={plet.Type}
         Rent={plet.Rent}
         Bedrooms={plet.Bedrooms}
@@ -43,13 +43,16 @@ function GetLet() {
         Garden={plet.Garden}
         Address={plet.Address}
         Postcode={plet.Postcode}
+        id={plet.id}
       />
     );
   }
 
   return (
-    <div>
-      <form className="drop-menu">
+    <>
+   
+      <div className="col"><form className="drop-menu">
+      <h1>Filter Properties &nbsp;</h1>
         <label htmlFor="ty">Type</label>
         <input
           value={filtertyp}
@@ -114,12 +117,13 @@ function GetLet() {
           Clear{" "}
         </button>
       </form>
+      </div>
 
       <h2> A list of properties to let </h2>
       <div className="container-fluid">
         <div className="row">{letArray}</div>
       </div>
-    </div>
+    </>
   );
 }
 

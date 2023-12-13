@@ -12,8 +12,9 @@ function PropertiesForSale() {
   const [Postcode, setPostcode] = useState("");
 
   return (
-    <div>
-      <h1>Properties For Sale</h1>
+    <div className="row">
+    <div className="col">
+      
 
       <form
         className="drop-menu"
@@ -42,6 +43,7 @@ function PropertiesForSale() {
             .catch((err) => console.error(err));
         }}
       >
+        <h1>Properties For Sale</h1>
         {/* <select value={Type} onChange={(e) => setType(e.target.value)} id="ty" type="text"><option value="semi">Semi</option><option value="semi">detached</option><option value="semi">terrace</option></select> */}
         <label htmlFor="ty">Type</label>
         <select
@@ -121,10 +123,11 @@ function PropertiesForSale() {
           </button>
         </div>
       </form>
-      <br></br>
-      <div>
-        <GetSale />
       </div>
+      
+      
+        <GetSale />
+      
 
       <br />
     </div>

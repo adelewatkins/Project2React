@@ -30,7 +30,7 @@ function PropertiesToLetPT(props) {
             <option>Withdrawn</option>
           </select>
           &nbsp;
-          <button onClick={()=> navigate("/PropertiesToLet/BookingLet" + PropertiesToLetPT.id)} type="submit" className="btn btn-success btn-md">
+          <button onClick={()=> navigate("/PropertiesToLet/BookingLet/" + props.id)} type="submit" className="btn btn-success btn-md">
             {" "}
             Booking{" "}
           </button>

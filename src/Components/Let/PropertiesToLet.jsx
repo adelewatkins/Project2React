@@ -12,10 +12,13 @@ function PropertiesToLet() {
   const [Postcode, setPostcode] = useState("");
 
   return (
-    <div>
-      <h1>Properties To Let </h1>
+    <div className="row">
+      <div className="col">
+
+      
 
       <form
+      
         className="drop-menu"
         onSubmit={(e) => {
           e.preventDefault();
@@ -42,6 +45,7 @@ function PropertiesToLet() {
             .catch((err) => console.error(err));
         }}
       >
+        <h1>Properties To Let </h1>
         <label htmlFor="ty">Type</label>
         <select
           value={Type}
@@ -123,12 +127,14 @@ function PropertiesToLet() {
           </button>
         </div>
       </form>
-      <br></br>
-      <div>
-        <GetLet />
       </div>
+      
+      
+        <GetLet />
+      
 
       <br />
+      
     </div>
   );
 }
