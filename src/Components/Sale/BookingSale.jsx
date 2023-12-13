@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { useNavigate, useParams } from "react-router-dom";
 
 
-function BookingSale(props) {
+function BookingSale() {
   const navigate = useNavigate();
   const params = useParams();
   const [Name, setName] = useState("");
@@ -15,6 +15,8 @@ function BookingSale(props) {
   const [TimeSlot, setTimeSlot] = useState("");
   const [booking, setBookings] = useState([]);
   const [property, setProperty] = useState();
+
+
   useEffect(function () {
     axios
       .get("http://localhost:3000/PropertiesForSale/" + params.id)
@@ -26,9 +28,24 @@ function BookingSale(props) {
       .catch((err) => console.error(err));
       axios
       .get("http://localhost:3000/bookingForSale")
+      .then((response)=>{
+        console.log("Response:", response);
+        setBookings(response.data);
+        console.log("booking:", booking)
+      })
   }, []);
   console.log(property)
-  const saleArray = [];
+  // const saleArray = [];
+
+  // const bookingArray = [];
+  // for (const book of booking) {
+  //   bookingArray.push(
+  //       key={book.id},
+  //       Name={book.Name}
+  //       LastName={seller.LastName}
+  //       Address={seller.Address}
+  //       Postcode={seller.Postcode}
+  //       PhoneNumber={seller.PhoneNumber}
 
 
   return (
@@ -105,36 +122,26 @@ function BookingSale(props) {
         <button type="submit" className="btn btn-success btn-md">
           Submit
         </button>
+        
       </form>
-      {/* <BookingLet /> */}
+      <div>
+  <h3>Current Bookings</h3>
+  {booking.length > 0 && booking[0].property === params.id ? (
+    <Card>
+      <p>
+        <strong>Name:</strong> {booking[0].Name}, &nbsp;
+        <strong>Email:</strong> {booking[0].Email}, &nbsp;
+        <strong>Phone Number:</strong> {booking[0].PhoneNumber}, &nbsp;
+        <strong>Date:</strong> {booking[0].Date}, &nbsp;
+        <strong>Time Slot:</strong> {booking[0].TimeSlot}
+      </p>
+    </Card>
+  ) : (
+    <p>No bookings available for this property.</p>
+  )}
+</div>
+</div>
 
-      <Card className="col-sm-6 col-md-4 col-lg-3 m-auto">
-        <div className="flex">
-          <div className="card-body card-text">
-            <h4 className="card-title"></h4>
-            {" "}
-            <img src="https://cdn2-property.estateapps.co.uk/files/property/107/image/437868/437868_1347858_IMAGES_MAIN_4378681.jpg" className="card-image" alt="house stock" />
-            <p>{"Name: " + props.Name} </p>
-            <p> {"Email:" + props.Email}</p>
-            <p> {"Phone Number: " + props.PhoneNumber}</p>
-            <p> {"Date:" + props.Date}</p>
-            <p> {"Time Slot:" + props.TimeSlot}</p>
-
-          </div>
-        </div>
-      </Card>
-
-
-    </div>
-  );
+);
 }
-
-//BookingSale.propTypes = {
-//Name: PropTypes.string.isRequired,
-//Email: PropTypes.string.isRequired,
-//PhoneNumber: PropTypes.number.isRequired,
-//Date: PropTypes.string.isRequired,
-//TimeSlot: PropTypes.string.isRequired,
-// }
-
 export default BookingSale;

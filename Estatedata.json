@@ -1,6 +1,5 @@
 {
   "bookingForSale": [
-    
     {
       "Name": "elliot",
       "Email": "elliot@aol.com",
@@ -9,6 +8,33 @@
       "TimeSlot": "16:22",
       "property": "1",
       "id": 2
+    },
+    {
+      "Name": "Adele",
+      "Email": "a@a.com",
+      "PhoneNumber": "12345678",
+      "Date": "2023-12-14",
+      "TimeSlot": "17:52",
+      "property": "1",
+      "id": 3
+    },
+    {
+      "Name": "adele",
+      "Email": "aw@msn.com",
+      "PhoneNumber": "123456",
+      "Date": "2023-12-15",
+      "TimeSlot": "19:06",
+      "property": "1",
+      "id": 4
+    },
+    {
+      "Name": "A W",
+      "Email": "abc@123.com",
+      "PhoneNumber": "37463272390",
+      "Date": "2023-12-14",
+      "TimeSlot": "16:23",
+      "property": "2",
+      "id": 5
     }
   ],
   "Sellers": [
