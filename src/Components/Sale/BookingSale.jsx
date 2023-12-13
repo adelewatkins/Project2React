@@ -126,19 +126,27 @@ function BookingSale() {
       </form>
       <div>
   <h3>Current Bookings</h3>
-  {booking.length > 0 && booking[0].property === params.id ? (
-    <Card>
-      <p>
-        <strong>Name:</strong> {booking[0].Name}, &nbsp;
-        <strong>Email:</strong> {booking[0].Email}, &nbsp;
-        <strong>Phone Number:</strong> {booking[0].PhoneNumber}, &nbsp;
-        <strong>Date:</strong> {booking[0].Date}, &nbsp;
-        <strong>Time Slot:</strong> {booking[0].TimeSlot}
-      </p>
-    </Card>
-  ) : (
-    <p>No bookings available for this property.</p>
-  )}
+  {(() => {
+    if (booking.length > 0) {
+      return (
+        <Card>
+          <ul>
+            {booking.map((book, index) => (
+              <li key={index}>
+                <strong>Name:</strong> {book.Name}, &nbsp;
+                <strong>Email:</strong> {book.Email}, &nbsp;
+                <strong>Phone Number:</strong> {book.PhoneNumber}, &nbsp;
+                <strong>Date:</strong> {book.Date}, &nbsp;
+                <strong>Time Slot:</strong> {book.TimeSlot}
+              </li>
+            ))}
+          </ul>
+        </Card>
+      );
+    } else {
+      return <p>No bookings available.</p>;
+    }
+  })()}
 </div>
 </div>
 
