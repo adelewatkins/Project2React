@@ -38,7 +38,7 @@ function PropertiesToLetPT(props) {
           <p> {"Address: " + props.Address}</p>
           <p> {"Postcode: " + props.Postcode}</p>
           <select>
-            <option>For Let</option>
+            <option >For Let</option>
             <option>Already Let</option>
             <option>Withdrawn</option>
           </select>
