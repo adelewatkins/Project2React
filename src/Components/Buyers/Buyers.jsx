@@ -11,8 +11,7 @@ function Buyers() {
 
   return (
     <div>
-      <h1>Buyers</h1>
-      <form
+     <form
         onSubmit={(e) => {
           e.preventDefault();
           axios
@@ -31,8 +30,9 @@ function Buyers() {
               setPhoneNumber("");
             })
             .catch((err) => console.error(err));
-        }}
-      >
+          }}
+          >{" "}
+          <h1>Buyers &nbsp;</h1>  
         <label htmlFor="fn">First Name &nbsp;</label>
         <input
           value={FirstName} br
@@ -80,6 +80,7 @@ function Buyers() {
         <br />
         <button type="submit" className="btn btn-success btn-sm">Submit</button>
       </form>
+      <br />
       <br />
       <GetBuyers />
     </div>

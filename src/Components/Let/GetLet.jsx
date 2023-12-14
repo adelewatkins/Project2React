@@ -120,6 +120,9 @@ function GetLet() {
       </div>
 
       <h2> A list of properties to let </h2>
+      <br />
+      <br />
+      <br />
       <div className="container-fluid">
         <div className="row">{letArray}</div>
       </div>

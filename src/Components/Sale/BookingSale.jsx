@@ -77,7 +77,7 @@ function BookingSale() {
             .catch((err) => console.error(err));
         }}
       >
-        <label htmlFor="fn">Name &nbsp;</label>
+        <label htmlFor="fn">Full Name &nbsp;</label>
         <input
           value={Name}
           br
@@ -136,7 +136,7 @@ function BookingSale() {
                 <thead>
                   <tr>
                     <th>
-                      Name
+                      Full Name
                     </th>
                     <br />
                     <th>
@@ -161,7 +161,7 @@ function BookingSale() {
                     <br />
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="table-group-divider">
                   {booking.map(book => (<tr key={book.id}>
                     <td> {book.Name}</td>
                     <br />

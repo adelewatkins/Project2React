@@ -122,6 +122,10 @@ function GetSale() {
       </form>
       </div>
       <h2> Show Properties for Sale</h2>
+      <br />
+      <br />
+      <br />
+      
       <div className="container-fluid">
         <div className="row">{saleArray}</div>
       </div>

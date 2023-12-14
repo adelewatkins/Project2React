@@ -32,6 +32,8 @@ function GetBuyers() {
   return (
     <div>
       <h2> A list of buyers </h2>
+      <br />
+      <br />
       <div className="container-fluid">
         <div className="row">{buyerArray}</div>
       </div>

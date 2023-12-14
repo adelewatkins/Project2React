@@ -127,6 +127,15 @@ form {
   align-self: center;
 
 }
+.card-person {
+
+  width: 20%;
+
+  height: 30%;
+
+  object-fit: auto;
+
+}
 
 .card-image {
 

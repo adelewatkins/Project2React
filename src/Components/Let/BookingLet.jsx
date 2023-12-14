@@ -64,7 +64,7 @@ function BookingLet() {
             .catch((err) => console.error(err));
         }}
       >
-        <label htmlFor="fn">Name &nbsp;</label>
+        <label htmlFor="fn">Full Name &nbsp;</label>
         <input
           value={Name}
           br
@@ -124,7 +124,7 @@ function BookingLet() {
                 <thead>
                   <tr>
                     <th>
-                      Name
+                      Full Name
                     </th>
                     <br />
                     <th>
@@ -149,7 +149,7 @@ function BookingLet() {
                     <br />
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="table-group-divider">
                   {letBooking.map(book => (<tr key={book.id}>
                     <td> {book.Name}</td>
                     <br />

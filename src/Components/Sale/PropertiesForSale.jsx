@@ -123,6 +123,9 @@ function PropertiesForSale() {
           </button>
         </div>
       </form>
+      <br />
+      <br />
+      
       </div>
       
       
