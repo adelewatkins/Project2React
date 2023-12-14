@@ -110,16 +110,6 @@
       "Address": "57 Bon Accord Street",
       "Postcode": "AB11 6EB",
       "id": 3
-    },
-    {
-      "Type": "Semi-Detached",
-      "Price": 11,
-      "Bedrooms": 2,
-      "Bathrooms": 2,
-      "Garden": true,
-      "Address": "139 NY",
-      "Postcode": "NY1 122",
-      "id": 4
     }
   ],
   "PropertiesToLet": [
