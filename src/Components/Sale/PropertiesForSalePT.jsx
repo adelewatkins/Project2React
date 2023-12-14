@@ -26,7 +26,7 @@ function PropertiesForSalePT(props) {
                             <option>Under Offer</option>
                             <option>Withdrawn</option>
                         </select>&nbsp;
-                        <button onClick={()=> navigate("/PropertiesForSale/BookingSale/" + props.id)} type="Bookings" className="btn btn-success btn-sm"> Booking </button>
+                        <button onClick={()=> navigate("/PropertiesForSale/BookingSale/" + props.id)} type="Bookings" className="btn btn-success btn-sm"> Book a viewing </button>
 
                     </div>
                     </div>

@@ -38,7 +38,7 @@ function BookingLet() {
 
   return (
     <div>
-      <h1>Bookings</h1>
+      <h1>Bookings to Let</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -110,34 +110,71 @@ function BookingLet() {
           Submit
         </button>
       </form>
-      <div>
+      <br />
+      <br />
+
+      
   <h3>Current Bookings</h3>
   {(() => {
     if (letBooking.length > 0  ) {
      
       return (
-        <Card>
-          <ul>
-            {letBooking.map((book) => (
-              <li >
-                <strong>Name:</strong> {book.Name}, &nbsp;
-                <strong>Email:</strong> {book.Email}, &nbsp;
-                <strong>Phone Number:</strong> {book.PhoneNumber}, &nbsp;
-                <strong>Date:</strong> {book.Date}, &nbsp;
-                <strong>Time Slot:</strong> {book.TimeSlot}&nbsp;
-                <strong>Property:</strong> {book.letProperty}
-              </li>
-            ))}
-          </ul>
-        </Card>
-      );
-    } else {
-      return <p>No bookings available.</p>;
-    }
-  })()}
-</div>
-    </div>
+        <Card >
+               <table>
+                <thead>
+                  <tr>
+                    <th>
+                      Name
+                    </th>
+                    <br />
+                    <th>
+                      Email
+                    </th>
+                    <br />
+                    <th>
+                      Phone Number
+                    </th>
+                    <br />
+                    <th>
+                      Date                
+                      </th>
+                      <br />
+                    <th>
+                      Time Slot
+                    </th>
+                    <br />
+                    <th>
+                      Property
+                    </th>
+                    <br />
+                  </tr>
+                </thead>
+                <tbody>
+                  {letBooking.map(book => (<tr key={book.id}>
+                    <td> {book.Name}</td>
+                    <br />
+                    <td> {book.Email}</td>
+                    <br />
+                    <td> {book.PhoneNumber}</td>
+                    <br />
+                    <td> {book.Date}</td>
+                    <br />
+                    <td> {book.TimeSlot}</td>
+                    <br />
+                    <td> {book.letProperty}</td>
+                    <br />
+                  </tr>
+                  ))}
+                </tbody>
+              </table>
+             </Card>
+            )
+          } else {
+            return <p>No bookings available.</p>;
+          }
+        })()}
+      </div>
+
   );
 }
-
 export default BookingLet;

@@ -32,7 +32,7 @@ function PropertiesToLetPT(props) {
           &nbsp;
           <button onClick={()=> navigate("/PropertiesToLet/BookingLet/" + props.id)} type="submit" className="btn btn-success btn-md">
             {" "}
-            Booking{" "}
+            Book a viewing{" "}
           </button>
         </div>
       </div>

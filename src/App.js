@@ -14,6 +14,8 @@ import React from "react";
 import "bootstrap/dist/js/bootstrap.min.js";
 import BookingLet from "./Components/Let/BookingLet";
 import BookingSale from "./Components/Sale/BookingSale";
+import Logo from "./Logo.png"
+
 
 function App() {
   return (
@@ -22,11 +24,11 @@ function App() {
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdWK7j0tDuQySJtiFoaacxBtjj8uIf-LSU9Q&usqp=CAU"
+            <img
+                src={Logo}
                 alt="Logo"
-                width="50%px"
-                height="50%px"
+                width="35%"
+                height="35%"
                 className="d-inline-block align-text-middle"
               />{" "}
             </a>
@@ -45,7 +47,7 @@ function App() {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/">
                     Home
