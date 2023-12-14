@@ -125,8 +125,6 @@ function PropertiesToLet() {
           </button>
         </div>
       </form>
-      <br />
-      <br />
       </div>
       
       
