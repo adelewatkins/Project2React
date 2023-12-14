@@ -18,12 +18,12 @@ function PropertiesToLetPT(props) {
             alt="house stock"
           />
           <p>{"Rent: £" + props.Rent} </p>
-          <p> {"Type:" + props.Type}</p>
-          <p> {"Bedrooms:" + props.Bedrooms}</p>
-          <p> {"Bathrooms:" + props.Bathrooms}</p>
-          <p> {"Garden:" + props.Garden}</p>
-          <p> {"Address:" + props.Address}</p>
-          <p> {"Postcode:" + props.Postcode}</p>
+          <p> {"Type: " + props.Type}</p>
+          <p> {"Bedrooms: " + props.Bedrooms}</p>
+          <p> {"Bathrooms: " + props.Bathrooms}</p>
+          <p> {"Garden: " + props.Garden}</p>
+          <p> {"Address: " + props.Address}</p>
+          <p> {"Postcode: " + props.Postcode}</p>
           <select>
             <option>For Let</option>
             <option>Already Let</option>

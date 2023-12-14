@@ -3,36 +3,18 @@
     {
       "Name": "Alan",
       "Email": "Al@aol.com",
-      "PhoneNumber": "0898731234",
+      "PhoneNumber": "08987312334",
       "Date": "2023-10-14",
       "TimeSlot": "16:20",
       "letProperty": "1",
       "id": 1
-    },
-    {
-      "Name": "Steve",
-      "Email": "steve@steve.co.uk",
-      "PhoneNumber": "08000000",
-      "Date": "2023-12-15",
-      "TimeSlot": "11:30",
-      "letProperty": "1",
-      "id": 2
-    },
-    {
-      "Name": "Mr z",
-      "Email": "zzz@aol.com",
-      "PhoneNumber": "01234777777",
-      "Date": "2023-12-25",
-      "TimeSlot": "13:34",
-      "letProperty": "3",
-      "id": 3
     }
   ],
   "bookingForSale": [
     {
-      "Name": "elliot",
+      "Name": "Elliot",
       "Email": "elliot@aol.com",
-      "PhoneNumber": "0898765431234",
+      "PhoneNumber": "08987654312",
       "Date": "2023-12-14",
       "TimeSlot": "16:22",
       "property": "1",
@@ -41,32 +23,14 @@
     {
       "Name": "Adele",
       "Email": "a@a.com",
-      "PhoneNumber": "12345678",
+      "PhoneNumber": "0120345678",
       "Date": "2023-12-14",
       "TimeSlot": "17:52",
       "property": "1",
       "id": 3
     },
     {
-      "Name": "adele",
-      "Email": "aw@msn.com",
-      "PhoneNumber": "123456",
-      "Date": "2023-12-15",
-      "TimeSlot": "19:06",
-      "property": "1",
-      "id": 4
-    },
-    {
-      "Name": "A W",
-      "Email": "abc@123.com",
-      "PhoneNumber": "37463272390",
-      "Date": "2023-12-14",
-      "TimeSlot": "16:23",
-      "property": "2",
-      "id": 5
-    },
-    {
-      "Name": "bob",
+      "Name": "Bob",
       "Email": "bob@bob.com",
       "PhoneNumber": "0111199922",
       "Date": "2023-12-27",
@@ -77,16 +41,16 @@
   ],
   "Sellers": [
     {
-      "FirstName": "agus",
-      "LastName": "tina",
-      "Address": "123 fake street",
-      "Postcode": "eh1 1aq",
+      "FirstName": "Agus",
+      "LastName": "Tina",
+      "Address": "123 Fake Street",
+      "Postcode": "EH1 1AQ",
       "PhoneNumber": "0777777777",
       "id": 2
     },
     {
       "FirstName": "Seller",
-      "LastName": "MrSelly",
+      "LastName": "Selly",
       "Address": "19 Seller Street",
       "Postcode": "M1 1AQ",
       "PhoneNumber": "11111111",
@@ -96,7 +60,7 @@
       "FirstName": "Michael",
       "LastName": "Parker",
       "Address": "31 Road",
-      "Postcode": "gl1 8bl",
+      "Postcode": "GL1 8BL",
       "PhoneNumber": "07888854421",
       "id": 4
     }
@@ -106,23 +70,23 @@
       "FirstName": "Poca",
       "LastName": "Hontas",
       "Address": "123 address",
-      "Postcode": "eh1 1aq",
+      "Postcode": "EH1 1AQ",
       "PhoneNumber": "0777777777",
       "id": 5
     },
     {
       "FirstName": "Peter",
       "LastName": "Qwerty",
-      "Address": "1282",
+      "Address": "1282 Small Road",
       "Postcode": "ZZ0 0ZZ",
       "PhoneNumber": "00000000",
       "id": 6
     },
     {
-      "FirstName": "mike",
-      "LastName": "atkinson",
-      "Address": "123street hello",
-      "Postcode": "fy2 0rr",
+      "FirstName": "Mike",
+      "LastName": "Atkinson",
+      "Address": "123 Street Hello",
+      "Postcode": "FY2 0RR",
       "PhoneNumber": "07957447474",
       "id": 7
     }
@@ -154,8 +118,8 @@
       "Bedrooms": 1,
       "Bathrooms": 1,
       "Garden": "Yes",
-      "Address": "123 sakdnans",
-      "Postcode": "eh1 1aq",
+      "Address": "123 Sakdnans",
+      "Postcode": "EH1 1AQ",
       "id": 3
     }
   ],
@@ -166,29 +130,9 @@
       "Bedrooms": 1,
       "Bathrooms": 1,
       "Garden": "Yes",
-      "Address": "123 address",
-      "Postcode": "eh1 1aq",
+      "Address": "123 Address",
+      "Postcode": "EH1 1AQ",
       "id": 1
-    },
-    {
-      "Type": "Detached",
-      "Rent": 500,
-      "Bedrooms": 2,
-      "Bathrooms": 2,
-      "Garden": "No",
-      "Address": "123 sakdnans",
-      "Postcode": "ab1 2aq",
-      "id": 2
-    },
-    {
-      "Type": "Detached",
-      "Rent": 11,
-      "Bedrooms": 1,
-      "Bathrooms": 1,
-      "Garden": null,
-      "Address": "1",
-      "Postcode": "1",
-      "id": 3
     }
   ]
 }

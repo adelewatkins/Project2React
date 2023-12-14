@@ -14,12 +14,12 @@ function PropertiesForSalePT(props) {
         {" "}
                     <img src="https://cdn2-property.estateapps.co.uk/files/property/107/image/437868/437868_1347858_IMAGES_MAIN_4378681.jpg" className="card-image" alt="house stock" />
                         <p>{"Price: £" +props.Price} </p>
-                        <p> {"Type:" +props.Type}</p>
+                        <p> {"Type: " +props.Type}</p>
                         <p> {"Bedrooms: "+props.Bedrooms}</p>
-                        <p> {"Bathrooms:" +props.Bathrooms}</p>
-                        <p> {"Garden:" +props.Garden}</p>
-                        <p> {"Address:" +props.Address}</p>
-                        <p> {"Postcode:" +props.Postcode}</p>
+                        <p> {"Bathrooms: " +props.Bathrooms}</p>
+                        <p> {"Garden: " +props.Garden}</p>
+                        <p> {"Address: " +props.Address}</p>
+                        <p> {"Postcode: " +props.Postcode}</p>
 
                         <select>
                             <option>For Sale</option>
