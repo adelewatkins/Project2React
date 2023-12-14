@@ -127,17 +127,19 @@ function BookingSale() {
       <div>
   <h3>Current Bookings</h3>
   {(() => {
-    if (booking.length > 0) {
+    if (booking.length > 0  ) {
+     
       return (
         <Card>
           <ul>
-            {booking.map((book, index) => (
-              <li key={index}>
+            {booking.map((book) => (
+              <li >
                 <strong>Name:</strong> {book.Name}, &nbsp;
                 <strong>Email:</strong> {book.Email}, &nbsp;
                 <strong>Phone Number:</strong> {book.PhoneNumber}, &nbsp;
                 <strong>Date:</strong> {book.Date}, &nbsp;
-                <strong>Time Slot:</strong> {book.TimeSlot}
+                <strong>Time Slot:</strong> {book.TimeSlot}&nbsp;
+                <strong>Property:</strong> {book.property}
               </li>
             ))}
           </ul>
