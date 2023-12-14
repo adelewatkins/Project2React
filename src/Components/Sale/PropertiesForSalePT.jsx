@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import PropertiesForSale from './PropertiesForSale';
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 

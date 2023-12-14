@@ -1,4 +1,33 @@
 {
+  "bookingForLet": [
+    {
+      "Name": "Alan",
+      "Email": "Al@aol.com",
+      "PhoneNumber": "0898731234",
+      "Date": "2023-10-14",
+      "TimeSlot": "16:20",
+      "letProperty": "1",
+      "id": 1
+    },
+    {
+      "Name": "Steve",
+      "Email": "steve@steve.co.uk",
+      "PhoneNumber": "08000000",
+      "Date": "2023-12-15",
+      "TimeSlot": "11:30",
+      "letProperty": "1",
+      "id": 2
+    },
+    {
+      "Name": "Mr z",
+      "Email": "zzz@aol.com",
+      "PhoneNumber": "01234777777",
+      "Date": "2023-12-25",
+      "TimeSlot": "13:34",
+      "letProperty": "3",
+      "id": 3
+    }
+  ],
   "bookingForSale": [
     {
       "Name": "elliot",

@@ -15,10 +15,8 @@ function PropertiesToLet() {
     <div className="row">
       <div className="col">
 
-      
 
       <form
-      
         className="drop-menu"
         onSubmit={(e) => {
           e.preventDefault();

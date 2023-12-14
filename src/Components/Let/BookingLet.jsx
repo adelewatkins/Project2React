@@ -1,13 +1,39 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Card from "react-bootstrap/Card";
+import { useNavigate, useParams } from "react-router-dom";
 
 
 function BookingLet() {
+  const navigate = useNavigate();
+  const params = useParams();
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [PhoneNumber, setPhoneNumber] = useState("");
   const [Date, setDate] = useState("");
   const [TimeSlot, setTimeSlot] = useState("");
+  const [letBooking, setLetBookings] = useState([]);
+  const [letProperty, setLetProperty] = useState();
+
+  
+  useEffect(function () {
+    axios
+      .get("http://localhost:3000/PropertiesToLet/" + params.id)
+      .then((response) => {
+        console.log("Response:", response);
+        setLetProperty(response.data);
+        // console.log("sale:", sale);
+      })
+      .catch((err) => console.error(err));
+      axios
+      .get("http://localhost:3000/bookingForLet")
+      .then((response)=>{
+        console.log("Response:", response);
+        setLetBookings(response.data);
+        console.log("booking:", letBooking)
+      })
+  }, []);
+  console.log(letProperty)
 
 
   return (
@@ -17,12 +43,13 @@ function BookingLet() {
         onSubmit={(e) => {
           e.preventDefault();
           axios
-            .post("http://localhost:3000/PropertiesToLet/BookingLet/:id" , {
+            .post("http://localhost:3000/bookingForLet", {
               Name,
               Email,
               PhoneNumber,
               Date,
               TimeSlot,
+              letProperty: params.id
               
             })
             .then((response) => {
@@ -83,7 +110,32 @@ function BookingLet() {
           Submit
         </button>
       </form>
-      {/* <BookingLet /> */}
+      <div>
+  <h3>Current Bookings</h3>
+  {(() => {
+    if (letBooking.length > 0  ) {
+     
+      return (
+        <Card>
+          <ul>
+            {letBooking.map((book) => (
+              <li >
+                <strong>Name:</strong> {book.Name}, &nbsp;
+                <strong>Email:</strong> {book.Email}, &nbsp;
+                <strong>Phone Number:</strong> {book.PhoneNumber}, &nbsp;
+                <strong>Date:</strong> {book.Date}, &nbsp;
+                <strong>Time Slot:</strong> {book.TimeSlot}&nbsp;
+                <strong>Property:</strong> {book.letProperty}
+              </li>
+            ))}
+          </ul>
+        </Card>
+      );
+    } else {
+      return <p>No bookings available.</p>;
+    }
+  })()}
+</div>
     </div>
   );
 }
