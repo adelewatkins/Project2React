@@ -11,7 +11,7 @@ function Buyers() {
 
   return (
     <div>
-     <form
+      <form
         onSubmit={(e) => {
           e.preventDefault();
           axios
@@ -30,18 +30,19 @@ function Buyers() {
               setPhoneNumber("");
             })
             .catch((err) => console.error(err));
-          }}
-          >{" "}
-          <h1>Buyers &nbsp;</h1>  
+        }}
+      >
+        {" "}
+        <h1>Buyers &nbsp;</h1>
         <label htmlFor="fn">First Name &nbsp;</label>
         <input
-          value={FirstName} br
+          value={FirstName}
+          br
           onChange={(e) => setFirstName(e.target.value)}
           id="fn"
           type="text"
           class="form-control"
         ></input>
-        <br />
         <label htmlFor="ln">Last Name &nbsp;</label>
         <input
           value={LastName}
@@ -50,7 +51,6 @@ function Buyers() {
           type="text"
           class="form-control"
         ></input>
-        <br />
         <label htmlFor="ad">Address &nbsp; &nbsp; &nbsp;</label>
         <input
           value={Address}
@@ -59,7 +59,6 @@ function Buyers() {
           type="text"
           class="form-control"
         ></input>
-        <br />
         <label htmlFor="pc">Postcode &nbsp;&nbsp;&nbsp;</label>
         <input
           value={Postcode}
@@ -68,8 +67,7 @@ function Buyers() {
           type="text"
           class="form-control"
         ></input>
-        <br />
-        <label htmlFor="pn">PhoneNum</label>
+        <label htmlFor="pn">Phone Number</label>
         <input
           value={PhoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
@@ -78,7 +76,10 @@ function Buyers() {
           class="form-control"
         ></input>
         <br />
-        <button type="submit" className="btn btn-success btn-sm">Submit</button>
+        <button type="submit" className="btn btn-success btn-md">
+          Submit
+        </button>
+        <br />
       </form>
       <br />
       <br />

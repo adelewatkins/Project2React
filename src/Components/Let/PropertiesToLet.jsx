@@ -26,7 +26,7 @@ function PropertiesToLet() {
               Rent: parseInt(Rent),
               Bedrooms: parseInt(Bedrooms),
               Bathrooms: parseInt(Bathrooms),
-              Garden: parseInt(Garden),
+              Garden,
               Address,
               Postcode,
             })
@@ -125,6 +125,8 @@ function PropertiesToLet() {
           </button>
         </div>
       </form>
+      <br />
+      <br />
       </div>
       
       

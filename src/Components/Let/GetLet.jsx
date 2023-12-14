@@ -25,13 +25,13 @@ function GetLet() {
 
   const letArray = [];
   for (const plet of letting) {
-    if (filtertyp && plet.Type !== filtertyp) continue;
+    if (filtertyp && !plet.Type.toLowerCase().includes(filtertyp.toLowerCase())) continue;
     if (filterrt && plet.Rent > parseInt(filterrt)) continue;
     if (filterbds && plet.Bedrooms < parseInt(filterbds)) continue;
     if (filterbts && plet.Bathrooms < parseInt(filterbts)) continue;
-    if (filtergds && plet.Garden < parseInt(filtergds)) continue;
-    if (filterads && plet.Address === filterads) continue;
-    if (filterpcd && plet.Postcode === filterpcd) continue;
+    if (filtergds && !plet.Garden.toLowerCase().includes(filtergds.toLowerCase())) continue;
+    if (filterads && !plet.Address.toLowerCase().includes(filterads.toLowerCase())) continue;
+    if (filterpcd && !plet.Postcode.toLowerCase().includes(filterpcd.toLowerCase())) continue;
 
     letArray.push(
       <PropertiesToLetPT
@@ -50,9 +50,9 @@ function GetLet() {
 
   return (
     <>
-   
+
       <div className="col"><form className="drop-menu">
-      <h1>Filter Properties &nbsp;</h1>
+        <h1>Filter Properties &nbsp;</h1>
         <label htmlFor="ty">Type</label>
         <input
           value={filtertyp}

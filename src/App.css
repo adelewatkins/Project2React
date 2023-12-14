@@ -173,4 +173,7 @@ form {
   object-fit: fill;
   filter: grayscale(100%);
 
+} code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }

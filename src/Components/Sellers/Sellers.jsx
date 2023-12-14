@@ -32,7 +32,7 @@ function Sellers() {
             .catch((err) => console.error(err));
         }}
       >
-         {" "}
+        {" "}
         <h1>Sellers &nbsp;</h1>
         <label htmlFor="fn">First Name &nbsp;</label>
         <input
@@ -66,7 +66,7 @@ function Sellers() {
           type="text"
           className="form-control"
         ></input>
-        <label htmlFor="pn">PhoneNum</label>
+        <label htmlFor="pn">Phone Number</label>
         <input
           value={PhoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
@@ -78,6 +78,7 @@ function Sellers() {
         <button type="submit" className="btn btn-success btn-md">
           Submit
         </button>
+        <br />
       </form>
       <br />
       <br />
