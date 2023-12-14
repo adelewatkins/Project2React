@@ -1,17 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import GetBuyers from "./GetBuyers";
- 
+
 function Buyers() {
   const [FirstName, setFirstName] = useState("");
   const [LastName, setLastName] = useState("");
   const [Address, setAddress] = useState("");
   const [Postcode, setPostcode] = useState("");
   const [PhoneNumber, setPhoneNumber] = useState("");
- 
+
   return (
     <div>
-      <h1>Buyers</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -33,33 +32,40 @@ function Buyers() {
             .catch((err) => console.error(err));
         }}
       >
-        <label htmlFor="fn">First Name</label>
+        {" "}
+        <h1>Buyers &nbsp;</h1>
+        <label htmlFor="fn">First Name &nbsp;</label>
         <input
           value={FirstName}
+          br
           onChange={(e) => setFirstName(e.target.value)}
           id="fn"
           type="text"
+          class="form-control"
         ></input>
-        <label htmlFor="ln">Last Name</label>
+        <label htmlFor="ln">Last Name &nbsp;</label>
         <input
           value={LastName}
           onChange={(e) => setLastName(e.target.value)}
           id="ln"
           type="text"
+          class="form-control"
         ></input>
-        <label htmlFor="ad">Address</label>
+        <label htmlFor="ad">Address &nbsp; &nbsp; &nbsp;</label>
         <input
           value={Address}
           onChange={(e) => setAddress(e.target.value)}
           id="ad"
           type="text"
+          class="form-control"
         ></input>
-        <label htmlFor="pc">Postcode</label>
+        <label htmlFor="pc">Postcode &nbsp;&nbsp;&nbsp;</label>
         <input
           value={Postcode}
           onChange={(e) => setPostcode(e.target.value)}
           id="pc"
           type="text"
+          class="form-control"
         ></input>
         <label htmlFor="pn">Phone Number</label>
         <input
@@ -67,17 +73,19 @@ function Buyers() {
           onChange={(e) => setPhoneNumber(e.target.value)}
           id="pn"
           type="tel"
+          class="form-control"
         ></input>
         <br />
-        <button type="submit"className="btn btn-success btn-sm">Submit</button>
+        <button type="submit" className="btn btn-success btn-md">
+          Submit
+        </button>
+        <br />
       </form>
       <br />
-      <div>
-        <GetBuyers />
-      </div>
-     
+      <br />
+      <GetBuyers />
     </div>
   );
 }
- 
+
 export default Buyers;

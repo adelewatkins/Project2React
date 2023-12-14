@@ -1,220 +1,137 @@
 {
+  "bookingForSale": [
+    {
+      "Name": "Elliot",
+      "Email": "elliot@aol.com",
+      "PhoneNumber": "071542568",
+      "Date": "2023-12-14",
+      "TimeSlot": "16:22",
+      "property": "1",
+      "id": 2
+    },
+    {
+      "Name": "Adele",
+      "Email": "a@a.com",
+      "PhoneNumber": "071622568",
+      "Date": "2023-12-14",
+      "TimeSlot": "17:52",
+      "property": "1",
+      "id": 3
+    },
+    {
+      "Name": "James Jameson",
+      "Email": "abc@123.com",
+      "PhoneNumber": "37463272390",
+      "Date": "2023-12-14",
+      "TimeSlot": "16:23",
+      "property": "2",
+      "id": 5
+    }
+  ],
   "Sellers": [
     {
-      "FirstName": "agus",
-      "LastName": "tina",
-      "Address": "123 fake street",
-      "Postcode": "eh1 1aq",
+      "FirstName": "Agus",
+      "LastName": "Tina",
+      "Address": "1 Asney Cottage",
+      "Postcode": "LL13 0DS",
       "PhoneNumber": "0777777777",
       "id": 2
     },
     {
-      "FirstName": "Seller",
-      "LastName": "MrSelly",
-      "Address": "19 Seller Street",
-      "Postcode": "M1 1AQ",
-      "PhoneNumber": "11111111",
+      "FirstName": "John",
+      "LastName": "Smith",
+      "Address": "19 Arun Court",
+      "Postcode": "G30 2EZ",
+      "PhoneNumber": "07481235777",
       "id": 3
     },
     {
       "FirstName": "Michael",
       "LastName": "Parker",
-      "Address": "31 Road",
-      "Postcode": "gl1 8bl",
-      "PhoneNumber": "07888854421",
+      "Address": "10 Deebank Road",
+      "Postcode": "AB35 5QT",
+      "PhoneNumber": "07481235515",
       "id": 4
+    },
+    {
+      "FirstName": "Otto",
+      "LastName": "Octavius",
+      "Address": "139 NY",
+      "Postcode": "NY1 122",
+      "PhoneNumber": "07481235515",
+      "id": 5
     }
   ],
   "Buyers": [
     {
       "FirstName": "Poca",
       "LastName": "Hontas",
-      "Address": "123 address",
-      "Postcode": "eh1 1aq",
-      "PhoneNumber": "0777777777",
+      "Address": "3 Logie Farm Cottage",
+      "Postcode": "KY14 6HL",
+      "PhoneNumber": "07481235000",
       "id": 5
     },
     {
-      "FirstName": "Otto",
-      "LastName": "Octavius",
-      "Address": "139 NY",
-      "Postcode": "NY1 122",
-      "PhoneNumber": "",
-      "id": 6
-    },
-    {
-      "FirstName": "Otto",
-      "LastName": "Octavius",
-      "Address": "139 NY",
-      "Postcode": "NY1 122",
-      "PhoneNumber": "",
+      "FirstName": "Mike",
+      "LastName": "Atkinson",
+      "Address": "56 East Lancashire Road",
+      "Postcode": "WA11 9AB",
+      "PhoneNumber": "07957447474",
       "id": 7
-    },
-    {
-      "FirstName": "Otto",
-      "LastName": "Octavius",
-      "Address": "139 NY",
-      "Postcode": "NY1 122",
-      "PhoneNumber": "",
-      "id": 8
-    },
-    {
-      "FirstName": "Otto",
-      "LastName": "Octavius",
-      "Address": "139 NY",
-      "Postcode": "NY1 122",
-      "PhoneNumber": "",
-      "id": 9
-    },
-    {
-      "FirstName": "Otto",
-      "LastName": "Octavius",
-      "Address": "139 NY",
-      "Postcode": "NY1 122",
-      "PhoneNumber": "",
-      "id": 10
-    },
-    {
-      "FirstName": "Michael",
-      "LastName": "Parker",
-      "Address": "31 Road",
-      "Postcode": "gl1 8bl",
-      "PhoneNumber": "07888854421",
-      "id": 11
     }
   ],
   "PropertiesForSale": [
     {
-      "Type": "Semi",
-      "Price": 140000,
+      "Type": "Flat",
+      "Price": 200000,
       "Bedrooms": 2,
       "Bathrooms": 1,
       "Garden": "Yes",
-      "Address": "123 Address Street",
-      "Postcode": "AB1 C23",
+      "Address": "5 High Antrim",
+      "Postcode": "BT41 1AT",
       "id": 1
     },
     {
       "Type": "Flat",
-      "Price": 10000,
+      "Price": 180000,
       "Bedrooms": 1,
       "Bathrooms": 3,
       "Garden": "No",
-      "Address": "456 Address Street",
-      "Postcode": "AB2 C45",
+      "Address": "3 South London Road",
+      "Postcode": "IP9 2JP",
       "id": 2
     },
     {
       "Type": "Terrace",
-      "Price": 123123,
+      "Price": 505000,
       "Bedrooms": 1,
       "Bathrooms": 1,
       "Garden": "Yes",
-      "Address": "123 sakdnans",
-      "Postcode": "eh1 1aq",
+      "Address": "57 Bon Accord Street",
+      "Postcode": "AB11 6EB",
       "id": 3
-    },
-    {
-      "Type": "Flat",
-      "Price": 50000,
-      "Bedrooms": 1,
-      "Bathrooms": 1,
-      "Garden": "No",
-      "Address": "a121",
-      "Postcode": "eh1 1aq",
-      "id": 4
-    },
-    {
-      "Type": "Terrace",
-      "Price": 50000,
-      "Bedrooms": 1,
-      "Bathrooms": 1,
-      "Garden": "No",
-      "Address": "123 address",
-      "Postcode": "eh1 1aq",
-      "id": 5
-    },
-    {
-      "Type": "Semi-Detached",
-      "Price": 2222,
-      "Bedrooms": 3,
-      "Bathrooms": 3,
-      "Garden": true,
-      "Address": "222",
-      "Postcode": "33",
-      "id": 6
-    },
-    {
-      "Type": "",
-      "Price": 3112,
-      "Bedrooms": 33,
-      "Bathrooms": 22,
-      "Garden": true,
-      "Address": "33",
-      "Postcode": "22",
-      "id": 7
-    },
-    {
-      "Type": "Semi-Detached",
-      "Price": null,
-      "Bedrooms": 11,
-      "Bathrooms": 11,
-      "Garden": false,
-      "Address": "222",
-      "Postcode": "33",
-      "id": 8
-    },
-    {
-      "Type": "Semi-Detached",
-      "Price": 11,
-      "Bedrooms": 11,
-      "Bathrooms": 1,
-      "Garden": false,
-      "Address": "1",
-      "Postcode": "1",
-      "id": 9
-    },
-    {
-      "Type": "Semi-Detached",
-      "Price": 11,
-      "Bedrooms": 11,
-      "Bathrooms": 1,
-      "Garden": true,
-      "Address": "1",
-      "Postcode": "1",
-      "id": 10
     }
   ],
   "PropertiesToLet": [
     {
       "Type": "Semi-Detached",
-      "Rent": 100,
+      "Rent": 900,
       "Bedrooms": 1,
       "Bathrooms": 1,
       "Garden": "Yes",
-      "Address": "123 address",
-      "Postcode": "eh1 1aq",
+      "Address": "Flat 3 Lerwick Road",
+      "Postcode": "ZE1 0AD",
       "id": 1
     },
     {
-      "Type": "Detached",
-      "Rent": 500,
+      "Type": "Semi-Detached",
+      "Rent": 1200,
       "Bedrooms": 2,
       "Bathrooms": 2,
       "Garden": "No",
-      "Address": "123 sakdnans",
-      "Postcode": "ab1 2aq",
+      "Address": "3 Caerphilly Park",
+      "Postcode": "CF83 3GG",
       "id": 2
-    },
-    {
-      "Type": "Detached",
-      "Rent": 11,
-      "Bedrooms": 1,
-      "Bathrooms": 1,
-      "Garden": null,
-      "Address": "1",
-      "Postcode": "1",
-      "id": 3
     }
   ]
 }

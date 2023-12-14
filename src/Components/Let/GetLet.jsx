@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import PropertiesToLetPT from "./PropertiesToLetPT"
+import PropertiesToLetPT from "./PropertiesToLetPT";
 
 function GetLet() {
   const [letting, setLet] = useState([]);
@@ -25,17 +25,17 @@ function GetLet() {
 
   const letArray = [];
   for (const plet of letting) {
-    if (filtertyp && plet.Type !== filtertyp) continue;
+    if (filtertyp && !plet.Type.toLowerCase().includes(filtertyp.toLowerCase())) continue;
     if (filterrt && plet.Rent > parseInt(filterrt)) continue;
     if (filterbds && plet.Bedrooms < parseInt(filterbds)) continue;
     if (filterbts && plet.Bathrooms < parseInt(filterbts)) continue;
-    if (filtergds && plet.Garden < parseInt(filtergds)) continue;
-    if (filterads && plet.Address === filterads) continue;
-    if (filterpcd && plet.Postcode === filterpcd) continue;
+    if (filtergds && !plet.Garden.toLowerCase().includes(filtergds.toLowerCase())) continue;
+    if (filterads && !plet.Address.toLowerCase().includes(filterads.toLowerCase())) continue;
+    if (filterpcd && !plet.Postcode.toLowerCase().includes(filterpcd.toLowerCase())) continue;
 
     letArray.push(
       <PropertiesToLetPT
-        key={plet.Type + " " + plet.Rent}
+        key={plet.id}
         Type={plet.Type}
         Rent={plet.Rent}
         Bedrooms={plet.Bedrooms}
@@ -43,40 +43,90 @@ function GetLet() {
         Garden={plet.Garden}
         Address={plet.Address}
         Postcode={plet.Postcode}
-        
+        id={plet.id}
       />
-    )
+    );
   }
 
   return (
+    <>
 
-    <div>
-
-      <form>
-
-<label htmlFor="ty" >Type</label>
-<input value={filtertyp}onChange={(event)=>setFiltertyp(event.target.value)} id="ty" type="text"></input>
-<label htmlFor="rt" >Rent £</label>
-<input value={filterrt} onChange={(event) => setFilterrt(event.target.value)} id="pr" type="£"></input>
-<label htmlFor="bd" >Min Bedrooms</label>
-<input value={filterbds} onChange={(event) => setFilterbds(event.target.value)} id="bd" type="number" min={0}></input>
-<label htmlFor="bt">Bathrooms</label>
-<input value={filterbts} onChange={(event) => setFilterbts(event.target.value)} id="bt" type="number" min={0}></input>
-<label htmlFor="gn" >Garden</label>
-<input value={filtergds} onChange={(event) => setFiltergds(event.target.value)} id="gn" type="text"></input>
-<label htmlFor="ad" >Address</label>
-<input value={filterads} onChange={(event) => setFilterads(event.target.value)} id="ad" type="text"></input>
-<label htmlFor="pc" >Postcode</label>
-<input value={filterpcd} onChange={(event) => setFilterpcd(event.target.value)} id="pc" type="text"></input>
-<br />
-<button type="search" className="btn btn-danger btn-sm"> Clear </button>
-</form>
+      <div className="col"><form className="drop-menu">
+        <h1>Filter Properties &nbsp;</h1>
+        <label htmlFor="ty">Type</label>
+        <input
+          value={filtertyp}
+          onChange={(event) => setFiltertyp(event.target.value)}
+          id="ty"
+          type="text"
+          class="form-control"
+        ></input>
+        <label htmlFor="rt">Rent £</label>
+        <input
+          value={filterrt}
+          onChange={(event) => setFilterrt(event.target.value)}
+          id="pr"
+          type="£"
+          class="form-control"
+        ></input>
+        <label htmlFor="bd">Min Bedrooms</label>
+        <input
+          value={filterbds}
+          onChange={(event) => setFilterbds(event.target.value)}
+          id="bd"
+          type="number"
+          min={0}
+          class="form-control"
+        ></input>
+        <label htmlFor="bt">Bathrooms</label>
+        <input
+          value={filterbts}
+          onChange={(event) => setFilterbts(event.target.value)}
+          id="bt"
+          type="number"
+          min={0}
+          class="form-control"
+        ></input>
+        <label htmlFor="gn">Garden</label>
+        <input
+          value={filtergds}
+          onChange={(event) => setFiltergds(event.target.value)}
+          id="gn"
+          type="text"
+          class="form-control"
+        ></input>
+        <label htmlFor="ad">Address</label>
+        <input
+          value={filterads}
+          onChange={(event) => setFilterads(event.target.value)}
+          id="ad"
+          type="text"
+          class="form-control"
+        ></input>
+        <label htmlFor="pc">Postcode</label>
+        <input
+          value={filterpcd}
+          onChange={(event) => setFilterpcd(event.target.value)}
+          id="pc"
+          type="text"
+          class="form-control"
+        ></input>
+        <br />
+        <button type="search" className="btn btn-danger btn-md">
+          {" "}
+          Clear{" "}
+        </button>
+      </form>
+      </div>
 
       <h2> A list of properties to let </h2>
-    
-      {letArray}
-      
-    </div>
+      <br />
+      <br />
+      <br />
+      <div className="container-fluid">
+        <div className="row">{letArray}</div>
+      </div>
+    </>
   );
 }
 
