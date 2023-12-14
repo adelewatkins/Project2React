@@ -12,6 +12,16 @@ function PropertiesToLetPT(props) {
       <div className="flex">
         <div className="card-body card-text">
           <h4 className="card-title"></h4>
+          <label htmlFor="pr"><h5>Premium Listing &nbsp;</h5></label>
+                    <input
+ 
+ 
+                        id="pl"
+                        type="checkbox"
+ 
+                    ></input>
+                    <br></br>
+                    <br></br>
           <img
               src={RS4}
               alt="RS"

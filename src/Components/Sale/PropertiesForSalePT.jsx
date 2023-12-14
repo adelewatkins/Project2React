@@ -14,6 +14,16 @@ function PropertiesForSalePT(props) {
         <div className="card-body card-text">
         <h4 className="card-title"></h4>
         {" "}
+        <label htmlFor="pr"><h5>Premium Listing &nbsp;</h5></label>
+                    <input
+ 
+ 
+                        id="pl"
+                        type="checkbox"
+ 
+                    ></input>
+                    <br></br>
+                    <br></br>
                     <img
               src={RS}
               alt="RS"
@@ -22,6 +32,8 @@ function PropertiesForSalePT(props) {
               className="d-inline-block align-text-middle"/> 
               <br />
               <br />
+              <button onClick={()=> navigate("/PropertiesForSale/BookingSale/" + props.id)} type="Bookings" className="btn btn-success btn-sm"> Book a viewing </button>
+
                         <p>{"Price: £" +props.Price} </p>
                         <p> {"Type: " +props.Type}</p>
                         <p> {"Bedrooms: "+props.Bedrooms}</p>
@@ -35,7 +47,7 @@ function PropertiesForSalePT(props) {
                             <option>Under Offer</option>
                             <option>Withdrawn</option>
                         </select>&nbsp;
-                        <button onClick={()=> navigate("/PropertiesForSale/BookingSale/" + props.id)} type="Bookings" className="btn btn-success btn-sm"> Book a viewing </button>
+                        <button onClick={()=> navigate("/PropertiesForSale/BookingSale/" + props.id)} type="Bookings" className="btn btn-success btn-sm"> Submit</button>
 
                     </div>
                     </div>

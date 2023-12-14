@@ -121,6 +121,16 @@
       "Address": "123 Sakdnans",
       "Postcode": "EH1 1AQ",
       "id": 3
+    },
+    {
+      "Type": "Detached",
+      "Price": 150000,
+      "Bedrooms": 3,
+      "Bathrooms": 2,
+      "Garden": true,
+      "Address": "41 Fake Street",
+      "Postcode": "AB1 1AB",
+      "id": 4
     }
   ],
   "PropertiesToLet": [
