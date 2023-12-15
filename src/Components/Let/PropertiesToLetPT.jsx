@@ -56,7 +56,7 @@ function PropertiesToLetPT(props) {
         </div>
       </div>
       <button className="btn btn-danger btn-md" onClick={handleConfetti}>
-        SOLD
+        LET
       </button>
     </Card>
   );
