@@ -9,12 +9,15 @@ function Buyers() {
   const [Postcode, setPostcode] = useState("");
   const [PhoneNumber, setPhoneNumber] = useState("");
 
+//this is the form that allows you to create a buyer
+
   return (
     <div>
       <form
         onSubmit={(e) => {
           e.preventDefault();
           axios
+          // this is a post to the server
             .post("http://localhost:3000/Buyers", {
               FirstName,
               LastName,
@@ -32,6 +35,8 @@ function Buyers() {
             .catch((err) => console.error(err));
         }}
       >
+        
+        {/* this is the input form on the buyers page  */}
         {" "}
         <h1>Buyers &nbsp;</h1>
         <label htmlFor="fn">First Name &nbsp;</label>
@@ -83,7 +88,8 @@ function Buyers() {
       </form>
       <br />
       <br />
-      <GetBuyers />
+      <GetBuyers /> 
+      {/* this is the render of the buyers page at the bottom */}
     </div>
   );
 }

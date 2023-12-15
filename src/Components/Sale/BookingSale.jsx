@@ -128,9 +128,10 @@ function BookingSale() {
       <br />
       
         <h3>Current Bookings</h3>
-        {(() => {
-          if (booking.length > 0) {
-            return (
+{
+        booking.length > 0 ?
+        
+           (
              <Card >
                <table>
                 <thead>
@@ -181,10 +182,9 @@ function BookingSale() {
               </table>
              </Card>
             )
-          } else {
-            return <p>No bookings available.</p>;
+          : <p>No bookings available.</p>
           }
-        })()}
+       
       </div>
 
   );

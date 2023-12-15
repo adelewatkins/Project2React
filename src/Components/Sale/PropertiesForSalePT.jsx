@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import RS from "./RS.png";
 import confetti from "canvas-confetti";
 
+//this is the render of the card for the properties 
+
 function PropertiesForSalePT(props) {
   const navigate = useNavigate();
   const handleConfetti = () => {

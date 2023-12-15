@@ -20,6 +20,7 @@ function PropertiesToLet() {
         className="drop-menu"
         onSubmit={(e) => {
           e.preventDefault();
+          // runsa post request to the json server
           axios
             .post("http://localhost:3000/PropertiesToLet", {
               Type,
@@ -129,7 +130,7 @@ function PropertiesToLet() {
       <br />
       </div>
       
-      
+      {/* this is the property display */}
         <GetLet />
       
 

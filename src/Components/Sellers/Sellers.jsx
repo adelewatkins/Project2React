@@ -9,6 +9,8 @@ function Sellers() {
   const [Postcode, setPostcode] = useState("");
   const [PhoneNumber, setPhoneNumber] = useState("");
 
+  //this is the form that allows you to create a buyer
+  
   return (
     <div>
       <form
