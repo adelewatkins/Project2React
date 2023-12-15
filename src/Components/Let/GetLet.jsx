@@ -14,6 +14,7 @@ function GetLet() {
 
   useEffect(function () {
     axios
+    // this is a get request from the server for new properties that have been added
       .get("http://localhost:3000/PropertiesToLet")
       .then((response) => {
         console.log("Response:", response);
@@ -50,7 +51,7 @@ function GetLet() {
 
   return (
     <>
-
+{/* this is the filter for the properties showing */}
       <div className="col"><form className="drop-menu">
         <h1>Filter Properties &nbsp;</h1>
         <label htmlFor="ty">Type</label>
@@ -125,6 +126,7 @@ function GetLet() {
       <br />
       <div className="container-fluid">
         <div className="row">{letArray}</div>
+        {/* this shows the propeties at the bottom of the page */}
       </div>
     </>
   );

@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
 
+// this is a render on the buyers page and how this is rendered
+
 function BuyersPT(props) {
   return (
     <Card className="col-sm-6 col-md-4 col-lg-3 m-4">

@@ -15,7 +15,7 @@ function BookingLet() {
   const [letBooking, setLetBookings] = useState([]);
   const [letProperty, setLetProperty] = useState();
 
-  
+  // set the property and retrieve the property by ID from the PTL page
   useEffect(function () {
     axios
       .get("http://localhost:3000/PropertiesToLet/" + params.id)
@@ -26,6 +26,7 @@ function BookingLet() {
       })
       .catch((err) => console.error(err));
       axios
+      // get request from the server
       .get("http://localhost:3000/bookingForLet")
       .then((response)=>{
         console.log("Response:", response);
@@ -43,6 +44,7 @@ function BookingLet() {
         onSubmit={(e) => {
           e.preventDefault();
           axios
+          // posting the updated booikng info
             .post("http://localhost:3000/bookingForLet", {
               Name,
               Email,
@@ -64,6 +66,8 @@ function BookingLet() {
             .catch((err) => console.error(err));
         }}
       >
+        {/* this is the booking imput form to submit a booking  */}
+
         <label htmlFor="fn">Full Name &nbsp;</label>
         <input
           value={Name}
@@ -115,10 +119,10 @@ function BookingLet() {
 
       
   <h3>Current Bookings</h3>
-  {(() => {
-    if (letBooking.length > 0  ) {
+  {
+    letBooking.length > 0 ?
      
-      return (
+     (
         <Card >
                <table>
                 <thead>
@@ -150,6 +154,10 @@ function BookingLet() {
                   </tr>
                 </thead>
                 <tbody className="table-group-divider">
+
+                  {/* this Calls a defined callback function on each element of an array, 
+                  and returns an array that contains the results.  */}
+
                   {letBooking.map(book => (<tr key={book.id}>
                     <td> {book.Name}</td>
                     <br />
@@ -169,10 +177,10 @@ function BookingLet() {
               </table>
              </Card>
             )
-          } else {
-            return <p>No bookings available.</p>;
-          }
-        })()}
+         
+            : <p>No bookings available.</p>
+                  }  
+        
       </div>
 
   );

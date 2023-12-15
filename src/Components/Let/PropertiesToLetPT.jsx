@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import RS4 from "./RS4.png";
 import confetti from "canvas-confetti";
 
+//this is the render of the card for the properties 
+
 function PropertiesToLetPT(props) {
   const navigate = useNavigate();
   const handleConfetti = () => {
@@ -11,6 +13,8 @@ function PropertiesToLetPT(props) {
       particleCount: 500,
       spread: 320,
     });
+
+    // above is the function that run confetti
   };
   return (
     <Card className="col-sm-6 col-md-4 col-lg-3 m-4">
@@ -46,6 +50,7 @@ function PropertiesToLetPT(props) {
           </select>
           &nbsp;
           <button
+          // this button below handles the booking system
             onClick={() => navigate("/PropertiesToLet/BookingLet/" + props.id)}
             type="submit"
             className="btn btn-success btn-md"
