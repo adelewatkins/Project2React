@@ -56,7 +56,7 @@ function PropertiesToLetPT(props) {
         </div>
       </div>
       <button className="btn btn-danger btn-md" onClick={handleConfetti}>
-        SOLD
+        LET
       </button>
     </Card>
   );
@@ -66,7 +66,7 @@ PropertiesToLetPT.propTypes = {
   Rent: PropTypes.number.isRequired,
   Bedrooms: PropTypes.number.isRequired,
   Bathrooms: PropTypes.number.isRequired,
-  Garden: PropTypes.bool.isRequired,
+  Garden: PropTypes.string.isRequired,
   Address: PropTypes.string.isRequired,
   Postcode: PropTypes.string.isRequired,
 };

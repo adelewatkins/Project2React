@@ -1,4 +1,15 @@
 {
+  "bookingForLet": [
+    {
+      "Name": "Mr Man",
+      "Email": "man@email.com",
+      "PhoneNumber": "01234555678",
+      "Date": "2023-12-20",
+      "TimeSlot": "14:22",
+      "letProperty": "2",
+      "id": 1
+    }
+  ],
   "bookingForSale": [
     {
       "Name": "Elliot",
