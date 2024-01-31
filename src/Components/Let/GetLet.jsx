@@ -15,7 +15,7 @@ function GetLet() {
   useEffect(function () {
     axios
     // this is a get request from the server for new properties that have been added
-      .get("http://localhost:3000/PropertiesToLet")
+      .get("http://localhost:8082/PLet/get")
       .then((response) => {
         console.log("Response:", response);
         setLet(response.data);

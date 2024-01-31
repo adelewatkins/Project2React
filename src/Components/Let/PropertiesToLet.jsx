@@ -22,7 +22,7 @@ function PropertiesToLet() {
           e.preventDefault();
           // runsa post request to the json server
           axios
-            .post("http://localhost:3000/PropertiesToLet", {
+            .post("http://localhost:8082/PLet/create", {
               Type,
               Rent: parseInt(Rent),
               Bedrooms: parseInt(Bedrooms),

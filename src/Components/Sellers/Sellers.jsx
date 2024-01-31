@@ -17,12 +17,12 @@ function Sellers() {
         onSubmit={(e) => {
           e.preventDefault();
           axios
-            .post("http://localhost:3000/Sellers", {
-              FirstName,
-              LastName,
-              Address,
-              Postcode,
-              PhoneNumber,
+            .post("http://localhost:8082/sellers/create", {
+              firstName:FirstName,
+              lastName:LastName,
+              address:Address,
+              postcode:Postcode,
+              phoneNumber:PhoneNumber
             })
             .then((response) => {
               setFirstName("");
