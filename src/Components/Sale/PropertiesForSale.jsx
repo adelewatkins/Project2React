@@ -20,14 +20,14 @@ function PropertiesForSale() {
           onSubmit={(e) => {
             e.preventDefault();
             axios
-              .post("http://localhost:3000/PropertiesForSale", {
-                Type,
-                Price: parseInt(Price),
-                Bedrooms: parseInt(Bedrooms),
-                Bathrooms: parseInt(Bathrooms),
-                Garden,
-                Address,
-                Postcode,
+              .post("http://localhost:8082/PSale/create", {
+                type:Type,
+                price: parseInt(Price),
+                bedrooms: parseInt(Bedrooms),
+                bathrooms: parseInt(Bathrooms),
+                garden: Garden,
+                address: Address,
+                postcode: Postcode,
               })
               .then((response) => {
                 setType("");
