@@ -18,7 +18,7 @@ function BookingLet() {
   // set the property and retrieve the property by ID from the PTL page
   useEffect(function () {
     axios
-      .get("http://localhost:3000/PropertiesToLet/" + params.id)
+      .get("http://localhost:8082/PLet/get" + params.id)
       .then((response) => {
         console.log("Response:", response);
         setLetProperty(response.data);

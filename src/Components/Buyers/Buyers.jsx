@@ -18,12 +18,12 @@ function Buyers() {
           e.preventDefault();
           axios
           // this is a post to the server
-            .post("http://localhost:3000/Buyers", {
-              FirstName,
-              LastName,
-              Address,
-              Postcode,
-              PhoneNumber,
+            .post("http://localhost:8082/Buyers/create", {
+              firstName: FirstName,
+              lastName: LastName,
+              address: Address,
+              postcode: Postcode,
+              phoneNumber: PhoneNumber
             })
             .then((response) => {
               setFirstName("");

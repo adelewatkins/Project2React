@@ -19,7 +19,7 @@ function BookingSale() {
 
   useEffect(function () {
     axios
-      .get("http://localhost:3000/PropertiesForSale/" + params.id)
+      .get("http://localhost:8082/BSale/get" + params.id)
       .then((response) => {
         console.log("Response:", response);
         setProperty(response.data);
