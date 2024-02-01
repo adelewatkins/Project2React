@@ -18,21 +18,14 @@ function BookingLet() {
   // set the property and retrieve the property by ID from the PTL page
   useEffect(function () {
     axios
-      .get("http://localhost:8082/PLet/get" + params.id)
+      .get("http://localhost:8082/PLet/get/" + params.id)
       .then((response) => {
         console.log("Response:", response);
         setLetProperty(response.data);
         // console.log("sale:", sale);
       })
       .catch((err) => console.error(err));
-      axios
-      // get request from the server
-      .get("http://localhost:3000/bookingForLet")
-      .then((response)=>{
-        console.log("Response:", response);
-        setLetBookings(response.data);
-        console.log("booking:", letBooking)
-      })
+
   }, []);
   console.log(letProperty)
 
@@ -44,15 +37,15 @@ function BookingLet() {
         onSubmit={(e) => {
           e.preventDefault();
           axios
-          // posting the updated booikng info
-            .post("http://localhost:3000/bookingForLet", {
+            // posting the updated booikng info
+            .post("http://localhost:8082/BLet/create", {
               name,
               email,
               phoneNumber,
               date,
               timeSlot,
-              letProperty: params.id
-              
+              propertiesToLet: { id: params.id }
+
             })
             .then((response) => {
               setName("");
@@ -60,7 +53,7 @@ function BookingLet() {
               setPhoneNumber("");
               setDate("");
               setTimeSlot("");
-             
+
 
             })
             .catch((err) => console.error(err));
@@ -80,7 +73,7 @@ function BookingLet() {
         <label htmlFor="ln">Email &nbsp;</label>
         <input
           value={email}
-          onChange={(e) =>  setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           id="ln"
           type="email"
           className="form-control"
@@ -88,7 +81,7 @@ function BookingLet() {
         <label htmlFor="ad">Phone Number &nbsp; &nbsp; &nbsp;</label>
         <input
           value={phoneNumber}
-          onChange={(e) =>  setPhoneNumber(e.target.value)}
+          onChange={(e) => setPhoneNumber(e.target.value)}
           id="ad"
           type="tel"
           className="form-control"
@@ -117,71 +110,66 @@ function BookingLet() {
       <br />
       <br />
 
-      
-  <h3>Current Bookings</h3>
-  {
-    letBooking.length > 0 ?
-     
-     (
-        <Card >
-               <table>
-                <thead>
-                  <tr>
-                    <th>
-                      Full Name
-                    </th>
-                    <br />
-                    <th>
-                      Email
-                    </th>
-                    <br />
-                    <th>
-                      Phone Number
-                    </th>
-                    <br />
-                    <th>
-                      Date                
-                      </th>
-                      <br />
-                    <th>
-                      Time Slot
-                    </th>
-                    <br />
-                    <th>
-                      Property
-                    </th>
-                    <br />
-                  </tr>
-                </thead>
-                <tbody className="table-group-divider">
 
-                  {/* this Calls a defined callback function on each element of an array, 
+      <h3>Current Bookings</h3>
+      {
+
+
+        (
+          <Card >
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    Full Name
+                  </th>
+
+                  <th>
+                    Email
+                  </th>
+
+                  <th>
+                    Phone Number
+                  </th>
+
+                  <th>
+                    Date
+                  </th>
+
+                  <th>
+                    Time Slot
+                  </th>
+
+
+
+                </tr>
+              </thead>
+              <tbody className="table-group-divider">
+
+                {/* this Calls a defined callback function on each element of an array, 
                   and returns an array that contains the results.  */}
 
-                  {letBooking.map(book => (<tr key={book.id}>
-                    <td> {book.name}</td>
-                    <br />
-                    <td> {book.email}</td>
-                    <br />
-                    <td> {book.phoneNumber}</td>
-                    <br />
-                    <td> {book.date}</td>
-                    <br />
-                    <td> {book.timeSlot}</td>
-                    <br />
-                    <td> {book.letProperty}</td>
-                    <br />
-                  </tr>
-                  ))}
-                </tbody>
-              </table>
-             </Card>
-            )
-         
-            : <p>No bookings available.</p>
-                  }  
-        
-      </div>
+                {letProperty?.bookingForLets.map(book => (<tr key={book.id}>
+                  <td> {book.name}</td>
+
+                  <td> {book.email}</td>
+
+                  <td> {book.phoneNumber}</td>
+
+                  <td> {book.date}</td>
+
+                  <td> {book.timeSlot}</td>
+
+                </tr>
+                ))}
+              </tbody>
+            </table>
+          </Card>
+        )
+
+      }
+
+    </div>
 
   );
 }
