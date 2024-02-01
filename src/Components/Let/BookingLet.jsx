@@ -7,11 +7,11 @@ import { useNavigate, useParams } from "react-router-dom";
 function BookingLet() {
   const navigate = useNavigate();
   const params = useParams();
-  const [Name, setName] = useState("");
-  const [Email, setEmail] = useState("");
-  const [PhoneNumber, setPhoneNumber] = useState("");
-  const [Date, setDate] = useState("");
-  const [TimeSlot, setTimeSlot] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [date, setDate] = useState("");
+  const [timeSlot, setTimeSlot] = useState("");
   const [letBooking, setLetBookings] = useState([]);
   const [letProperty, setLetProperty] = useState();
 
@@ -46,11 +46,11 @@ function BookingLet() {
           axios
           // posting the updated booikng info
             .post("http://localhost:3000/bookingForLet", {
-              Name,
-              Email,
-              PhoneNumber,
-              Date,
-              TimeSlot,
+              name,
+              email,
+              phoneNumber,
+              date,
+              timeSlot,
               letProperty: params.id
               
             })
@@ -70,7 +70,7 @@ function BookingLet() {
 
         <label htmlFor="fn">Full Name &nbsp;</label>
         <input
-          value={Name}
+          value={name}
           br
           onChange={(e) => setName(e.target.value)}
           id="fn"
@@ -79,7 +79,7 @@ function BookingLet() {
         ></input>
         <label htmlFor="ln">Email &nbsp;</label>
         <input
-          value={Email}
+          value={email}
           onChange={(e) =>  setEmail(e.target.value)}
           id="ln"
           type="email"
@@ -87,7 +87,7 @@ function BookingLet() {
         ></input>
         <label htmlFor="ad">Phone Number &nbsp; &nbsp; &nbsp;</label>
         <input
-          value={PhoneNumber}
+          value={phoneNumber}
           onChange={(e) =>  setPhoneNumber(e.target.value)}
           id="ad"
           type="tel"
@@ -95,7 +95,7 @@ function BookingLet() {
         ></input>
         <label htmlFor="pc">Date &nbsp;&nbsp;&nbsp;</label>
         <input
-          value={Date}
+          value={date}
           onChange={(e) => setDate(e.target.value)}
           id="pc"
           type="date"
@@ -103,7 +103,7 @@ function BookingLet() {
         ></input>
         <label htmlFor="pn">Time Slot</label>
         <input
-          value={TimeSlot}
+          value={timeSlot}
           onChange={(e) => setTimeSlot(e.target.value)}
           id="pn"
           type="time"
@@ -159,15 +159,15 @@ function BookingLet() {
                   and returns an array that contains the results.  */}
 
                   {letBooking.map(book => (<tr key={book.id}>
-                    <td> {book.Name}</td>
+                    <td> {book.name}</td>
                     <br />
-                    <td> {book.Email}</td>
+                    <td> {book.email}</td>
                     <br />
-                    <td> {book.PhoneNumber}</td>
+                    <td> {book.phoneNumber}</td>
                     <br />
-                    <td> {book.Date}</td>
+                    <td> {book.date}</td>
                     <br />
-                    <td> {book.TimeSlot}</td>
+                    <td> {book.timeSlot}</td>
                     <br />
                     <td> {book.letProperty}</td>
                     <br />

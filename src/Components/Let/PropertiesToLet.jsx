@@ -3,13 +3,13 @@ import axios from "axios";
 import GetLet from "./GetLet";
 
 function PropertiesToLet() {
-  const [Type, setType] = useState("");
-  const [Rent, setRent] = useState("");
-  const [Bedrooms, setBedrooms] = useState("");
-  const [Bathrooms, setBathrooms] = useState("");
-  const [Garden, setGarden] = useState("");
-  const [Address, setAddress] = useState("");
-  const [Postcode, setPostcode] = useState("");
+  const [type, setType] = useState("");
+  const [rent, setRent] = useState("");
+  const [bedrooms, setBedrooms] = useState("");
+  const [bathrooms, setBathrooms] = useState("");
+  const [garden, setGarden] = useState("");
+  const [address, setAddress] = useState("");
+  const [postcode, setPostcode] = useState("");
 
   return (
     <div className="row">
@@ -23,13 +23,13 @@ function PropertiesToLet() {
           // runsa post request to the json server
           axios
             .post("http://localhost:8082/PLet/create", {
-              Type,
-              Rent: parseInt(Rent),
-              Bedrooms: parseInt(Bedrooms),
-              Bathrooms: parseInt(Bathrooms),
-              Garden,
-              Address,
-              Postcode,
+              type,
+              rent: parseInt(rent),
+              bedrooms: parseInt(bedrooms),
+              bathrooms: parseInt(bathrooms),
+              garden,
+              address,
+              postcode,
             })
 
             .then((response) => {
@@ -47,7 +47,7 @@ function PropertiesToLet() {
         <h1>Properties To Let </h1>
         <label htmlFor="ty">Type</label>
         <select
-          value={Type}
+          value={type}
           onChange={(e) => setType(e.target.value)}
           id="ty"
           type="text"
@@ -64,7 +64,7 @@ function PropertiesToLet() {
 
         <label htmlFor="pr">Rent £</label>
         <input
-          value={Rent}
+          value={rent}
           onChange={(e) => setRent(e.target.value)}
           id="pr"
           type="£"
@@ -72,7 +72,7 @@ function PropertiesToLet() {
         ></input>
         <label htmlFor="bd">Bedroom</label>
         <input
-          value={Bedrooms}
+          value={bedrooms}
           onChange={(e) => setBedrooms(e.target.value)}
           id="bd"
           type="number"
@@ -81,7 +81,7 @@ function PropertiesToLet() {
         ></input>
         <label htmlFor="bt">Bathroom</label>
         <input
-          value={Bathrooms}
+          value={bathrooms}
           onChange={(e) => setBathrooms(e.target.value)}
           id="bt"
           type="number"
@@ -91,7 +91,7 @@ function PropertiesToLet() {
 
         <label htmlFor="gn">Garden</label>
         <select
-          value={Garden}
+          value={garden}
           onChange={(e) => setGarden(e.target.value)}
           id="gn"
           type="text"
@@ -104,7 +104,7 @@ function PropertiesToLet() {
 
         <label htmlFor="ad">Address</label>
         <input
-          value={Address}
+          value={address}
           onChange={(e) => setAddress(e.target.value)}
           id="ad"
           type="text"
@@ -112,7 +112,7 @@ function PropertiesToLet() {
         ></input>
         <label htmlFor="pc">Postcode</label>
         <input
-          value={Postcode}
+          value={postcode}
           onChange={(e) => setPostcode(e.target.value)}
           id="pc"
           type="text"
