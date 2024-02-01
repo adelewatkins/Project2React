@@ -16,7 +16,7 @@ function GetSale() {
 
   useEffect(function () {
     axios
-      .get("http://localhost:3000/PropertiesForSale")
+      .get("http://localhost:8082/PSale/get")
       .then((response) => {
         console.log("Response:", response);
         setSale(response.data);
@@ -27,24 +27,24 @@ function GetSale() {
 
   const saleArray = [];
   for (const psale of sale) {
-    if (filterty && !psale.Type.toLowerCase().includes(filterty.toLowerCase())) continue;
-    if (filterpr && psale.Price > parseInt(filterpr)) continue;
-    if (filterbd && psale.Bedrooms < parseInt(filterbd)) continue;
-    if (filterbt && psale.Bathrooms < parseInt(filterbt)) continue;
-    if (filtergd && !psale.Garden.toLowerCase().includes(filtergd.toLowerCase())) continue;
-    if (filterad && !psale.Address.toLowerCase().includes(filterad.toLowerCase())) continue;
-    if (filterpc && !psale.Postcode.toLowerCase().includes(filterpc.toLowerCase())) continue;
+    if (filterty && !psale.type.toLowerCase().includes(filterty.toLowerCase())) continue;
+    if (filterpr && psale.price > parseInt(filterpr)) continue;
+    if (filterbd && psale.bedrooms < parseInt(filterbd)) continue;
+    if (filterbt && psale.bathrooms < parseInt(filterbt)) continue;
+    if (filtergd && !psale.garden.toLowerCase().includes(filtergd.toLowerCase())) continue;
+    if (filterad && !psale.address.toLowerCase().includes(filterad.toLowerCase())) continue;
+    if (filterpc && !psale.postcode.toLowerCase().includes(filterpc.toLowerCase())) continue;
 
     saleArray.push(
       <PropertiesForSalePT
         key={psale.id}
-        Type={psale.Type}
-        Price={psale.Price}
-        Bedrooms={psale.Bedrooms}
-        Bathrooms={psale.Bathrooms}
-        Garden={psale.Garden}
-        Address={psale.Address}
-        Postcode={psale.Postcode}
+        type={psale.type}
+        price={psale.price}
+        bedrooms={psale.bedrooms}
+        bathrooms={psale.bathrooms}
+        garden={psale.garden}
+        address={psale.address}
+        postcode={psale.postcode}
         id={psale.id}
       />
     );

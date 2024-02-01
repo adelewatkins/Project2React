@@ -36,13 +36,13 @@ function PropertiesToLetPT(props) {
           />
           <br />
           <br />
-          <p>{"Rent: £" + props.Rent} </p>
-          <p> {"Type: " + props.Type}</p>
-          <p> {"Bedrooms: " + props.Bedrooms}</p>
-          <p> {"Bathrooms: " + props.Bathrooms}</p>
-          <p> {"Garden: " + props.Garden}</p>
-          <p> {"Address: " + props.Address}</p>
-          <p> {"Postcode: " + props.Postcode}</p>
+          <p>{"Rent: £" + props.rent} </p>
+          <p> {"Type: " + props.type}</p>
+          <p> {"Bedrooms: " + props.bedrooms}</p>
+          <p> {"Bathrooms: " + props.bathrooms}</p>
+          <p> {"Garden: " + props.garden}</p>
+          <p> {"Address: " + props.address}</p>
+          <p> {"Postcode: " + props.postcode}</p>
           <select>
             <option>For Let</option>
             <option>Already Let</option>
@@ -67,12 +67,12 @@ function PropertiesToLetPT(props) {
   );
 }
 PropertiesToLetPT.propTypes = {
-  Type: PropTypes.string.isRequired,
-  Rent: PropTypes.number.isRequired,
-  Bedrooms: PropTypes.number.isRequired,
-  Bathrooms: PropTypes.number.isRequired,
-  Garden: PropTypes.string.isRequired,
-  Address: PropTypes.string.isRequired,
-  Postcode: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  rent: PropTypes.number.isRequired,
+  bedrooms: PropTypes.number.isRequired,
+  bathrooms: PropTypes.number.isRequired,
+  garden: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+  postcode: PropTypes.string.isRequired,
 };
 export default PropertiesToLetPT;

@@ -15,11 +15,11 @@ function SellersPT(props) {
               alt="avatar"
               className="card-person"
             />
-            {props.FirstName} {props.LastName}
+            {props.firstName} {props.lastName}
           </h4>
-          <p>{props.Address}</p>
-          <p>{props.Postcode}</p>
-          <p>{props.PhoneNumber}</p>
+          <p>{props.address}</p>
+          <p>{props.postcode}</p>
+          <p>{props.phoneNumber}</p>
         </div>
       </div>
     </Card>
@@ -27,11 +27,11 @@ function SellersPT(props) {
        
 }
 SellersPT.propTypes = {
-    FirstName: PropTypes.string.isRequired,
-    LastName: PropTypes.string.isRequired,
-    Address: PropTypes.string.isRequired,
-    Postcode: PropTypes.string.isRequired,
-    PhoneNumber: PropTypes.number.isRequired,
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    address: PropTypes.string.isRequired,
+    postcode: PropTypes.string.isRequired,
+    phoneNumber: PropTypes.number.isRequired,
 
 }
 

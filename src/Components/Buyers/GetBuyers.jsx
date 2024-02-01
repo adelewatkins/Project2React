@@ -10,7 +10,7 @@ function GetBuyers() {
     axios
     // this is a get request from the server to post the buyer
 
-      .get("http://localhost:3000/Buyers")
+      .get("http://localhost:8082/Buyers/get")
       .then((response) => {
         console.log("Response:", response);
         setBuyers(response.data);
@@ -23,12 +23,12 @@ function GetBuyers() {
   for (const buyer of buyers) {
     buyerArray.push(
       <BuyersPT
-        key={buyer.FirstName + " " + buyer.Postcode}
-        FirstName={buyer.FirstName}
-        LastName={buyer.LastName}
-        Address={buyer.Address}
-        Postcode={buyer.Postcode}
-        PhoneNumber={buyer.PhoneNumber}
+        key={buyer.firstName + " " + buyer.postcode}
+        firstName={buyer.firstName}
+        lastName={buyer.lastName}
+        address={buyer.address}
+        postcode={buyer.postcode}
+        phoneNumber={buyer.phoneNumber}
       />
     );
   }
