@@ -26,24 +26,24 @@ function GetLet() {
 
   const letArray = [];
   for (const plet of letting) {
-    if (filtertyp && !plet.Type.toLowerCase().includes(filtertyp.toLowerCase())) continue;
-    if (filterrt && plet.Rent > parseInt(filterrt)) continue;
-    if (filterbds && plet.Bedrooms < parseInt(filterbds)) continue;
-    if (filterbts && plet.Bathrooms < parseInt(filterbts)) continue;
-    if (filtergds && !plet.Garden.toLowerCase().includes(filtergds.toLowerCase())) continue;
-    if (filterads && !plet.Address.toLowerCase().includes(filterads.toLowerCase())) continue;
-    if (filterpcd && !plet.Postcode.toLowerCase().includes(filterpcd.toLowerCase())) continue;
+    if (filtertyp && !plet.type.toLowerCase().includes(filtertyp.toLowerCase())) continue;
+    if (filterrt && plet.rent > parseInt(filterrt)) continue;
+    if (filterbds && plet.bedrooms < parseInt(filterbds)) continue;
+    if (filterbts && plet.bathrooms < parseInt(filterbts)) continue;
+    if (filtergds && !plet.garden.toLowerCase().includes(filtergds.toLowerCase())) continue;
+    if (filterads && !plet.address.toLowerCase().includes(filterads.toLowerCase())) continue;
+    if (filterpcd && !plet.postcode.toLowerCase().includes(filterpcd.toLowerCase())) continue;
 
     letArray.push(
       <PropertiesToLetPT
         key={plet.id}
-        Type={plet.Type}
-        Rent={plet.Rent}
-        Bedrooms={plet.Bedrooms}
-        Bathrooms={plet.Bathrooms}
-        Garden={plet.Garden}
-        Address={plet.Address}
-        Postcode={plet.Postcode}
+        type={plet.type}
+        rent={plet.rent}
+        bedrooms={plet.bedrooms}
+        bathrooms={plet.bathrooms}
+        garden={plet.garden}
+        address={plet.address}
+        postcode={plet.postcode}
         id={plet.id}
       />
     );
