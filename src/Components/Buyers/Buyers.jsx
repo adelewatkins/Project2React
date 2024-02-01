@@ -1,15 +1,22 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import GetBuyers from "./GetBuyers";
+import DisplayBuyers from "./DisplayBuyers";
 
-function Buyers() {
+function Buyers(props) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address, setAddress] = useState("");
   const [postcode, setPostcode] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [buyers, setBuyers] = useState([]);
 
 //this is the form that allows you to create a buyer
+
+function getBuyers () {
+    axios.get("http://localhost:8082/Buyers/get")
+      .then((response) => {setBuyers(response.data)})
+  }
+  useEffect(getBuyers, [])
 
   return (
     <div>
@@ -31,6 +38,7 @@ function Buyers() {
               setAddress("");
               setPostcode("");
               setPhoneNumber("");
+              getBuyers();
             })
             .catch((err) => console.error(err));
         }}
@@ -88,7 +96,7 @@ function Buyers() {
       </form>
       <br />
       <br />
-      <GetBuyers /> 
+      <DisplayBuyers buyers={buyers}/> 
       {/* this is the render of the buyers page at the bottom */}
     </div>
   );
