@@ -19,33 +19,16 @@ function BookingSale() {
 
   useEffect(function () {
     axios
-      .get("http://localhost:8082/BSale/get" + params.id)
+      .get("http://localhost:8082/PSale/get/" + params.id)
       .then((response) => {
         console.log("Response:", response);
         setProperty(response.data);
         // console.log("sale:", sale);
       })
       .catch((err) => console.error(err));
-    axios
-      .get("http://localhost:3000/bookingForSale")
-      .then((response) => {
-        console.log("Response:", response);
-        setBookings(response.data);
-        console.log("booking:", booking)
-      })
+
   }, []);
   console.log(property)
-  // const saleArray = [];
-
-  // const bookingArray = [];
-  // for (const book of booking) {
-  //   bookingArray.push(
-  //       key={book.id},
-  //       Name={book.Name}
-  //       LastName={seller.LastName}
-  //       Address={seller.Address}
-  //       Postcode={seller.Postcode}
-  //       PhoneNumber={seller.PhoneNumber}
 
 
   return (
@@ -56,13 +39,13 @@ function BookingSale() {
           e.preventDefault();
           console.log("submission successful")
           axios
-            .post("http://localhost:3000/bookingForSale", {
+            .post("http://localhost:8082/BSale/create", {
               name,
               email,
               phoneNumber,
               date,
               timeSlot,
-              property: params.id
+              propertiesForSale: { id: params.id }
             })
 
             .then((response) => {
@@ -126,66 +109,60 @@ function BookingSale() {
       </form>
       <br />
       <br />
-      
-        <h3>Current Bookings</h3>
-{
-        booking.length > 0 ?
-        
-           (
-             <Card >
-               <table>
-                <thead>
-                  <tr>
-                    <th>
-                      Full Name
-                    </th>
-                    <br />
-                    <th>
-                      Email
-                    </th>
-                    <br />
-                    <th>
-                      Phone Number
-                    </th>
-                    <br />
-                    <th>
-                      Date                
-                      </th>
-                      <br />
-                    <th>
-                      Time Slot
-                    </th>
-                    <br />
-                    <th>
-                      Property
-                    </th>
-                    <br />
-                  </tr>
-                </thead>
-                <tbody className="table-group-divider">
-                  {booking.map(book => (<tr key={book.id}>
-                    <td> {book.name}</td>
-                    <br />
-                    <td> {book.email}</td>
-                    <br />
-                    <td> {book.phoneNumber}</td>
-                    <br />
-                    <td> {book.date}</td>
-                    <br />
-                    <td> {book.timeSlot}</td>
-                    <br />
-                    <td> {book.property}</td>
-                    <br />
-                  </tr>
-                  ))}
-                </tbody>
-              </table>
-             </Card>
-            )
-          : <p>No bookings available.</p>
-          }
-       
-      </div>
+
+      <h3>Current Bookings</h3>
+      {
+
+
+        (
+          <Card >
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    Full Name
+                  </th>
+
+                  <th>
+                    Email
+                  </th>
+
+                  <th>
+                    Phone Number
+                  </th>
+
+                  <th>
+                    Date
+                  </th>
+
+                  <th>
+                    Time Slot
+                  </th>
+
+                </tr>
+              </thead>
+              <tbody className="table-group-divider">
+                {property?.bookingForSales.map(book => (<tr key={book.id}>
+                  <td> {book.name}</td>
+
+                  <td> {book.email}</td>
+
+                  <td> {book.phoneNumber}</td>
+
+                  <td> {book.date}</td>
+
+                  <td> {book.timeSlot}</td>
+
+                </tr>
+                ))}
+              </tbody>
+            </table>
+          </Card>
+        )
+
+      }
+
+    </div>
 
   );
 }
