@@ -38,13 +38,13 @@ function GetSale() {
     saleArray.push(
       <PropertiesForSalePT
         key={psale.id}
-        Type={psale.type}
-        Price={psale.price}
-        Bedrooms={psale.bedrooms}
-        Bathrooms={psale.bathrooms}
-        Garden={psale.garden}
-        Address={psale.address}
-        Postcode={psale.postcode}
+        type={psale.type}
+        price={psale.price}
+        bedrooms={psale.bedrooms}
+        bathrooms={psale.bathrooms}
+        garden={psale.garden}
+        address={psale.address}
+        postcode={psale.postcode}
         id={psale.id}
       />
     );

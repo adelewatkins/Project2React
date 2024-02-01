@@ -24,11 +24,11 @@ function GetBuyers() {
     buyerArray.push(
       <BuyersPT
         key={buyer.firstName + " " + buyer.postcode}
-        FirstName={buyer.firstName}
-        LastName={buyer.lastName}
-        Address={buyer.address}
-        Postcode={buyer.postcode}
-        PhoneNumber={buyer.phoneNumber}
+        firstName={buyer.firstName}
+        lastName={buyer.lastName}
+        address={buyer.address}
+        postcode={buyer.postcode}
+        phoneNumber={buyer.phoneNumber}
       />
     );
   }

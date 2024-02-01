@@ -20,11 +20,11 @@ function GetSellers() {
     sellerArray.push(
       <SellersPT
         key={seller.firstName + " " + seller.postcode}
-        FirstName={seller.firstName}
-        LastName={seller.lastName}
-        Address={seller.address}
-        Postcode={seller.postcode}
-        PhoneNumber={seller.phoneNumber}
+        firstName={seller.firstName}
+        lastName={seller.lastName}
+        address={seller.address}
+        postcode={seller.postcode}
+        phoneNumber={seller.phoneNumber}
       />
     );
   }
