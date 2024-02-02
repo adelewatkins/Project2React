@@ -31,7 +31,8 @@ function BookingLet() {
 
 
   return (
-    <div>
+    <div className="booking-container">
+      <div className="booking-form">
       <h1>Bookings to Let</h1>
       <form
         onSubmit={(e) => {
@@ -109,8 +110,28 @@ function BookingLet() {
       </form>
       <br />
       <br />
-
-
+      {letProperty ? (
+      <div className="container-fluid">
+      <Card className="col-sm-6 col-md-4 col-lg-3 m-1">
+            <div className="flex">
+              <div className="card-body card-text">
+                <div className="card-title">
+                  <img src="/static/media/RS4.ddda5954ffdafffb144f.png" alt="RS" width="100%" height="15%" className="d-inline-block align-text-middle" />
+                  <Card.Title>{letProperty.type}</Card.Title>
+                  <Card.Text>
+                    Rent: {letProperty.rent}<br />
+                    Bedrooms: {letProperty.bedrooms}<br />
+                    Bathrooms: {letProperty.bathrooms}<br />
+                    Garden: {letProperty.garden}<br />
+                    Address: {letProperty.address}<br />
+                    Postcode: {letProperty.postcode}<br />
+                  </Card.Text>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+      ) : null}
       <h3>Current Bookings</h3>
       {
 
@@ -170,7 +191,7 @@ function BookingLet() {
       }
 
     </div>
-
+</div>
   );
 }
 export default BookingLet;
