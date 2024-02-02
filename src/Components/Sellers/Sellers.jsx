@@ -1,28 +1,36 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import GetSellers from "./GetSellers";
+import DisplaySellers from "./GetSellers";
 
-function Sellers() {
-  const [FirstName, setFirstName] = useState("");
-  const [LastName, setLastName] = useState("");
-  const [Address, setAddress] = useState("");
-  const [Postcode, setPostcode] = useState("");
-  const [PhoneNumber, setPhoneNumber] = useState("");
-
+function Sellers(props) {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [address, setAddress] = useState("");
+  const [postcode, setPostcode] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [sellers, setSellers] = useState([]);
   //this is the form that allows you to create a buyer
   
+  function getSellers () {
+    axios.get("http://localhost:8082/sellers/get")
+      .then((response) => {setSellers(response.data)})
+  }
+  useEffect(getSellers, [])
+
+
+
   return (
     <div>
       <form
         onSubmit={(e) => {
           e.preventDefault();
           axios
-            .post("http://localhost:3000/Sellers", {
-              FirstName,
-              LastName,
-              Address,
-              Postcode,
-              PhoneNumber,
+            .post("http://localhost:8082/sellers/create", {
+              firstName,
+              lastName,
+              address,
+              postcode,
+              phoneNumber
             })
             .then((response) => {
               setFirstName("");
@@ -30,6 +38,8 @@ function Sellers() {
               setAddress("");
               setPostcode("");
               setPhoneNumber("");
+              getSellers();
+              
             })
             .catch((err) => console.error(err));
         }}
@@ -38,7 +48,7 @@ function Sellers() {
         <h1>Sellers &nbsp;</h1>
         <label htmlFor="fn">First Name &nbsp;</label>
         <input
-          value={FirstName}
+          value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
           id="fn"
           type="text"
@@ -46,7 +56,7 @@ function Sellers() {
         ></input>
         <label htmlFor="ln">Last Name &nbsp;</label>
         <input
-          value={LastName}
+          value={lastName}
           onChange={(e) => setLastName(e.target.value)}
           id="ln"
           type="text"
@@ -54,7 +64,7 @@ function Sellers() {
         ></input>
         <label htmlFor="ad">Address &nbsp; &nbsp; &nbsp;</label>
         <input
-          value={Address}
+          value={address}
           onChange={(e) => setAddress(e.target.value)}
           id="ad"
           type="text"
@@ -62,7 +72,7 @@ function Sellers() {
         ></input>
         <label htmlFor="pc">Postcode &nbsp;&nbsp;&nbsp;</label>
         <input
-          value={Postcode}
+          value={postcode}
           onChange={(e) => setPostcode(e.target.value)}
           id="pc"
           type="text"
@@ -70,7 +80,7 @@ function Sellers() {
         ></input>
         <label htmlFor="pn">Phone Number</label>
         <input
-          value={PhoneNumber}
+          value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
           id="pn"
           type="tel"
@@ -85,7 +95,7 @@ function Sellers() {
       <br />
       <br />
       <div>
-        <GetSellers />
+        <DisplaySellers sellers={sellers}/>
       </div>
     </div>
   );

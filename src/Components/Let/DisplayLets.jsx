@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import PropertiesToLetPT from "./PropertiesToLetPT";
 
-function GetLet() {
-  const [letting, setLet] = useState([]);
+function DisplayLets(props) {
+  // const [letting, setLet] = useState([]);
   const [filtertyp, setFiltertyp] = useState("");
   const [filterrt, setFilterrt] = useState("");
   const [filterbds, setFilterbds] = useState("");
@@ -12,38 +12,38 @@ function GetLet() {
   const [filterads, setFilterads] = useState("");
   const [filterpcd, setFilterpcd] = useState("");
 
-  useEffect(function () {
-    axios
-    // this is a get request from the server for new properties that have been added
-      .get("http://localhost:3000/PropertiesToLet")
-      .then((response) => {
-        console.log("Response:", response);
-        setLet(response.data);
-        console.log("let:", letting);
-      })
-      .catch((err) => console.error(err));
-  }, []);
+  // useEffect(function () {
+  //   axios
+  //   // this is a get request from the server for new properties that have been added
+  //     .get("http://localhost:8082/PLet/get")
+  //     .then((response) => {
+  //       console.log("Response:", response);
+  //       setLet(response.data);
+  //       console.log("let:", letting);
+  //     })
+  //     .catch((err) => console.error(err));
+  // }, []);
 
   const letArray = [];
-  for (const plet of letting) {
-    if (filtertyp && !plet.Type.toLowerCase().includes(filtertyp.toLowerCase())) continue;
-    if (filterrt && plet.Rent > parseInt(filterrt)) continue;
-    if (filterbds && plet.Bedrooms < parseInt(filterbds)) continue;
-    if (filterbts && plet.Bathrooms < parseInt(filterbts)) continue;
-    if (filtergds && !plet.Garden.toLowerCase().includes(filtergds.toLowerCase())) continue;
-    if (filterads && !plet.Address.toLowerCase().includes(filterads.toLowerCase())) continue;
-    if (filterpcd && !plet.Postcode.toLowerCase().includes(filterpcd.toLowerCase())) continue;
+  for (const plet of props.lets) {
+    if (filtertyp && !plet.type.toLowerCase().includes(filtertyp.toLowerCase())) continue;
+    if (filterrt && plet.rent > parseInt(filterrt)) continue;
+    if (filterbds && plet.bedrooms < parseInt(filterbds)) continue;
+    if (filterbts && plet.bathrooms < parseInt(filterbts)) continue;
+    if (filtergds && !plet.garden.toLowerCase().includes(filtergds.toLowerCase())) continue;
+    if (filterads && !plet.address.toLowerCase().includes(filterads.toLowerCase())) continue;
+    if (filterpcd && !plet.postcode.toLowerCase().includes(filterpcd.toLowerCase())) continue;
 
     letArray.push(
       <PropertiesToLetPT
         key={plet.id}
-        Type={plet.Type}
-        Rent={plet.Rent}
-        Bedrooms={plet.Bedrooms}
-        Bathrooms={plet.Bathrooms}
-        Garden={plet.Garden}
-        Address={plet.Address}
-        Postcode={plet.Postcode}
+        type={plet.type}
+        rent={plet.rent}
+        bedrooms={plet.bedrooms}
+        bathrooms={plet.bathrooms}
+        garden={plet.garden}
+        address={plet.address}
+        postcode={plet.postcode}
         id={plet.id}
       />
     );
@@ -132,4 +132,4 @@ function GetLet() {
   );
 }
 
-export default GetLet;
+export default DisplayLets;

@@ -1,15 +1,22 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import GetSale from "./GetSale";
+import DisplaySales from "./DisplaySales";
 
 function PropertiesForSale() {
-  const [Type, setType] = useState("");
-  const [Price, setPrice] = useState("");
-  const [Bedrooms, setBedrooms] = useState("");
-  const [Bathrooms, setBathrooms] = useState("");
-  const [Garden, setGarden] = useState("");
-  const [Address, setAddress] = useState("");
-  const [Postcode, setPostcode] = useState("");
+  const [type, setType] = useState("");
+  const [price, setPrice] = useState("");
+  const [bedrooms, setBedrooms] = useState("");
+  const [bathrooms, setBathrooms] = useState("");
+  const [garden, setGarden] = useState("");
+  const [address, setAddress] = useState("");
+  const [postcode, setPostcode] = useState("");
+  const [sales, setSales] = useState([]);
+
+  function getSales () {
+    axios.get("http://localhost:8082/PSale/get")
+      .then((response) => {setSales(response.data)})
+  }
+  useEffect(getSales, [])
 
   return (
     <div className="row">
@@ -20,14 +27,14 @@ function PropertiesForSale() {
           onSubmit={(e) => {
             e.preventDefault();
             axios
-              .post("http://localhost:3000/PropertiesForSale", {
-                Type,
-                Price: parseInt(Price),
-                Bedrooms: parseInt(Bedrooms),
-                Bathrooms: parseInt(Bathrooms),
-                Garden,
-                Address,
-                Postcode,
+              .post("http://localhost:8082/PSale/create", {
+                type,
+                price: parseInt(price),
+                bedrooms: parseInt(bedrooms),
+                bathrooms: parseInt(bathrooms),
+                garden,
+                address,
+                postcode
               })
               .then((response) => {
                 setType("");
@@ -37,15 +44,18 @@ function PropertiesForSale() {
                 setGarden("");
                 setAddress("");
                 setPostcode("");
+                getSales();
               })
               .catch((err) => console.error(err));
           }}
+
+          
         >
           <h1>Properties For Sale</h1>
           {/* <select value={Type} onChange={(e) => setType(e.target.value)} id="ty" type="text"><option value="semi">Semi</option><option value="semi">detached</option><option value="semi">terrace</option></select> */}
           <label htmlFor="ty">Type</label>
           <select
-            value={Type}
+            value={type}
             onChange={(e) => setType(e.target.value)}
             id="ty"
             type="text"
@@ -61,7 +71,7 @@ function PropertiesForSale() {
           </select>
           <label htmlFor="pr">Price £</label>
           <input
-            value={Price}
+            value={price}
             onChange={(e) => setPrice(e.target.value)}
             id="pr"
             type="£"
@@ -69,7 +79,7 @@ function PropertiesForSale() {
           ></input>{" "}
           <label htmlFor="bd">Bedroom</label>
           <input
-            value={Bedrooms}
+            value={bedrooms}
             onChange={(e) => setBedrooms(e.target.value)}
             id="bd"
             type="number"
@@ -78,7 +88,7 @@ function PropertiesForSale() {
           ></input>{" "}
           <label htmlFor="bt">Bathroom</label>
           <input
-            value={Bathrooms}
+            value={bathrooms}
             onChange={(e) => setBathrooms(e.target.value)}
             id="bt"
             type="number"
@@ -87,7 +97,7 @@ function PropertiesForSale() {
           ></input>
           <label htmlFor="gn">Garden</label>
           <select
-            value={Garden}
+            value={garden}
             onChange={(e) => setGarden(e.target.value)}
             id="gn"
             type="text"
@@ -99,7 +109,7 @@ function PropertiesForSale() {
           </select>
           <label htmlFor="ad">Address</label>
           <input
-            value={Address}
+            value={address}
             onChange={(e) => setAddress(e.target.value)}
             id="ad"
             type="text"
@@ -107,7 +117,7 @@ function PropertiesForSale() {
           ></input>{" "}
           <label htmlFor="pc">Postcode</label>
           <input
-            value={Postcode}
+            value={postcode}
             onChange={(e) => setPostcode(e.target.value)}
             id="pc"
             type="text"
@@ -125,7 +135,7 @@ function PropertiesForSale() {
         <br />
       </div>
 
-      <GetSale />
+      <DisplaySales sales={sales} />
 
       <br />
     </div>

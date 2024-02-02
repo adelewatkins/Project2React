@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import SellersPT from "./SellersPT";
 import axios from "axios";
 
-function GetSellers() {
+function DisplaySellers(props) {
   const [sellers, setSellers] = useState([]);
   useEffect(function () {
     axios
-      .get("http://localhost:3000/sellers")
+      .get("http://localhost:8082/sellers/get")
       .then((response) => {
         console.log("Response:", response);
         setSellers(response.data);
@@ -16,15 +16,15 @@ function GetSellers() {
   }, []);
 
   const sellerArray = [];
-  for (const seller of sellers) {
+  for (const seller of props.sellers) {
     sellerArray.push(
       <SellersPT
-        key={seller.FirstName + " " + seller.Postcode}
-        FirstName={seller.FirstName}
-        LastName={seller.LastName}
-        Address={seller.Address}
-        Postcode={seller.Postcode}
-        PhoneNumber={seller.PhoneNumber}
+        key={seller.firstName + " " + seller.postcode}
+        firstName={seller.firstName}
+        lastName={seller.lastName}
+        address={seller.address}
+        postcode={seller.postcode}
+        phoneNumber={seller.phoneNumber}
       />
     );
   }
@@ -41,4 +41,4 @@ function GetSellers() {
   );
 }
 
-export default GetSellers;
+export default DisplaySellers;

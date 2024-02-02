@@ -34,13 +34,13 @@ function PropertiesForSalePT(props) {
           />
           <br />
           <br />
-          <p>{"Price: £" + props.Price} </p>
-          <p> {"Type: " + props.Type}</p>
-          <p> {"Bedrooms: " + props.Bedrooms}</p>
-          <p> {"Bathrooms: " + props.Bathrooms}</p>
-          <p> {"Garden: " + props.Garden}</p>
-          <p> {"Address: " + props.Address}</p>
-          <p> {"Postcode: " + props.Postcode}</p>
+          <p>{"Price: £" + props.price} </p>
+          <p> {"Type: " + props.type}</p>
+          <p> {"Bedrooms: " + props.bedrooms}</p>
+          <p> {"Bathrooms: " + props.bathrooms}</p>
+          <p> {"Garden: " + props.garden}</p>
+          <p> {"Address: " + props.address}</p>
+          <p> {"Postcode: " + props.postcode}</p>
           <select>
             <option>For Sale</option>
             <option>Under Offer</option>
@@ -67,12 +67,12 @@ function PropertiesForSalePT(props) {
 }
 
 PropertiesForSalePT.propTypes = {
-  Type: PropTypes.string.isRequired,
-  Price: PropTypes.number.isRequired,
-  Bedrooms: PropTypes.number.isRequired,
-  Bathrooms: PropTypes.number.isRequired,
-  Garden: PropTypes.string.isRequired,
-  Address: PropTypes.string.isRequired,
-  Postcode: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  bedrooms: PropTypes.number.isRequired,
+  bathrooms: PropTypes.number.isRequired,
+  garden: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+  postcode: PropTypes.string.isRequired,
 };
 export default PropertiesForSalePT;
