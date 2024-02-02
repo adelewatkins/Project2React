@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import GetLet from "./GetLet";
+import DisplayLets from "./DisplayLets";
 
 function PropertiesToLet() {
   const [type, setType] = useState("");
@@ -10,6 +10,13 @@ function PropertiesToLet() {
   const [garden, setGarden] = useState("");
   const [address, setAddress] = useState("");
   const [postcode, setPostcode] = useState("");
+  const [lets, setLets] = useState([]);
+
+  function getLets () {
+    axios.get("http://localhost:8082/PLet/get")
+      .then((response) => {setLets(response.data)})
+  }
+  useEffect(getLets, [])
 
   return (
     <div className="row">
@@ -40,6 +47,7 @@ function PropertiesToLet() {
               setGarden("");
               setAddress("");
               setPostcode("");
+              getLets();
             })
             .catch((err) => console.error(err));
         }}
@@ -131,7 +139,7 @@ function PropertiesToLet() {
       </div>
       
       {/* this is the property display */}
-        <GetLet />
+        <DisplayLets lets={lets}/>
       
 
       <br />

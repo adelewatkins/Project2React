@@ -32,7 +32,8 @@ function BookingSale() {
 
 
   return (
-    <div>
+    <div className="booking-container">
+      <div className="booking-form">
       <h1>Bookings for Sale</h1>
       <form
         onSubmit={(e) => {
@@ -109,7 +110,7 @@ function BookingSale() {
       <br />
       {property ? (
         <div className="container-fluid">
-          <Card className="col-sm-6 col-md-4 col-lg-3 m-4">
+          <Card className="col-sm-6 col-md-4 col-lg-3 m-1">
             <div className="flex">
               <div className="card-body card-text">
                 <div className="card-title">
@@ -131,8 +132,6 @@ function BookingSale() {
       ) : null}
       <h3>Current Bookings</h3>
       {
-
-
         (
           <Card >
             <table>
@@ -182,7 +181,7 @@ function BookingSale() {
       }
 
     </div>
-
+    </div>
   );
 }
 export default BookingSale;

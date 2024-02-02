@@ -36,7 +36,7 @@ function DisplaySales(props) {
         address={psale.address}
         postcode={psale.postcode}
         id={psale.id}
-        // getSales={getSales}
+       
       />
     );
   }
