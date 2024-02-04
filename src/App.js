@@ -15,6 +15,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import BookingLet from "./Components/Let/BookingLet";
 import BookingSale from "./Components/Sale/BookingSale";
 import Logo from "./Logo.png"
+import EditPropertyForSale from "./Components/Sale/EditPropertyForSale";
 
 
 function App() {
@@ -108,6 +109,7 @@ function App() {
           <Route path="/PropertiesToLet" element={<PropertiesToLet />} />
           <Route path="/PropertiesToLet/BookingLet/:id" element={<BookingLet/>}/>
           <Route path="/PropertiesForSale/BookingSale/:id" element={<BookingSale/>}/>
+          <Route path="/PropertiesForSale/Edit/:id" element={<EditPropertyForSale/>}/>
         </Routes>
       </Router>
     </header>
