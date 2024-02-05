@@ -17,6 +17,8 @@ import BookingSale from "./Components/Sale/BookingSale";
 import Logo from "./Logo.png"
 import EditPropertyForSale from "./Components/Sale/EditPropertyForSale";
 import EditPropertyToLet from "./Components/Let/EditPropertyToLet";
+import EditBuyers from "./Components/Buyers/EditBuyers";
+import EditSellers from "./Components/Sellers/EditSellers";
 
 function App() {
   return (
@@ -111,6 +113,8 @@ function App() {
           <Route path="/PropertiesForSale/BookingSale/:id" element={<BookingSale />} />
           <Route path="/PropertiesForSale/edit/:id" element={<EditPropertyForSale />} />
           <Route path="/PropertiesToLet/edit/:id" element={<EditPropertyToLet />} />
+          <Route path="/Buyers/edit/:id" element={<EditBuyers />} />
+          <Route path="/Sellers/edit/:id" element={<EditSellers />} />
         </Routes>
       </Router>
     </header>
