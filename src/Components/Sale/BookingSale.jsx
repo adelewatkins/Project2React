@@ -99,8 +99,7 @@ function BookingSale() {
               <label htmlFor="pn">Time Slot</label>
 
 
-              <select onChange={(e) => setTimeSlot(e.target.value)} value={timeSlot} className="form-control border-3 border-primary rounded" style={{width:"250px"}}  
-           required>
+              <select onChange={(e) => setTimeSlot(e.target.value)} value={timeSlot} className="form-control" required>
                 <option value="">Select Time</option>
                 <option value="8AM">8:00-9:00</option>
                 <option value="9AM">9:00-10:00</option>
