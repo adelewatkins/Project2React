@@ -18,23 +18,22 @@ function BookingSale() {
   const [property, setProperty] = useState();
 
 
-  useEffect(function () {
-    axios
-      .get("http://localhost:8082/PSale/get/" + params.id)
+  function getBSales(){
+    axios.get("http://localhost:8082/PSale/get/" + params.id)
       .then((response) => {
         console.log("Response:", response);
         setProperty(response.data);
         // console.log("sale:", sale);
       })
-      .catch((err) => console.error(err));
-
-  }, []);
+      .catch((err) => console.error(err))}
+      useEffect(getBSales, [])
   console.log(property)
 
 
   return (
     <div className="booking-container">
       <div className="booking-form">
+
         <h1>Bookings for Sale</h1>
         <div class="row" style={{maxWidth:"1000px"}}>
           <div class="col">
@@ -58,7 +57,7 @@ function BookingSale() {
                     setPhoneNumber("");
                     setDate("");
                     setTimeSlot("");
-
+                    getBSales();
 
                   })
                   .catch((err) => console.error(err));
@@ -177,6 +176,11 @@ function BookingSale() {
 
                     <td> {book.timeSlot}</td>
 
+                    <td><button onClick={() => {
+                        axios.delete("http://localhost:8082/BSale/delete/" + book.id)
+                            .then(res => { getBSales() })
+                            .catch(err => console.error(err));
+                  }}>Remove</button></td>
                   </tr>
                   ))}
                 </tbody>
@@ -188,6 +192,7 @@ function BookingSale() {
 
       </div>
     </div>
+
   );
 }
 export default BookingSale;

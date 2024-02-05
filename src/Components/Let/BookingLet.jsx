@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Row } from "react-bootstrap";
 
 
-function BookingLet() {
+function BookingLet(props) {
   const navigate = useNavigate();
   const params = useParams();
   const [name, setName] = useState("");
@@ -17,17 +17,24 @@ function BookingLet() {
   const [letProperty, setLetProperty] = useState();
 
   // set the property and retrieve the property by ID from the PTL page
-  useEffect(function () {
-    axios
-      .get("http://localhost:8082/PLet/get/" + params.id)
-      .then((response) => {
-        console.log("Response:", response);
-        setLetProperty(response.data);
+  
+  // function getBookings (){
+  //   axios.get("http://localhost:8082/BLet/get/" + params.id)
+  //     .then((response) => {setLetBookings(response.data);
+  //       // console.log("sale:", sale);
+  //     })
+  //     .catch((err) => console.error(err))}
+  //     useEffect(getBookings, [])
+  // console.log(letBooking)
+
+
+  function getPLets(){
+    axios.get("http://localhost:8082/PLet/get/" + params.id)
+      .then((response) => {setLetProperty(response.data);
         // console.log("sale:", sale);
       })
-      .catch((err) => console.error(err));
-
-  }, []);
+      .catch((err) => console.error(err))}
+      useEffect(getPLets, [])
   console.log(letProperty)
 
 
@@ -57,7 +64,8 @@ function BookingLet() {
               setPhoneNumber("");
               setDate("");
               setTimeSlot("");
-
+              getPLets();
+              
 
             })
             .catch((err) => console.error(err));
@@ -111,13 +119,16 @@ function BookingLet() {
           Submit
         </button>
       </form>
+      <br />
       </div>
       <br />
       <br />
+      
       <div class="col">
       {letProperty ? (
   
       <Card style={{marginTop:"0px"}}>
+
             <div className="flex">
               <div className="card-body card-text">
                 <div className="card-title">
@@ -136,13 +147,13 @@ function BookingLet() {
             </div>
           </Card>
 
+
       ) : null}
       </div>
       </div>
+
       <h3>Current Bookings</h3>
-      {
-
-
+      {      
         (
           <Card >
             <table>
@@ -168,8 +179,6 @@ function BookingLet() {
                     Time Slot
                   </th>
 
-
-
                 </tr>
               </thead>
               <tbody className="table-group-divider">
@@ -188,6 +197,11 @@ function BookingLet() {
 
                   <td> {book.timeSlot}</td>
 
+                  <td><button onClick={() => {
+                        axios.delete("http://localhost:8082/BLet/delete/" + book.id)
+                            .then(res => { getPLets() })
+                            .catch(err => console.error(err));
+                  }}>Remove</button></td>
                 </tr>
                 ))}
               </tbody>
@@ -200,5 +214,6 @@ function BookingLet() {
     </div>
 </div>
   );
+
 }
 export default BookingLet;

@@ -47,7 +47,7 @@ function PropertiesForSalePT(props) {
             <option>Withdrawn</option>
           </select>
           &nbsp;
-          <button
+          <button style={{marginTop: "10px"}}
             onClick={() =>
               navigate("/PropertiesForSale/BookingSale/" + props.id)
             }
@@ -57,6 +57,12 @@ function PropertiesForSalePT(props) {
             {" "}
             Book a viewing{" "}
           </button>
+          <button onClick={() =>
+              navigate("/PropertiesForSale/Edit/" + props.id)
+            }style={{marginTop: "10px"}} type="submit" className="btn btn-success btn-md">
+              {" "}
+              Edit Property{" "}
+            </button>
         </div>
       </div>
       <button className="btn btn-danger btn-md" onClick={handleConfetti}>

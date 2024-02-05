@@ -13,7 +13,6 @@ function BuyersPT(props) {
     }
 
 
-
   return (
     <Card className="col-sm-6 col-md-4 col-lg-3 m-4">
       <div className="flex">
