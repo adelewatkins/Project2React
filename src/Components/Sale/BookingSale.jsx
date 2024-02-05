@@ -30,6 +30,42 @@ function BookingSale() {
   console.log(property)
 
 
+
+  function CheckBooking() {
+    axios.get("http://localhost:8082/BSale/get").then(response => {
+        console.log(response)
+        for (const booking of response.data) {
+            if (booking.date === date && booking.timeSlot === timeSlot) {
+                     alert("Booking not available")
+                     return;
+            }
+        }
+    
+        axios.post("http://localhost:8082/BSale/create",
+            { 
+              name,
+              email,
+              phoneNumber,
+              date,
+              timeSlot,
+              propertiesForSale: { id: params.id }
+            })
+            .then(response => {
+                console.log(response);
+                setName("");
+                setEmail("");
+                setPhoneNumber("");
+                setDate("");
+                setTimeSlot("");
+                getBSales();
+            }).catch(err => console.error(err))
+
+
+    })
+
+}
+
+
   return (
     <div className="booking-container">
       <div className="booking-form">
@@ -41,28 +77,9 @@ function BookingSale() {
               onSubmit={(e) => {
                 e.preventDefault();
                 console.log("submission successful")
-                axios
-                  .post("http://localhost:8082/BSale/create", {
-                    name,
-                    email,
-                    phoneNumber,
-                    date,
-                    timeSlot,
-                    propertiesForSale: { id: params.id }
-                  })
-
-                  .then((response) => {
-                    setName("");
-                    setEmail("");
-                    setPhoneNumber("");
-                    setDate("");
-                    setTimeSlot("");
-                    getBSales();
-
-                  })
-                  .catch((err) => console.error(err));
-              }}
-            >
+                CheckBooking();
+              }}>
+            
               <label htmlFor="fn">Full Name &nbsp;</label>
               <input
                 value={name}

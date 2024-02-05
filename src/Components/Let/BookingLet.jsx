@@ -38,6 +38,42 @@ function BookingLet(props) {
   console.log(letProperty)
 
 
+  function CheckBooking() {
+    axios.get("http://localhost:8082/BLet/get").then(response => {
+        console.log(response)
+        for (const booking of response.data) {
+            if (booking.date === date && booking.timeSlot === timeSlot) {
+                     alert("Booking not available")
+                     return;
+            }
+        }
+    
+        axios.post("http://localhost:8082/BLet/create",
+            { 
+              name,
+              email,
+              phoneNumber,
+              date,
+              timeSlot,
+              propertiesToLet: { id: params.id }
+            })
+            .then(response => {
+                console.log(response);
+                setName("");
+                setEmail("");
+                setPhoneNumber("");
+                setDate("");
+                setTimeSlot("");
+                getPLets();
+            }).catch(err => console.error(err))
+
+
+    })
+
+}
+
+
+
   return (
     <div className="booking-container">
       <div className="booking-form">
@@ -47,30 +83,8 @@ function BookingLet(props) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          axios
-            // posting the updated booikng info
-            .post("http://localhost:8082/BLet/create", {
-              name,
-              email,
-              phoneNumber,
-              date,
-              timeSlot,
-              propertiesToLet: { id: params.id }
-
-            })
-            .then((response) => {
-              setName("");
-              setEmail("");
-              setPhoneNumber("");
-              setDate("");
-              setTimeSlot("");
-              getPLets();
-              
-
-            })
-            .catch((err) => console.error(err));
-        }}
-      >
+          CheckBooking();
+        }}>
         {/* this is the booking imput form to submit a booking  */}
 
         <label htmlFor="fn">Full Name &nbsp;</label>
