@@ -45,6 +45,8 @@ function DisplayLets(props) {
         address={plet.address}
         postcode={plet.postcode}
         id={plet.id}
+        getPLets={props.getPLets}
+        getBookings={props.getBookings}
       />
     );
   }

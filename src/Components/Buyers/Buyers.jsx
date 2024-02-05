@@ -97,7 +97,7 @@ function getBuyers () {
       </form>
       <br />
       <br />
-      <DisplayBuyers buyers={buyers}/> 
+      <DisplayBuyers buyers={buyers} getBuyers={getBuyers}/> 
       {/* this is the render of the buyers page at the bottom */}
     </div>
   );
