@@ -107,13 +107,20 @@ function BookingLet(props) {
           className="form-control"
         ></input>
         <label htmlFor="pn">Time Slot</label>
-        <input
-          value={timeSlot}
-          onChange={(e) => setTimeSlot(e.target.value)}
-          id="pn"
-          type="time"
-          className="form-control"
-        ></input>
+       <select onChange={(e) => setTimeSlot(e.target.value)} value={timeSlot} className="form-control border-3 border-primary rounded" style={{width:"250px"}}  
+           required>
+                <option value="">Select Time</option>
+                <option value="8AM">8:00-9:00</option>
+                <option value="9AM">9:00-10:00</option>
+                <option value="10AM">10:00-11:00</option>
+                <option value="11AM">11:00-12:00</option>
+                <option value="12PM">12:00-13:00</option>
+                <option value="1PM">13:00-14:00</option>
+                <option value="2PM">14:00-15:00</option>
+                <option value="3PM">15:00-16:00</option>
+                <option value="4PM">16:00-17:00</option>
+            </select>
+
         <br />
         <button type="submit" className="btn btn-success btn-md">
           Submit
