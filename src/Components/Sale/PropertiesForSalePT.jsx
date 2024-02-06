@@ -14,6 +14,33 @@ function PropertiesForSalePT(props) {
       spread: 320,
     });
   };
+
+  const handleBookings = () =>{
+    navigate("/PropertiesForSale/BookingSale/" + props.id)
+
+} 
+
+  function buttonDisplay() {
+    
+    if(props.propertyStatus !== "For Sale") {
+        return (
+          <>
+            <button style={{marginLeft: "10px"}} className='btn btn-success' disabled="disabled">Book a viewing</button>
+          </>
+        )
+      } else {
+        return (
+            <>
+            <button style={{marginLeft: "10px"}} className='btn btn-success ' onClick={handleBookings}>Book a viewing</button>
+            </>
+        )
+      }
+    }
+
+
+
+
+
   return (
     <Card className="col-sm-6 col-md-4 col-lg-3 m-4">
       <div className="flex">
@@ -41,13 +68,15 @@ function PropertiesForSalePT(props) {
           <p> {"Garden: " + props.garden}</p>
           <p> {"Address: " + props.address}</p>
           <p> {"Postcode: " + props.postcode}</p>
-          <select>
+          <p> {"Property Status: " + props.propertyStatus}</p>
+          {/* <select>
             <option>For Sale</option>
             <option>Under Offer</option>
             <option>Withdrawn</option>
-          </select>
+          </select> */}
           &nbsp;
-          <button
+          {buttonDisplay()}
+          {/* <button style={{marginTop: "10px"}}
             onClick={() =>
               navigate("/PropertiesForSale/BookingSale/" + props.id)
             }
@@ -56,7 +85,13 @@ function PropertiesForSalePT(props) {
           >
             {" "}
             Book a viewing{" "}
-          </button>
+          </button> */}
+          <button onClick={() =>
+              navigate("/PropertiesForSale/Edit/" + props.id)
+            }style={{ marginRight: "10px"}} type="submit" className="btn btn-success btn-md">
+              {" "}
+              Edit Property{" "}
+            </button>  
         </div>
       </div>
       <button className="btn btn-danger btn-md" onClick={handleConfetti}>
@@ -74,5 +109,6 @@ PropertiesForSalePT.propTypes = {
   garden: PropTypes.string.isRequired,
   address: PropTypes.string.isRequired,
   postcode: PropTypes.string.isRequired,
+  propertyStatus: PropTypes.string.isRequired
 };
 export default PropertiesForSalePT;

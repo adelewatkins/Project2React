@@ -1,62 +1,49 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import DisplaySales from "./DisplaySales";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useNavigate, useParams } from "react-router-dom";
 
-function PropertiesForSale() {
-  const [type, setType] = useState("");
-  const [price, setPrice] = useState("");
-  const [bedrooms, setBedrooms] = useState("");
-  const [bathrooms, setBathrooms] = useState("");
-  const [garden, setGarden] = useState("");
-  const [address, setAddress] = useState("");
-  const [postcode, setPostcode] = useState("");
-  const [sales, setSales] = useState([]);
-  const [propertyStatus, setPropertyStatus] = useState("For Sale")
+function EditPropertyForSale() {
+    const navigate = useNavigate();
+    const params = useParams();
+    const [type, setType] = useState("");
+    const [price, setPrice] = useState("");
+    const [bedrooms, setBedrooms] = useState("");
+    const [bathrooms, setBathrooms] = useState("");
+    const [garden, setGarden] = useState("");
+    const [address, setAddress] = useState("");
+    const [postcode, setPostcode] = useState("");
+    const [propertyStatus, setPropertyStatus] = useState("");
+    
+    useEffect(() => {
+        axios.get("http://localhost:8082/PSale/get/" + params.id)
+        .then((res) => {
+            console.log(res);
+            setType(res.data.type);
+            setPrice(res.data.price);
+            setBedrooms(res.data.bedrooms);
+            setBathrooms(res.data.bathrooms);
+            setGarden(res.data.garden);
+            setAddress(res.data.address);
+            setPostcode(res.data.postcode);
+            setPropertyStatus(res.data.propertyStatus);
+        }).catch(error => console.error(error));
+}, []);
 
-  function getSales() {
-    axios.get("http://localhost:8082/PSale/get").then((response) => {
-      setSales(response.data);
-    });
-  }
-  useEffect(getSales, []);
+const handleSubmit = (e) => {
+    e.preventDefault();
 
-  return (
-    <div className="row">
-      <div className="col">
-        <form
-          className="drop-menu"
-          accordion
-          onSubmit={(e) => {
-            e.preventDefault();
-            axios
-              .post("http://localhost:8082/PSale/create", {
-                type,
-                price: parseInt(price),
-                bedrooms: parseInt(bedrooms),
-                bathrooms: parseInt(bathrooms),
-                garden,
-                address,
-                postcode,
-                propertyStatus
-              })
-              .then((response) => {
-                setType("");
-                setPrice("");
-                setBedrooms("");
-                setBathrooms("");
-                setGarden("");
-                setAddress("");
-                setPostcode("");
-                setPropertyStatus("For Sale");
-                getSales();
-              })
-              .catch((err) => console.error(err));
-          }}
-        >
-          <h1>Properties For Sale</h1>
-          {/* <select value={Type} onChange={(e) => setType(e.target.value)} id="ty" type="text"><option value="semi">Semi</option><option value="semi">detached</option><option value="semi">terrace</option></select> */}
-          <label htmlFor="ty">Type</label>
-          <select
+    axios.put("http://localhost:8082/PSale/edit/" + params.id, { type, price, bedrooms, bathrooms, garden, address, postcode, propertyStatus})
+        .then(() => {
+            navigate("/PropertiesForSale")
+        }).catch(error => console.error(error))
+    }
+
+return(
+    <>
+    <h1>Edit Property</h1>
+    <form onSubmit={handleSubmit}>
+    <label htmlFor="ty">Type</label>
+    <select
             value={type}
             onChange={(e) => setType(e.target.value)}
             id="ty"
@@ -125,23 +112,30 @@ function PropertiesForSale() {
             type="text"
             className="form-control"
           ></input>
+          <label htmlFor="pstatus">Property Status</label>
+          <select
+            value={propertyStatus}
+            onChange={(e) => setPropertyStatus(e.target.value)}
+            id="pstatus"
+            type="text"
+            className="form-control"
+          >
+            <option value="For Sale">For Sale</option>
+            <option value="Under Offer">Under Offer</option>
+            <option value="Withdrawn">Withdrawn</option>
+          </select>
           <br />
           <div>
             <button type="submit" className="btn btn-success btn-md">
               {" "}
-              Add Property{" "}
+              Update{" "}
             </button>
           </div>
         </form>
-        <br />
-        <br />
-      </div>
+    </>
 
-      <DisplaySales sales={sales} />
+);
 
-      <br />
-    </div>
-  );
 }
 
-export default PropertiesForSale;
+export default EditPropertyForSale;

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import RS4 from "./RS4.png";
 import confetti from "canvas-confetti";
 
-//this is the render of the card for the properties 
+//this is the render of the card for the properties
 
 function PropertiesToLetPT(props) {
   const navigate = useNavigate();
@@ -16,6 +16,29 @@ function PropertiesToLetPT(props) {
 
     // above is the function that run confetti
   };
+
+  const handleBookings = () =>{
+    navigate("/PropertiesToLet/BookingLet/" + props.id)
+
+} 
+
+  function buttonDisplay() {
+    
+    if(props.propertyStatus !== "To Let") {
+        return (
+          <>
+            <button style={{marginLeft: "10px"}} className='btn btn-success' disabled="disabled">Book a viewing</button>
+          </>
+        )
+      } else {
+        return (
+            <>
+            <button style={{marginLeft: "10px"}} className='btn btn-success ' onClick={handleBookings}>Book a viewing</button>
+            </>
+        )
+      }
+    }
+
   return (
     <Card className="col-sm-6 col-md-4 col-lg-3 m-4">
       <div className="flex">
@@ -43,20 +66,31 @@ function PropertiesToLetPT(props) {
           <p> {"Garden: " + props.garden}</p>
           <p> {"Address: " + props.address}</p>
           <p> {"Postcode: " + props.postcode}</p>
-          <select>
+          <p> {"Property Status: " + props.propertyStatus}</p>
+          {/* <select>
             <option>For Let</option>
-            <option>Already Let</option>
+            <option>Under Offer</option>
             <option>Withdrawn</option>
-          </select>
+          </select> */}
           &nbsp;
-          <button
-          // this button below handles the booking system
+          {buttonDisplay()}
+          {/* <button
+            // this button below handles the booking system
             onClick={() => navigate("/PropertiesToLet/BookingLet/" + props.id)}
             type="submit"
             className="btn btn-success btn-md"
           >
             {" "}
             Book a viewing{" "}
+          </button> */}
+          <button
+            onClick={() => navigate("/PropertiesToLet/Edit/" + props.id)}
+            style={{ marginRight: "10px" }}
+            type="submit"
+            className="btn btn-success btn-md"
+          >
+            {" "}
+            Edit Property{" "}
           </button>
         </div>
       </div>
@@ -74,5 +108,6 @@ PropertiesToLetPT.propTypes = {
   garden: PropTypes.string.isRequired,
   address: PropTypes.string.isRequired,
   postcode: PropTypes.string.isRequired,
+  propertyStatus: PropTypes.string.isRequired
 };
 export default PropertiesToLetPT;

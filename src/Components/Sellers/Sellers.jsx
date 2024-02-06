@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import DisplaySellers from "./GetSellers";
+import DisplaySellers from "./DisplaySellers";
 
 function Sellers(props) {
   const [firstName, setFirstName] = useState("");
@@ -12,11 +12,43 @@ function Sellers(props) {
   //this is the form that allows you to create a buyer
   
   function getSellers () {
-    axios.get("http://localhost:8082/sellers/get")
+    axios.get("http://localhost:8082/Sellers/get")
       .then((response) => {setSellers(response.data)})
   }
   useEffect(getSellers, [])
 
+
+  function CheckSeller() {
+
+
+    axios.get("http://localhost:8082/Sellers/get").then(response => {
+        console.log(response)
+        for (const sellers of response.data) {
+            if (sellers.firstName.toLowerCase() === firstName.toLowerCase() && sellers.lastName.toLowerCase() === lastName.toLowerCase()) {
+                     alert("Seller already exists")
+                     return;
+            }
+        }
+
+axios.post("http://localhost:8082/Sellers/create", 
+      { firstName,
+        lastName,
+        address,
+        postcode,
+        phoneNumber
+       })
+        .then(response => {
+            setFirstName("");
+            setLastName("");
+            setAddress("");
+            setPostcode("");
+            setPhoneNumber("");
+            getSellers();
+        })
+        .catch(err => console.error(err))
+
+    })
+}
 
 
   return (
@@ -24,26 +56,9 @@ function Sellers(props) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          axios
-            .post("http://localhost:8082/sellers/create", {
-              firstName,
-              lastName,
-              address,
-              postcode,
-              phoneNumber
-            })
-            .then((response) => {
-              setFirstName("");
-              setLastName("");
-              setAddress("");
-              setPostcode("");
-              setPhoneNumber("");
-              getSellers();
-              
-            })
-            .catch((err) => console.error(err));
-        }}
-      >
+          CheckSeller();
+        }}>
+
         {" "}
         <h1>Sellers &nbsp;</h1>
         <label htmlFor="fn">First Name &nbsp;</label>
@@ -95,7 +110,7 @@ function Sellers(props) {
       <br />
       <br />
       <div>
-        <DisplaySellers sellers={sellers}/>
+        <DisplaySellers sellers={sellers} getSellers={getSellers}/>
       </div>
     </div>
   );

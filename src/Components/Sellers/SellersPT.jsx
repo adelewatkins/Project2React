@@ -1,9 +1,18 @@
 import PropTypes from 'prop-types'
 import Sellers from './Sellers';
 import Card from "react-bootstrap/Card";
-
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 function SellersPT(props) {
+  const navigate = useNavigate();
+
+  function deleteSeller (){
+    axios.delete("http://localhost:8082/Sellers/delete/" + props.id)
+    .then(response => {props.getSellers()})
+    .catch(err => console.error(err))
+    }
+
   return (
     <Card className="col-sm-6 col-md-4 col-lg-3 m-4">
       <div className="flex">
@@ -20,6 +29,13 @@ function SellersPT(props) {
           <p>{props.address}</p>
           <p>{props.postcode}</p>
           <p>{props.phoneNumber}</p>
+          <button onClick={() =>
+              navigate("/Sellers/Edit/" + props.id)
+            }style={{marginTop: "10px"}} type="submit" className="btn btn-success btn-md">
+              {" "}
+              Edit Seller{" "}
+            </button>
+          <button style={{marginTop: "10px"}} className="btn btn-danger" onClick={deleteSeller}>Delete Seller</button>
         </div>
       </div>
     </Card>
