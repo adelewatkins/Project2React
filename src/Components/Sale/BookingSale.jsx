@@ -202,7 +202,14 @@ function BookingSale() {
 
                     <td> {book.timeSlot}</td>
 
-                    <td><button onClick={() => {
+                    <button onClick={() =>
+              navigate("/BookingSale/Edit/" + book.id)
+            }style={{marginTop: "10px"}} type="submit" className="btn btn-success btn-md">
+              {" "}
+              Edit Booking{" "}
+            </button>
+
+                    <td><button className="btn btn-danger" onClick={() => {
                         axios.delete("http://localhost:8082/BSale/delete/" + book.id)
                             .then(res => { getBSales() })
                             .catch(err => console.error(err));

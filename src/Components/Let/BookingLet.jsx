@@ -217,7 +217,14 @@ function BookingLet(props) {
 
                   <td> {book.timeSlot}</td>
 
-                  <td><button onClick={() => {
+                  <button onClick={() =>
+              navigate("/BookingLet/Edit/" + book.id)
+            }style={{marginTop: "10px"}} type="submit" className="btn btn-success btn-md">
+              {" "}
+              Edit Booking{" "}
+            </button>
+
+                  <td><button style={{width: "80px"}}className="btn btn-danger" onClick={() => {
                         axios.delete("http://localhost:8082/BLet/delete/" + book.id)
                             .then(res => { getPLets() })
                             .catch(err => console.error(err));
