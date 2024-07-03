@@ -21,6 +21,7 @@ import EditBuyers from "./Components/Buyers/EditBuyers";
 import EditSellers from "./Components/Sellers/EditSellers";
 import EditBookingSale from "./Components/Sale/EditBookingSale";
 import EditBookingLet from "./Components/Let/EditBookingLet";
+import DownPage from "./Components/IsItDown/DownPage"
 
 function App() {
   return (
@@ -119,6 +120,7 @@ function App() {
           <Route path="/Sellers/edit/:id" element={<EditSellers />} />
           <Route path="/BookingSale/edit/:id" element={<EditBookingSale />} />
           <Route path="/BookingLet/edit/:id" element={<EditBookingLet />} />
+          <Route path="/WhatsDown" element={<DownPage />} />
         </Routes>
       </Router>
     </header>

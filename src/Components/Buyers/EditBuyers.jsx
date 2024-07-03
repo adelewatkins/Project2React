@@ -10,6 +10,7 @@ function EditBuyers() {
     const [address, setAddress] = useState("");
     const [postcode, setPostcode] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
+    const [status, setStatus] = useState("");
    
     useEffect(() => {
         axios.get("http://localhost:8082/Buyers/get")
